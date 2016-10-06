@@ -16,7 +16,8 @@ class AuthController extends Controller
     public function redirectToProvider()
     {
         Log::info("HIT");
-        return Socialite::driver('github')->redirect();
+        $redirectUrl = "https://tutorialedge.net/auth/github/callback";
+        return Socialite::driver('github')->redirectUrL($redirectUrl)->redirect();
     }
 
     /**
