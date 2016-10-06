@@ -81,9 +81,8 @@ class AuthController extends Controller
      */
     public function redirectToProvider(Request $request)
     {
-        return Socialite::driver('github')
-            ->with(['redirect_uri' => env('GITHUB_CALLBACK_URL' ) . '?redirect=' . $request->input('redirect')])
-            ->redirect();
+        Log::info("Redirect to provider method hit");
+        return Socialite::driver('github')->with(['redirect_uri' => env('GITHUB_CALLBACK_URL' ) . '?redirect=' . $request->input('redirect')])->redirect();
     }
 
     /**
@@ -130,7 +129,7 @@ class AuthController extends Controller
         }
         
         Log::info("Creating a new user");
-        // Event::fire(new UserCreatedEvent($githubUser));
+
         return User::create([
             'name' => $githubUser->nickname,
             'email' => $githubUser->email,

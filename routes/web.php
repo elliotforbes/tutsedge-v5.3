@@ -36,17 +36,8 @@ Route::get('/404', 'FrontendController@error404');
 Route::get('/500', 'FrontendController@error500');
 Route::get('/error', 'FrontendController@error');
 
-// Route::get('/admin-test', 'Admin\AdminController@test');
-
-// Route::group(['prefix' => 'admin'], function(){
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function (){
-    Route::get('/', 'Admin\AdminController@Home'); 
-    Route::resource('articles', 'Admin\LessonController');
-    Route::resource('users', 'Admin\UserController');
-    Route::resource('comments', 'Admin\CommentController');
-    Route::get('/settings', 'Admin\AdminController@Settings');
-    Route::get('/stats', 'Admin\AdminController@Stats');
-    
+    Route::get('/', 'Admin\AdminController@Home');     
 });
 
 // Tags, Courses and Single Lessons
