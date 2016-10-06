@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Socialite;
 use Log;
 
@@ -26,7 +25,7 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback(Request $request)
+    public function handleProviderCallback()
     {
         $user = Socialite::driver('github')->stateless()->user();
 
