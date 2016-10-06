@@ -72,3 +72,5 @@ Route::get('/auth/github/callback', 'Auth\AuthController@handleProviderCallback'
 */
 Route::get('/auth/redirect', 'Auth\SocialAuthController@redirect');
 Route::get('/auth/callback', 'Auth\SocialAuthController@callback');
+
+Auth::routes();
