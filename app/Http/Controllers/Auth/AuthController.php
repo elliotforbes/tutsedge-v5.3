@@ -12,7 +12,6 @@ use Socialite;
 use Illuminate\Http\Request;
 use Auth;
 use Log;
-use Event;
 
 class AuthController extends Controller
 {
