@@ -81,7 +81,7 @@ class AuthController extends Controller
      */
     public function redirectToProvider(Request $request)
     {
-        Log::info("Redirect to provider method hit");
+        Log::debug("Redirect to provider method hit");
         return Socialite::driver('github')->with(['redirect_uri' => env('GITHUB_CALLBACK_URL' ) . '?redirect=' . $request->input('redirect')])->redirect();
     }
 
@@ -108,7 +108,7 @@ class AuthController extends Controller
 
         Auth::login($authUser, true);
                 
-        return redirect('/');
+        return redirect('/profile');
     }
 
     /**
