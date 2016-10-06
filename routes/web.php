@@ -29,6 +29,13 @@ Route::get('/register', 'FrontendController@register');
  */ 
 Route::get('/books', 'BookController@index');
 Route::get('/book/{slug}', 'BookController@single');
+
+/*
+* Our github authentication routes 
+*/
+Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
+
 /*
  * Error Routes.
  */
@@ -46,22 +53,11 @@ Route::get('/course/{slug}', 'FrontendController@course');
 Route::get('/{slug}', 'FrontendController@show');
 
 Route::resource('comments', 'CommentController');
-
 Route::get('/testemail', 'EmailController@test');
 
-Route::group(['prefix' => 'api/v1'], function (){
-    Route::resource('lessons', 'LessonsController', ['only' => ['index', 'show']]);    
-});
 
-/*
-* Our github authentication routes 
-*/
-Route::get('/auth/github', 'Auth\AuthController@redirectToProvider');
-Route::get('/auth/github/callback', 'Auth\AuthController@handleProviderCallback');
 /*
 * Our facebook authentication routes 
 */
-Route::get('/auth/redirect', 'Auth\SocialAuthController@redirect');
-Route::get('/auth/callback', 'Auth\SocialAuthController@callback');
-
-Auth::routes();
+// Route::get('/auth/redirect', 'Auth\SocialAuthController@redirect');
+// Route::get('/auth/callback', 'Auth\SocialAuthController@callback');
