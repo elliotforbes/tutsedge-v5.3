@@ -43,18 +43,11 @@ Route::get('/404', 'FrontendController@error404');
 Route::get('/500', 'FrontendController@error500');
 Route::get('/error', 'FrontendController@error');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function (){
-    Route::get('/', 'Admin\AdminController@Home');     
-});
-
 // Tags, Courses and Single Lessons
 Route::get('/tag/{slug}', 'FrontendController@tag');
 Route::get('/course/{slug}', 'FrontendController@course');
 Route::get('/{slug}', 'FrontendController@show');
-
-Route::resource('comments', 'CommentController');
 Route::get('/testemail', 'EmailController@test');
-
 
 /*
 * Our facebook authentication routes 

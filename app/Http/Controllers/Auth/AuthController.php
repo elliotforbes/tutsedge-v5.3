@@ -27,6 +27,7 @@ class AuthController extends Controller
     public function handleProviderCallback()
     {
         Log::info("Hi");
+        
         $user = Socialite::driver('github')->user();
 
         Log::info($user->getId());;
