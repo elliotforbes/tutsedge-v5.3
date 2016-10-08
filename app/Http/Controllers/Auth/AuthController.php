@@ -37,5 +37,7 @@ class AuthController extends Controller
 
         Log::info("Successfully Logged In User");
 
+        return redirect('/');
+
     }
 }
