@@ -30,8 +30,11 @@ class AuthController extends Controller
     public function handleProviderCallback()
     {
         $githubUser = Socialite::driver('github')->stateless()->user();
-
+        Log::info($githubUser);
+        
         $user = User::where('github_id', $githubUser->email)->first();
+        
+        Log::info($user);
 
         Auth::login($user);
 
