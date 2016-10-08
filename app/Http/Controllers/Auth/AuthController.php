@@ -32,7 +32,7 @@ class AuthController extends Controller
 
         $user = User::where('github_id', $githubUser->email)->first();
 
-        auth()->login($user);
+        Auth::login($user);
 
         Log::info("Successfully Logged In User");
 
