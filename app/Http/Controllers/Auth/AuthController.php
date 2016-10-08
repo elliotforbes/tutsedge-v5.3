@@ -32,7 +32,7 @@ class AuthController extends Controller
         $githubUser = Socialite::driver('github')->stateless()->user();
         Log::info($githubUser->id);
 
-        $user = User::where('github_id', $githubUser->email)->first();
+        $user = User::where('github_id', $githubUser->id)->first();
         
         Log::info($user);
 
