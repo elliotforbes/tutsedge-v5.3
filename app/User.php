@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 use App\Traits\Admin;
 
 class User extends Authenticatable
 {
+    use AuthenticableTrait;
     use Admin;
     
     /**
