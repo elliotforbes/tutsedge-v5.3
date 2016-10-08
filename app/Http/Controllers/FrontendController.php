@@ -30,7 +30,8 @@ class FrontendController extends Controller
      * @return view
      */
     public function show($slug)
-    {  
+    {
+        Log::info("Retrieving article for slug: " . $slug);
         $lesson = Lesson::whereSlug($slug)->get()->first();
         
         $course = Course::where('id', '=', $lesson->course_id)->get()->first();
@@ -43,9 +44,8 @@ class FrontendController extends Controller
             ];
             return view('errors.404');
         }
-        // log::info($lesson->tags->get(0));
+
         $tag = $lesson->tags->get(0);
-        // fire an event every time a lesson is vieweds
         
         if(count($lesson->tags) > 0){
             $articles = Lesson::whereHas('tags', function($q) use ($tag)
@@ -56,10 +56,7 @@ class FrontendController extends Controller
                         ->where('id', '!=', $lesson->id)
                         ->take(2)
                         ->get();
-        } else {
-            Log::info("Returning 2 Random Recommended Articles");
-            $articles = DB::table('lessons')->take(2)->get();
-        }
+        } 
         
         
         return view('frontend.single', compact('lesson', 'articles', 'course'));     
