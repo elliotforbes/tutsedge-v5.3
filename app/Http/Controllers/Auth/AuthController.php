@@ -31,7 +31,7 @@ class AuthController extends Controller
         $githubUser = Socialite::driver('github')->stateless()->user();
         Log::info($githubUser->id);
         
-        $authUser = $this->findOrCreateUser($user);
+        $authUser = $this->findOrCreateUser($githubUser);
 
         Auth::login($authUser, true);
                 
