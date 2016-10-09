@@ -60,7 +60,6 @@ class FrontendController extends Controller
                         ->get();
         } 
         
-        
         return view('frontend.single', compact('lesson', 'articles', 'course'));     
         
     }
