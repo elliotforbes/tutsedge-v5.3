@@ -12,10 +12,15 @@ function UserService($log, $http) {
         return $http.get('api/users?page=' + page);
     }
 
+    function getGrowth() {
+        return $http.get('api/users/growth');
+    }
+
     var service = {
         newUser: newUser,
         getUser: getUser,
-        getUsers: getUsers
+        getUsers: getUsers,
+        getGrowth: getGrowth
     };
 
     return service;

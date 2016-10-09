@@ -1,4 +1,4 @@
-function DashboardUsersController() {
+function DashboardUsersController(UserService) {
   var ctrl = this;
 
   ctrl.labels = ['-4 Week', '-3 Week', '-2 Week', '-1 Week'];
@@ -18,11 +18,16 @@ function DashboardUsersController() {
     [6, 3, 4, 2]
   ];
 
-  ctrl.$onInit = function() {
-    console.log("Hey you guys");
+  this.$onInit = function() {
+    UserService.getGrowth()
+      .then(function success(response){
+        ctrl.data[0] = response.data.growth;
+      });
   };
 
 };
+
+DashboardUsersController.$inject = ['UserService'];
 
 angular.module('root')
   .controller('DashboardUsersController', DashboardUsersController);
