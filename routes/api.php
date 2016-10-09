@@ -18,3 +18,4 @@ Route::get('lesson/{slug}', 'API\LessonAPIController@show');
 
 Route::get('users', 'API\UserAPIController@index');
 Route::get('user/{id}', 'API\UserAPIController@show');
+Route::get('users/growth', 'API\UserAPIController@growthStats');
