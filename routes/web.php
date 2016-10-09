@@ -12,7 +12,6 @@
 */
 
 Route::get('/', 'FrontendController@Home');
-Route::get('/dashboard', 'FrontendController@dashboard');
 Route::get('/tutorials', 'FrontendController@allTutorials');
 Route::get('/search', 'FrontendController@search');
 Route::get('/about', 'FrontendController@about');
@@ -25,6 +24,10 @@ Route::get('/sitemap', 'FrontendController@sitemap');
 Route::get('/profile', 'FrontendController@profile');
 Route::get('/forum', 'FrontendController@forum');
 Route::get('/register', 'FrontendController@register');
+
+
+Route::get('/dashboard', 'FrontendController@dashboard');
+
 /*
  * Book Review Routes:
  */ 

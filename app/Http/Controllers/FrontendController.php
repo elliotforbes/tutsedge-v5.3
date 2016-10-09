@@ -12,6 +12,7 @@ use App\User;
 use App\Post;
 use App\Tag;
 use Log;
+use Auth;
 
 class FrontendController extends Controller
 {
@@ -68,7 +69,16 @@ class FrontendController extends Controller
     */
     public function dashboard()
     {
-        return view('admin.index');
+        if(Auth::check())
+        {
+            Log::info("User is logged in, permitting access to the admin panel");
+            return view('admin.index');
+        } 
+        else 
+        {
+            Log::info("User is not logged in, access denied");
+            return redirect('/');
+        }
     }
 
     /*
