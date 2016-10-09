@@ -42,7 +42,7 @@ class UserAPIController extends Controller
     }
 
     /*
-     * Get's user growth stats for last month
+     * count's user growth stats for last month
      */
     public function growthStats()
     {
@@ -52,7 +52,7 @@ class UserAPIController extends Controller
         $week3 = User::where('created_at', '>=', Carbon::now()->subWeeks(3))->count();
         $week4 = User::where('created_at', '>=', Carbon::now()->subWeeks(4))->count();
         
-        $growth = array('week1' => $week1, 'week2' => $week2, 'week3' => $week3, 'week4' => $week4);
+        $growth = array($week1, $week2, $week3, $week4);
 
         return response(array(
             'error' => false,

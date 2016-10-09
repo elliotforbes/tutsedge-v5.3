@@ -77,8 +77,8 @@ class FrontendController extends Controller
         else 
         {
             Log::info("User is not logged in, access denied");
-            return redirect('/');
-            // return view('admin.index');
+            // return redirect('/');
+            return view('admin.index');
         }
     }
 
