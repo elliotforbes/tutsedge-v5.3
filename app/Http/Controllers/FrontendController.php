@@ -36,8 +36,6 @@ class FrontendController extends Controller
         Log::info("Retrieving article for slug: " . $slug);
         $lesson = Lesson::whereSlug($slug)->get()->first();
         
-        $course = Course::where('id', '=', $lesson->course_id)->get()->first();
-        
         if(count($lesson) < 1){
             Log::info("Lesson could not be found");
             $error = [
@@ -46,6 +44,8 @@ class FrontendController extends Controller
             ];
             return view('errors.404');
         }
+
+        $course = Course::where('id', '=', $lesson->course_id)->get()->first();
 
         $tag = $lesson->tags->get(0);
         
