@@ -50,7 +50,7 @@ class UserAPIController extends Controller
         $week1 = User::where('created_at', '>=', Carbon::now()->subWeek())
                       ->count();
         $week2 = User::where('created_at', '>=', Carbon::now()->subWeeks(2))
-                      ->where('created_at', '<=', Carbon::now()-subWeek())
+                      ->where('created_at', '<=', Carbon::now()->subWeek())
                       ->count();
         $week3 = User::where('created_at', '>=', Carbon::now()->subWeeks(3))
                       ->where('created_at', '<=', Carbon::now()->subWeeks(2))
