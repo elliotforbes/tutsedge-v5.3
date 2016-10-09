@@ -59,7 +59,7 @@ class UserAPIController extends Controller
                       ->where('created_at', '<=', Carbon::now()->subWeeks(3))
                       ->count();
         
-        $growth = array($week1, $week2, $week3, $week4);
+        $growth = array($week4, $week3, $week2, $week1);
 
         return response(array(
             'error' => false,
