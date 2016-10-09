@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+        
         /*
          * Package Service Providers...
          */

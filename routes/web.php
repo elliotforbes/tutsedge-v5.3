@@ -47,7 +47,6 @@ Route::get('/error', 'FrontendController@error');
 Route::get('/tag/{slug}', 'FrontendController@tag');
 Route::get('/course/{slug}', 'FrontendController@course');
 Route::get('/{slug}', 'FrontendController@show');
-Route::get('/testemail', 'EmailController@test');
 
 /*
 * Our facebook authentication routes 

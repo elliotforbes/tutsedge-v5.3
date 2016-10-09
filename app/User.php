@@ -4,10 +4,14 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use App\Traits\Admin;
 
 class User extends Authenticatable
 {
+    use HasApiTokens;
+    use Notifiable;
     use AuthenticableTrait;
     use Admin;
     
