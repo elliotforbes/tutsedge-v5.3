@@ -16,27 +16,27 @@
               <th>View Profile</th>
             </thead>
             <tbody>
-              <tr>
-                <td>Elliot Forbes</td>
-                <td>elliot@elliotforbes.co.uk</td>
-                <td>1234567</td>
-                <td>1st January, 1970</td>
-                <td><a href="#/user/edit/1" class="btn btn-outline-primary"><i class="ion ion-ios-search-strong"></i> View</a></td>
+              <tr ng-repeat="user in $ctrl.users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.github_id }}</td>
+                <td>{{ user.created_at }}</td>
+                <td><a href="#/user/edit/{{ user.id }}" class="btn btn-outline-primary"><i class="ion ion-ios-search-strong"></i> View</a></td>
               </tr>
             </tbody>
           </table>
 
           <nav aria-label="Page navigation">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#/users" aria-label="Previous">
+              <li class="page-item" ng-if="$ctrl.pageSettings.prev_page_url !== null">
+                <a class="page-link" ng-click="$ctrl.getPrevPage()" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                   <span class="sr-only">Previous</span>
                 </a>
               </li>
-              <li class="page-item"><a class="page-link" href="#/users">1</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#/users" aria-label="Next">
+              <li class="page-item" ng-repeat="i in $ctrl.getPage($ctrl.pageSettings.last_page)"><a class="page-link" ng-click="$ctrl.getUsers(i)">1</a></li>
+              <li class="page-item" ng-if="$ctrl.pageSettings.next_page_url !== null">
+                <a class="page-link" ng-click="$ctrl.getNextPage()" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                   <span class="sr-only">Next</span>
                 </a>

@@ -1,16 +1,13 @@
-function ArticleEditController($log, ArticleService) {
+function ArticleEditController($log, ArticleService, $routeParams) {
   var ctrl = this;
-
+  var slug = $routeParams.slug;
   ctrl.article = {};
 
-  ctrl.init = function() {
-    ctrl.article = {
-      title : "Test Article",
-      description: "lorem ipsum",
-      slug: "test_article",
-      image: "test_image.jpg",
-      body: "body"
-    };
+  this.$onInit = function() {
+    ArticleService.getArticle(slug)
+      .then(function success(response){
+        ctrl.article = response.data.lesson;
+      });
   };
 
   ctrl.save = function(article) {
@@ -20,7 +17,7 @@ function ArticleEditController($log, ArticleService) {
 
 };
 
-ArticleEditController.$inject = ['$log', 'ArticleService'];
+ArticleEditController.$inject = ['$log', 'ArticleService', '$routeParams'];
 
 angular.module('articles')
   .controller('ArticleEditController', ArticleEditController);

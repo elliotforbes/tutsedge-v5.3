@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('test', function() {
-  return "Test";
-});
+Route::get('lessons','API\LessonAPIController@index');
+Route::get('lesson/{slug}', 'API\LessonAPIController@show');
+
+Route::get('users', 'API\UserAPIController@index');
+Route::get('user/{id}', 'API\UserAPIController@show');

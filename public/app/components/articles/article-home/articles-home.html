@@ -12,66 +12,33 @@
               <th>Article Title</th>
               <th>Author</th>
               <th>Slug</th>
+              <th>Published At</th>
               <th><i class="ion ion-ios-eye"></i> Views</th>
               <th>Edit</th>
             </thead>
             <tbody>
-              <tr>
-                <td>Article 1</td>
-                <td>Elliot Forbes</td>
-                <td>article_1</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
-              </tr>
-              <tr>
-                <td>Article 2</td>
-                <td>Elliot Forbes</td>
-                <td>article_2</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
-              </tr>
-              <tr>
-                <td>Article 3</td>
-                <td>Elliot Forbes</td>
-                <td>article_3</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
-              </tr>
-              <tr>
-                <td>Article 4</td>
-                <td>Elliot Forbes</td>
-                <td>article_4</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
-              </tr>
-              <tr>
-                <td>Article 5</td>
-                <td>Elliot Forbes</td>
-                <td>article_5</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
-              </tr>
-              <tr>
-                <td>Article 6</td>
-                <td>Elliot Forbes</td>
-                <td>article_6</td>
-                <td>23,456</td>
-                <td><a href="#/article/edit/1" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
+              <tr ng-repeat="article in $ctrl.articles">
+                <td>{{ article.title }}</td>
+                <td>{{ article.author }}</td>
+                <td>{{ article.slug }}</td>
+                <td>{{ article.published_at }}</td>
+                <td>{{ article.views }}</td>
+                <td><a href="#/article/edit/{{ article.slug }}" class="btn btn-outline-primary"><i class="ion ion-edit"></i> Edit</a></td>
               </tr>
             </tbody>
           </table>
 
           <nav aria-label="Page navigation">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#/articles" aria-label="Previous">
+              <li class="page-item" ng-if="$ctrl.pageSettings.prev_page_url !== null">
+                <a class="page-link" ng-click="$ctrl.getPrevPage()" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                   <span class="sr-only">Previous</span>
                 </a>
               </li>
-              <li class="page-item"><a class="page-link" href="#/articles">1</a></li>
+              <li class="page-item"><a class="page-link">1</a></li>
               <li class="page-item">
-                <a class="page-link" href="#/articles" aria-label="Next">
+                <a class="page-link" ng-click="$ctrl.getNextPage()" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                   <span class="sr-only">Next</span>
                 </a>

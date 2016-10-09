@@ -6,7 +6,7 @@ function articleRouteProvider($routeProvider){
       .when('/article/new', {
         template: '<article-new></article-new>'
       })
-      .when('/article/edit/:id', {
+      .when('/article/edit/:slug', {
         template: '<article-edit></article-edit>'
       })
       .otherwise({ 

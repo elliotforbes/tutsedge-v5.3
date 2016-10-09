@@ -25,6 +25,7 @@ class FrontendController extends Controller
         $courses = Course::all();
         return view('frontend.index', compact('lessons', 'courses'));
     }
+
     /*
      * Show the an article based of slug passed in.
      * 
@@ -78,6 +79,7 @@ class FrontendController extends Controller
         {
             Log::info("User is not logged in, access denied");
             return redirect('/');
+            // return view('admin.index');
         }
     }
 

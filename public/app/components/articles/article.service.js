@@ -13,15 +13,20 @@ function ArticleService($http, $log) {
     $log.log("Placeholder for deleting an article");
   }
 
-  function getArticle(id) {
-    $log.log("Placeholder for retrieving an article");
+  function getArticle(slug) {
+    return $http.get("api/lesson/" + slug);
+  }
+
+  function getArticles(page){
+    return $http.get("api/lessons?page=" + page);
   }
 
   var service = {
     newArticle : newArticle,
     updateArticle : updateArticle,
     deleteArticle : deleteArticle,
-    getArticle : getArticle
+    getArticle : getArticle,
+    getArticles: getArticles
   };
 
   return service;
