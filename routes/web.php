@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'FrontendController@Home');
+Route::get('/dashboard', 'FrontendController@dashboard');
 Route::get('/tutorials', 'FrontendController@allTutorials');
 Route::get('/search', 'FrontendController@search');
 Route::get('/about', 'FrontendController@about');

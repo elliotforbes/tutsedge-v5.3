@@ -64,6 +64,14 @@ class FrontendController extends Controller
     }
     
     /*
+    *
+    */
+    public function dashboard()
+    {
+        return view('admin.index');
+    }
+
+    /*
      * returns paginated results of all tutorials 
      */
     public function allTutorials()

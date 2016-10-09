@@ -7,9 +7,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
+                @if(Auth::check())
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                @endif
             </div>
         </div>
     </div>
