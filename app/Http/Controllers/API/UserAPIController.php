@@ -47,10 +47,17 @@ class UserAPIController extends Controller
     public function growthStats()
     {
         Log::info("User Growth Stats API Hit");
-        $week1 = User::where('created_at', '>=', Carbon::now()->subWeek())->count();
-        $week2 = User::where('created_at', '>=', Carbon::now()->subWeeks(2))->count();
-        $week3 = User::where('created_at', '>=', Carbon::now()->subWeeks(3))->count();
-        $week4 = User::where('created_at', '>=', Carbon::now()->subWeeks(4))->count();
+        $week1 = User::where('created_at', '>=', Carbon::now()->subWeek())
+                      ->count();
+        $week2 = User::where('created_at', '>=', Carbon::now()->subWeeks(2))
+                      ->where('created_at', '<=', Carbon::now()-subWeek())
+                      ->count();
+        $week3 = User::where('created_at', '>=', Carbon::now()->subWeeks(3))
+                      ->where('created_at', '<=', Carbon::now()->subWeeks(2))
+                      ->count();
+        $week4 = User::where('created_at', '>=', Carbon::now()->subWeeks(4))
+                      ->where('created_at', '<=', Carbon::now()->subWeeks(3))
+                      ->count();
         
         $growth = array($week1, $week2, $week3, $week4);
 
