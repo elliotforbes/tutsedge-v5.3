@@ -70,9 +70,14 @@ class FrontendController extends Controller
     public function dashboard()
     {
         if(Auth::check())
-        {
-            Log::info("User is logged in, permitting access to the admin panel");
-            return view('admin.index');
+        {   
+            if(Auth::user()->github_id == 3332224){
+                Log::info("User is logged in, permitting access to the admin panel");
+                return view('admin.index');
+            } else {
+                Log::info("User does not have correct github_id for dashboard");
+                return redirect('/');
+            }
         } 
         else 
         {
