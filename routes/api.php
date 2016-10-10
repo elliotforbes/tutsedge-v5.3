@@ -13,9 +13,33 @@ use Illuminate\Http\Request;
 |
 */
 
+
+/*
+ * Lesson Routes
+ */
 Route::get('lessons','API\LessonAPIController@index');
 Route::get('lesson/{slug}', 'API\LessonAPIController@show');
 
+/*
+ * User Routes
+ */
 Route::get('users', 'API\UserAPIController@index');
 Route::get('user/{id}', 'API\UserAPIController@show');
 Route::get('users/growth', 'API\UserAPIController@growthStats');
+
+/* 
+ * Course Routes
+ */
+Route::get('courses', 'API\CourseAPIController@index');
+Route::get('course/{id}', 'API\CourseAPIController@show');
+
+/*
+ * Tag Routes
+ */
+Route::get('tags', 'API\TagAPIController@index');
+Route::get('tag/{id}', 'API\TagAPIController@show');
+
+
+
+
+

@@ -4,7 +4,9 @@ angular.module('root', [
     'dashboard',
     'user',
     'comment',
+    'courses',
     'stats',
     'settings',
-    'social'
+    'social',
+    'tags'
 ]);
