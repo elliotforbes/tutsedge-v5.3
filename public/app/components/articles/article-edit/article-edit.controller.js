@@ -1,4 +1,4 @@
-function ArticleEditController($log, ArticleService, $routeParams, TagService, CourseService) {
+function ArticleEditController($log, ArticleService, $routeParams, TagService, CourseService, $q, $timeout) {
   var ctrl = this;
   var slug = $routeParams.slug;
   ctrl.article = {};
@@ -16,8 +16,22 @@ function ArticleEditController($log, ArticleService, $routeParams, TagService, C
       })
       .then(function success(response){
         ctrl.courses = response.data.courses.data;
+        return ctrl.promise();
+      })
+      .then(function success(response){
+        $log.log("Completed");
       });
   };
+
+  ctrl.promise = function() {
+    var defer = $q.defer();
+
+    $timeout(function() {
+      defer.resolve('data received')
+    }, 2000);
+
+    return defer.promise;
+  }
 
   ctrl.save = function(article) {
     $log.log("Save any updates to the article");
@@ -26,7 +40,7 @@ function ArticleEditController($log, ArticleService, $routeParams, TagService, C
 
 };
 
-ArticleEditController.$inject = ['$log', 'ArticleService', '$routeParams', 'TagService', 'CourseService'];
+ArticleEditController.$inject = ['$log', 'ArticleService', '$routeParams', 'TagService', 'CourseService', '$q', '$timeout'];
 
 angular.module('articles')
   .controller('ArticleEditController', ArticleEditController);
