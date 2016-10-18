@@ -217,12 +217,22 @@ class FrontendController extends Controller
            $sitemap->add(URL::to('/'), '2015-01-01T12:00:00+02:00'  , '1.0', 'daily');
            $lessons = Lesson::orderBy('created_at', 'desc')->get()->all();
 
+           $courses = Course::get()->all();
+
+           foreach($courses as $course) 
+           {
+               Log::info($course);
+               $location = URL::to('/') . "/" . $course->slug;
+               $sitemap->add($location , $course->updated_at, '1.0', 'weekly');
+           }
+
            foreach($lessons as $lesson)
            {
                Log::info($lesson);
                $location = URL::to('/') . "/" . $lesson->slug;
                $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
            }
+           
            Log::info($sitemap->render('xml'));
            return $sitemap->render('xml');
        }
