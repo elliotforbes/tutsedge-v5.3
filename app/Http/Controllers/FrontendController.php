@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use DB;
+use App;
 use App\Lesson;
 use App\Course;
 use App\User;
 use App\Post;
 use App\Tag;
+use URL;
 use Log;
 use Auth;
 
@@ -205,28 +207,22 @@ class FrontendController extends Controller
            } 
        }
        
-       
        public function sitemap()
        {
            $sitemap = App::make("sitemap");
            
-        //    $sitemap->setCache('laravel.sitemap', 60);
            Log::info("Sitemap Route Hit");
-        //    if($sitemap->isCached())
-        //    {
-               Log::info("Sitemap isn't cached, creating new sitemap");
-               $sitemap->add(URL::to('/'), '2015-01-01T12:00:00+02:00'  , '1.0', 'daily');
-               
-               $lessons = Lesson::orderBy('created_at', 'desc')->get()->all();
-               
-               foreach($lessons as $lesson)
-               {
-                   Log::info($lesson);
-                   $location = URL::to('/') . "/" . $lesson->slug;
-                   $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
-               }
-        //    }
-           
+           Log::info("Sitemap isn't cached, creating new sitemap");
+
+           $sitemap->add(URL::to('/'), '2015-01-01T12:00:00+02:00'  , '1.0', 'daily');
+           $lessons = Lesson::orderBy('created_at', 'desc')->get()->all();
+
+           foreach($lessons as $lesson)
+           {
+               Log::info($lesson);
+               $location = URL::to('/') . "/" . $lesson->slug;
+               $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
+           }
            Log::info($sitemap->render('xml'));
            return $sitemap->render('xml');
        }

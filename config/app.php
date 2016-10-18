@@ -165,6 +165,7 @@ return [
         AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Roumen\Sitemap\SitemapServiceProvider::class,
         
         /*
          * Package Service Providers...
