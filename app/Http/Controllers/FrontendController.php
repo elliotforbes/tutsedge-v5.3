@@ -222,7 +222,7 @@ class FrontendController extends Controller
            foreach($courses as $course) 
            {
                Log::info($course);
-               $location = URL::to('/') . "/" . $course->slug;
+               $location = URL::to('/') . "/course/" . $course->slug;
                $sitemap->add($location , $course->updated_at, '1.0', 'weekly');
            }
 
@@ -232,7 +232,7 @@ class FrontendController extends Controller
                $location = URL::to('/') . "/" . $lesson->slug;
                $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
            }
-           
+
            Log::info($sitemap->render('xml'));
            return $sitemap->render('xml');
        }
