@@ -34,7 +34,7 @@ class LessonController extends Controller
 
         $article->title = $input['title'];
         $article->body = $input['body'];
-        $article->author = $input['author'];
+        $article->author = 'Elliot Forbes';
         $article->slug = $input['slug'];
         $article->image_path = $input['image_path'];
         $article->course_id = $input['course_id'];

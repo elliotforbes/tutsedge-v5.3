@@ -22,6 +22,6 @@
     <ng-view></ng-view>
   </div>
 
-  <script src="{{ asset('/js/admin-bundle.js') }}?v=236"></script>
+  <script src="{{ asset('/js/admin-bundle.js') }}?v=237"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@ function ArticleNewController(ArticleService, $log) {
         $log.log("Successfully Saved Article");
       }, function error(response){
         $log.log("Error: " + response);
+        ctrl.error = response;
       });
   };  
 
