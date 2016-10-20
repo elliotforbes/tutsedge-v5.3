@@ -17,7 +17,7 @@ Search the Site
             <div class="content">
                 <h1>Search:</h1>
                 <div class="input-field">
-                    <input ng-model="query" placeholder="Search Here..." id="first_name2" type="text" class="validate">
+                    <input ng-model="query" placeholder="Search Here..." ng-change="search" type="text" class="validate">
                 </div>
             </div>
         </div> 
@@ -27,7 +27,7 @@ Search the Site
                 <div id="search">
                     <h2>Results For: @{{ query }}</h2>
                 
-                    <div ng-if="query != ''" ng-repeat="lesson in results.data | filter:query" class="result">
+                    <div ng-if="query != ''" ng-repeat="lesson in lessons | filter:query" class="result">
                         
                         <div class="lesson col s12 m6 l4">
                             <figure class="snip1253">

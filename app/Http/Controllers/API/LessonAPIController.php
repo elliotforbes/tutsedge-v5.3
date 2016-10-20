@@ -9,9 +9,17 @@ use Log;
 use Auth;
 
 use App\Lesson;
+use App\Transformers\LessonTransformer;
 
 class LessonAPIController extends Controller
-{
+{   
+    protected $lessonTransformer;
+
+    function __construct(LessonTransformer $lessonTransformer)
+    {
+        $this->lessonTransformer = $lessonTransformer;   
+    }
+
     /*
      * Returns stuff
      */
@@ -26,6 +34,25 @@ class LessonAPIController extends Controller
         ), 200);
     } 
 
+
+    /*
+     * Returns transformed list of all lessons
+     */
+    public function all() 
+    {
+        Log::info("API Request made for search");
+
+        $lessons = Lesson::all();
+
+        return response()->json([
+            'error' => false,
+            'lessons' => $this->lessonTransformer->transformCollection($lessons->all())
+        ], 200);
+    }
+
+    /* 
+     * Returns one lesson based on slug
+     */
     public function show($slug) 
     {
         Log::info("API Request made for lesson with slug: " . $slug);
