@@ -7,7 +7,7 @@ function ArticleNewController(ArticleService, CourseService, $log) {
   ctrl.$onInit = function() {
     CourseService.getCourses()
       .then(function success(response) {
-        ctrl.courses = response.data;
+        ctrl.courses = response.data.courses.data;
       });
   }
 
