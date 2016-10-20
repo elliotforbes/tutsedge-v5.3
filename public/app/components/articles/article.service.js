@@ -2,7 +2,11 @@ function ArticleService($http, $log) {
 
   function newArticle(article) {
     console.log(article);
-    $log.log("Placeholder for saving new Article");
+    return $http({
+      method: 'POST',
+      url: 'articles',
+      data: article
+    });
   }
 
   function updateArticle(article) {

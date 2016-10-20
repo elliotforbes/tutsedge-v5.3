@@ -4,7 +4,12 @@ function ArticleNewController(ArticleService, $log) {
   ctrl.article = {};
 
   ctrl.save = function(article) {
-    ArticleService.newArticle(article);
+    ArticleService.newArticle(article)
+      .then(function success(response){
+        $log.log("Successfully Saved Article");
+      }, function error(response){
+        $log.log("Error: " + response);
+      });
   };  
 
 };

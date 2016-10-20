@@ -28,6 +28,10 @@ Route::get('/register', 'FrontendController@register');
 
 Route::get('/dashboard', 'FrontendController@dashboard');
 
+Route::group(['middleware' => 'auth'], function() {
+  Route::resource('articles', 'Admin\LessonController');
+});
+
 /*
  * Book Review Routes:
  */ 
