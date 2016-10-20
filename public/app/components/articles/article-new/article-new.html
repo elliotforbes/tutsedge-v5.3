@@ -44,11 +44,7 @@
         <div class="form-group">
           <label for="courseId">Course ID</label>
           <select class="form-control" ng-model="$ctrl.article.courseId">
-            <option value="1">AngularJS</option>
-            <option value="2">Laravel 5</option>
-            <option value="3">LWJGL 3</option>
-            <option value="4">Design Patterns</option>
-            <option value="5">Artificial Intelligence</option>
+            <option ng-repeat="course in $ctrl.courses" value="{{ course.id }}">{{ course.title }}</option>
           </select>
         </div>
         <div class="form-group">

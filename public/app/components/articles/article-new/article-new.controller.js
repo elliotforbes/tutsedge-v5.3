@@ -1,7 +1,15 @@
-function ArticleNewController(ArticleService, $log) {
+function ArticleNewController(ArticleService, CourseService, $log) {
   var ctrl = this;
 
   ctrl.article = {};
+  ctrl.courses = [];
+
+  ctrl.$onInit = function() {
+    CourseService.getCourses()
+      .then(function success(response) {
+        ctrl.courses = response.data;
+      });
+  }
 
   ctrl.save = function(article) {
     ArticleService.newArticle(article)
@@ -15,7 +23,7 @@ function ArticleNewController(ArticleService, $log) {
 
 };
 
-ArticleNewController.$inject = ['ArticleService', '$log'];
+ArticleNewController.$inject = ['ArticleService', 'CourseService', '$log'];
 
 angular.module('articles')
   .controller('ArticleNewController', ArticleNewController);
