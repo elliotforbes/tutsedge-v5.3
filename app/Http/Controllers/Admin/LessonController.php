@@ -39,7 +39,6 @@ class LessonController extends Controller
         $article->slug = $input['slug'];
         $article->image_path = $input['image'];
         $article->course_id = $input['course_id'];
-        $article->isLive = $input['status'];
 
         $article->published_at = Carbon::now();
         $article->created_at = Carbon::now();
