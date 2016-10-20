@@ -74,7 +74,7 @@
             @include('frontend.partials._sidebar')
             
             <div class="left-sidebar-content">
-                <h2>{!! $course->author !!}</h2>
+                <h2>Elliot Forbes</h2>
                 <h4>Software Engineer</h4>
 
                 <p>23 Year old Software Engineer who loves all manner of front end programing.</p>
