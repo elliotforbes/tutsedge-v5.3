@@ -27,7 +27,19 @@
                 <div class="clear"></div>
 
 
-                {!! Markdown::parse($lesson->body) !!}                    
+                {!! Markdown::parse($lesson->body) !!}     
+
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- article ad -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-6782067367590597"
+                    data-ad-slot="5293007688"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>  
+
             </div><!-- .post-body -->
 
             <div id="comments" class="comment-container">
@@ -57,39 +69,24 @@
             </div>
         </div><!-- .col s9 -->
         
-        <div class="col s12 m12 l3"><!-- .sidebar -->
-            <div class="left-sidebar">
-                <div class="left-sidebar-content">
-                    <img src="https://avatars0.githubusercontent.com/u/3332224?v=3&s=466" alt="">
-                    <h2>{!! $lesson->author !!}</h2>
-                    <h4>Software Engineer</h4>
+        <div class="sidebar col s12 m12 l3"><!-- .sidebar -->
+            
+            @include('frontend.partials._sidebar')
+            
+            <div class="left-sidebar-content">
+                <h2>{!! $course->author !!}</h2>
+                <h4>Software Engineer</h4>
 
-                    <p>23 Year old Software Engineer who loves all manner of front end programing.</p>
-                </div>
-                <div class="social-links">
-                    <h4>Follow Me</h4>
-                    <div class="row">
-                        <div class="col s12 m3 l3">
-                        </div>
-                        <div class="col s12 m3 l3">
-                            <div class="twitter center">
-                                <a target="_blank" href="https://twitter.com/Elliot_F"><i class="ion ion-social-twitter"></i></a>
-                            </div>
-                        </div>
-                        <div class="col s12 m3 l3">
-                            <div class="github center">
-                                <a target="_blank" href="https://github.com/emforce"><i class="ion ion-social-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="col s12 m3 l3">
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
+                <p>23 Year old Software Engineer who loves all manner of front end programing.</p>
             </div>
-            <div class="sidebar">
-                @include('frontend.partials._sidebar')
+            <div class="social-links register">
+                <h4>Follow Me</h4>
+                <a target="_blank" href="https://twitter.com/Elliot_F"><button class="register-btn twitter"><i class="fa fa-twitter-square"></i> Twitter</button></a>
+                <a target="_blank" href="https://www.facebook.com/tutorialedge"><button class="register-btn facebook"><i class="fa fa-facebook-square"></i> Facebook</button></a>             
+                <a target="_blank" href="https://github.com/emforce"><button class="register-btn github"><i class="fa fa-github-square"></i> Github</button></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCwFl9Y49sWChrddQTD9QhRA"><button class="register-btn youtube"><i class="fa fa-youtube-square"></i> Youtube</button></a>
             </div>
+
         </div><!-- end of sidebar-->
         
     </div>

@@ -9,8 +9,8 @@ The Blog
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="content">
+<div class="content">
+    <div class="post-body">
         <h1>The Blog</h1>
         @foreach($posts as $post)
         <div class="result">
