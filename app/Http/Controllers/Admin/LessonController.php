@@ -39,6 +39,7 @@ class LessonController extends Controller
         $article->slug = $input['slug'];
         $article->image_path = $input['image'];
         $article->course_id = $input['course_id'];
+        $article->isLive = $input['status'];
 
         $article->published_at = Carbon::now();
         $article->created_at = Carbon::now();
@@ -49,7 +50,9 @@ class LessonController extends Controller
         Log::info("Store method hit");
 
 
-        return view('admin.article.edit', compact('article'));
+        return response(array(
+            'error' => false
+        ), 200);
     }
     
     public function show($slug)
