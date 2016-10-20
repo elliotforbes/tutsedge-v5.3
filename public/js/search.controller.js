@@ -8,7 +8,5 @@ angular.module('TutorialApp', [])
                 $scope.lessons = response.data.lessons;
             });
     };
-    
-
       
 }]);

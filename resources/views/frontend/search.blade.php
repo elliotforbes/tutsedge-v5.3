@@ -53,6 +53,6 @@ Search the Site
         </div><!-- .container -->
     </div>
 </div>
-<script src="{{ asset('/js/search.controller.js?v=14', Request::secure()) }}"></script>
+<script src="{{ asset('/js/search.controller.js?v=15', Request::secure()) }}"></script>
 
 @endsection
