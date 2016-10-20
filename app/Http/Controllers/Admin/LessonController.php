@@ -9,7 +9,7 @@ use Markdown;
 use Request;
 use App\Lesson;
 use Log;
-use Carbon;
+use Carbon\Carbon;
 
 class LessonController extends Controller
 {
