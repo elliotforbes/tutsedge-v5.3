@@ -49,7 +49,6 @@ class LessonController extends Controller
 
         Log::info("Store method hit");
 
-
         return response(array(
             'error' => false
         ), 200);
