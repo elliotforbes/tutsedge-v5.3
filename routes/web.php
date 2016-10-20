@@ -52,8 +52,3 @@ Route::get('/tag/{slug}', 'FrontendController@tag');
 Route::get('/course/{slug}', 'FrontendController@course');
 Route::get('/{slug}', 'FrontendController@show');
 
-/*
-* Our facebook authentication routes 
-*/
-// Route::get('/auth/redirect', 'Auth\SocialAuthController@redirect');
-// Route::get('/auth/callback', 'Auth\SocialAuthController@callback');

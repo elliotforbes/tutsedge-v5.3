@@ -10,16 +10,14 @@
 </div>
 
 <div class="course-info"><!-- .course-info -->
-    @if(count($lesson->tags) > 1)
-        <h5>Tags:</h5>
-        @foreach ($lesson->tags as $tag)
-            <a href="{{ url('/tag') }}/{{ $tag->name }}">
-                <div class="chip">
-                    {{ $tag->name }}
-                </div>    
-            </a>
-        @endforeach
-    @endif
+    <h5>Tags:</h5>
+    @foreach ($lesson->tags as $tag)
+        <a href="{{ url('/tag') }}/{{ $tag->name }}">
+            <div class="chip">
+                {{ $tag->name }}
+            </div>    
+        </a>
+    @endforeach
     
     <h5>Share This Post:</h5>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
