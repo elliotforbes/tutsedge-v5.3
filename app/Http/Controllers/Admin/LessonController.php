@@ -53,17 +53,6 @@ class LessonController extends Controller
         ), 200);
     }
     
-    public function show($slug)
-    {
-        $lesson = Lesson::whereSlug($slug)->get()->first();
-        return view('admin.article.edit', compact('lesson'));
-    }
-    
-    public function edit($slug)
-    {
-        $article = Lesson::whereSlug($slug)->get()->first();
-        return view('admin.article.edit', compact('article'));
-    }
     
     public function update($slug, Request $request)
     {
