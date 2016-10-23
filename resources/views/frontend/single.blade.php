@@ -14,9 +14,9 @@
     <div class="row">
 
         <div class="col s12 m12 l9">
-            <div class="post-image">
+            <!--<div class="post-image">
                 <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="">
-            </div>            
+            </div>-->            
             <div class="post-body">
 
                 <div class="post-title">
