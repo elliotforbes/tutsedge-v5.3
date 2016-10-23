@@ -1,5 +1,5 @@
 var dashboardGrowth = {
-  templateUrl : './app/components/dashboard/dashboard-growth',
+  templateUrl : './app/components/dashboard/dashboard-growth/dashboard-growth.html',
   controller: DashboardGrowthController,
   bindings: {
     total : '<'
