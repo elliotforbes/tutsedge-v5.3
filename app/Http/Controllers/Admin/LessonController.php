@@ -72,7 +72,9 @@ class LessonController extends Controller
 
         $article->save();
 
-        return view('admin.article.edit', compact('article'));
+        return response(array(
+            'error' => false
+        ), 200);
     }
     
     
