@@ -599,7 +599,8 @@ footer.page-footer {
   .sidebar .left-sidebar-content {
     padding: 40px; }
     .sidebar .left-sidebar-content p {
-      color: #9A9A9A; }
+      color: #9A9A9A;
+      text-align: center; }
     .sidebar .left-sidebar-content h2 {
       text-align: center;
       font-weight: 800; }
@@ -654,7 +655,8 @@ footer.page-footer {
     padding: 10px;
     margin-bottom: 20px;
     color: white;
-    font-size: 20px; }
+    font-size: 20px;
+    height: auto; }
     .sidebar .register .register-btn i {
       color: white;
       margin-right: 5px; }

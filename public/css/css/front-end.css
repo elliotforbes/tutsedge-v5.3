@@ -761,6 +761,7 @@ footer.page-footer .footer-copyright {
 }
 .sidebar .left-sidebar-content p {
   color: #9A9A9A;
+  text-align: center;
 }
 .sidebar .left-sidebar-content h2 {
   text-align: center;
@@ -827,6 +828,7 @@ footer.page-footer .footer-copyright {
   margin-bottom: 20px;
   color: white;
   font-size: 20px;
+  height: auto;
 }
 .sidebar .register .register-btn i {
   color: white;
