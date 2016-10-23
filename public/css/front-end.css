@@ -593,12 +593,6 @@ footer.page-footer {
 @media screen and (max-width: 1024px) {
   .left-sidebar {
     display: none !important; } }
-.github-link {
-  margin: 20px 0px;
-  padding: 30px 20px 30px 100px;
-  background: #f8f8f8 url(../uploads/github.png) no-repeat 20px 50%;
-  font-weight: bold; }
-
 .sidebar {
   background-color: white;
   padding: 40px !important; }
@@ -664,5 +658,11 @@ footer.page-footer {
     .sidebar .register .register-btn i {
       color: white;
       margin-right: 5px; }
+
+.github-link {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../images/github.png) no-repeat 20px 50%;
+  font-weight: bold; }
 
 /*# sourceMappingURL=front-end.css.map */
