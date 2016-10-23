@@ -5,3 +5,6 @@ var dashboardGrowth = {
     total : '<'
   }
 }
+
+angular.module('dashboard')
+  .component('dashboardGrowth', dashboardGrowth);
