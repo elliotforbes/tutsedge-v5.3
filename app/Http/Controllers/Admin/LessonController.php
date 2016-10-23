@@ -78,7 +78,7 @@ class LessonController extends Controller
 
         $tags = $input['tags'];
         Log::info($tags);   
-        $articles->tags()->detach();
+        $article->tags()->detach();
 
         foreach ($tags as $tag) {
             Log::info($tag);
