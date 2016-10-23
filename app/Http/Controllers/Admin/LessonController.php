@@ -76,10 +76,15 @@ class LessonController extends Controller
         $article->updated_at = Carbon::now();
 
         $tags = $input['tags'];
-
-        $article->tags = $tags;
         Log::info($tags);
 
+        foreach ($tag as $tags) {
+            $currTag = Tag::find($tag->id)->get()->first();
+            $lesson->tags->save($currTag);
+        }
+
+        $article->tags = $tags;
+        
         $article->save();
 
         return response(array(
