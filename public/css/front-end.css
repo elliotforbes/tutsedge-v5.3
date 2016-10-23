@@ -358,11 +358,6 @@ nav {
   line-height: 29px; }
   .content .post-image img {
     max-height: 360px; }
-  .content .github-link {
-    margin: 20px 0px;
-    padding: 30px 20px 30px 100px;
-    background: #f8f8f8 url(../images/github.png) no-repeat 20px 50%;
-    font-weight: bold; }
   .content .amazon-link {
     margin: 20px 0px;
     padding: 30px 20px 30px 100px;
@@ -598,19 +593,26 @@ footer.page-footer {
 @media screen and (max-width: 1024px) {
   .left-sidebar {
     display: none !important; } }
-.left-sidebar {
-  background-color: white; }
-  .left-sidebar .left-sidebar-content {
+.github-link {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../images/github.png) no-repeat 20px 50%;
+  font-weight: bold; }
+
+.sidebar {
+  background-color: white;
+  padding: 40px !important; }
+  .sidebar .left-sidebar-content {
     padding: 40px; }
-    .left-sidebar .left-sidebar-content p {
+    .sidebar .left-sidebar-content p {
       color: #9A9A9A; }
-    .left-sidebar .left-sidebar-content h2 {
+    .sidebar .left-sidebar-content h2 {
       text-align: center;
       font-weight: 800; }
-    .left-sidebar .left-sidebar-content h4 {
+    .sidebar .left-sidebar-content h4 {
       text-align: center;
       color: #A6A9AC; }
-    .left-sidebar .left-sidebar-content img {
+    .sidebar .left-sidebar-content img {
       display: block;
       margin: auto;
       width: 100%;
@@ -618,7 +620,7 @@ footer.page-footer {
       max-width: 150px;
       max-height: 150px;
       border-radius: 75px; }
-  .left-sidebar .social-links {
+  .sidebar .social-links {
     border-top: 1px solid #ECEFF2;
     padding-left: 40px;
     padding-right: 40px;
@@ -627,32 +629,28 @@ footer.page-footer {
     margin-top: -20px;
     text-align: center;
     font-size: 15px; }
-    .left-sidebar .social-links i {
+    .sidebar .social-links i {
       color: white; }
-    .left-sidebar .social-links .twitter {
+    .sidebar .social-links .twitter {
       background-color: #1DA1F2;
       width: 30px;
       height: 30px;
       border-radius: 15px; }
-    .left-sidebar .social-links .facebook {
+    .sidebar .social-links .facebook {
       background-color: #3B5998;
       width: 30px;
       height: 30px;
       border-radius: 15px; }
-    .left-sidebar .social-links .youtube {
+    .sidebar .social-links .youtube {
       background-color: #DC4E41;
       width: 30px;
       height: 30px;
       border-radius: 15px; }
-    .left-sidebar .social-links .github {
+    .sidebar .social-links .github {
       background-color: #333333;
       width: 30px;
       height: 30px;
       border-radius: 15px; }
-
-.sidebar {
-  background-color: white;
-  padding: 40px !important; }
   .sidebar p {
     color: #9a9a9a; }
   .sidebar .register .register-btn {

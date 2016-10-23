@@ -1,0 +1,170 @@
+/*
+* All the colours for the site are defined here
+*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.facebook {
+  background-color: #3B5998; }
+
+.github {
+  background-color: #333333; }
+
+.twitter {
+  background-color: #55ACEE; }
+
+.google-plus {
+  background-color: #DB4437; }
+
+.banner {
+  background-color: #00CCFF;
+  margin-top: -40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: white; }
+  .banner .banner-cont {
+    margin: auto;
+    width: 80%;
+    text-align: center; }
+    .banner .banner-cont .element {
+      font-weight: 800; }
+    .banner .banner-cont h3 {
+      font-size: 32px; }
+
+.homepage-cont {
+  min-height: 600px; }
+  @media (max-width: 37.5em) {
+    .homepage-cont {
+      width: 90%; } }
+  @media (min-width: 37.5em) {
+    .homepage-cont {
+      width: 90%; } }
+  @media (min-width: 50em) {
+    .homepage-cont {
+      width: 80%; } }
+  @media (min-width: 64em) {
+    .homepage-cont {
+      width: 80%; } }
+
+.course-container {
+  margin-top: 40px; }
+  .course-container figure.snip1253 {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+  .course-container figure.snip1253 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .course-container figure.snip1253 .image {
+    max-height: 220px;
+    overflow: hidden; }
+  .course-container figure.snip1253 img {
+    max-width: 100%;
+    vertical-align: top;
+    position: relative; }
+  .course-container figure.snip1253 figcaption {
+    margin: -40px 15px 0;
+    padding: 15px;
+    height: 180px;
+    position: relative;
+    background-color: #ffffff; }
+  .course-container figure.snip1253 .date {
+    background-color: #2980b9;
+    top: 15px;
+    color: #fff;
+    left: 15px;
+    min-height: 48px;
+    min-width: 48px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .course-container figure.snip1253 .date span {
+    display: block;
+    line-height: 24px; }
+  .course-container figure.snip1253 .date .month {
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .course-container figure.snip1253 h3,
+  .course-container figure.snip1253 p {
+    margin: 0;
+    padding: 0;
+    /* fallback */ }
+  .course-container figure.snip1253 h3 {
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .course-container figure.snip1253 p {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    line-height: 1.6em;
+    /* fallback */
+    max-height: 20; }
+  .course-container figure.snip1253 footer {
+    padding: 0 25px;
+    background-color: #20638f;
+    color: #e6e6e6;
+    font-size: 0.8em;
+    line-height: 30px;
+    text-align: right; }
+  .course-container figure.snip1253 footer > div {
+    display: inline-block;
+    margin-left: 10px; }
+  .course-container figure.snip1253 footer i {
+    color: rgba(255, 255, 255, 0.2);
+    margin-right: 5px; }
+  .course-container figure.snip1253 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1; }
+  .course-container figure.snip1253:hover img,
+  .course-container figure.snip1253.hover img {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+  .course-container .course-box {
+    margin-bottom: 40px;
+    min-height: 300px; }
+
+.gray-container {
+  background-color: #F5F5F1;
+  width: 100%;
+  min-height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .gray-container .promo {
+    text-align: center; }
+    .gray-container .promo h5 {
+      font-weight: 800; }
+    .gray-container .promo p {
+      font-weight: 300; }
+    .gray-container .promo i {
+      margin: 40px 0;
+      color: #00CCFF;
+      font-size: 7rem;
+      display: block; }
+
+/*# sourceMappingURL=_homepage.css.map */

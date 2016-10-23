@@ -1,56 +1,632 @@
 /*
-Error: File to import not found or unreadable: grid.
-        on line 2 of public/css/front-end.scss
-
-1: @import "colours";
-2: @import "grid";
-3: @import "homepage";
-4: 
-5: body{
-6:     -webkit-font-smoothing: antialiased;
-7:     background-color: #F5F8F9;
-
-Backtrace:
-public/css/front-end.scss:2
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:278:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
+* All the colours for the site are defined here
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: grid.\A         on line 2 of public/css/front-end.scss\A \A 1: @import \"colours\";\A 2: @import \"grid\";\A 3: @import \"homepage\";\A 4: \A 5: body{\A 6:     -webkit-font-smoothing: antialiased;\A 7:     background-color: #F5F8F9;"; }
+.facebook {
+  background-color: #3B5998;
+}
+
+.github {
+  background-color: #333333;
+}
+
+.twitter {
+  background-color: #55ACEE;
+}
+
+.google-plus {
+  background-color: #DB4437;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #F5F8F9;
+  color: #444;
+  font: 400 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 37.5em) {
+  body p, body ul, body li, body a {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 37.5em) {
+  body p, body ul, body li, body a {
+    font-size: 19px;
+  }
+}
+@media (min-width: 50em) {
+  body p, body ul, body li, body a {
+    font-size: 19px;
+  }
+}
+@media (min-width: 64em) {
+  body p, body ul, body li, body a {
+    font-size: 18px;
+  }
+}
+
+nav {
+  background-color: #188AE2;
+}
+nav .button-collapse {
+  padding-left: 10px;
+}
+nav .github-signin {
+  background-color: #00CCFF;
+}
+nav ul li {
+  margin-top: -1px;
+}
+nav ul li:hover {
+  background-color: #00CCFF;
+}
+nav .brand-logo {
+  margin-left: 20px;
+  font-weight: 300;
+}
+@media (max-width: 37.5em) {
+  nav .brand-logo {
+    margin-top: 10px;
+  }
+}
+
+.author-info {
+  background-color: #ffffff;
+  padding: 30px;
+  padding-bottom: 10px;
+  /* Gap filler */
+  /* Tooltip */
+  /* Arrow */
+}
+.author-info h5 {
+  margin: 0;
+  padding: 0;
+}
+.author-info h5 a {
+  font-size: 26px;
+  color: #4e5e6a;
+}
+.author-info ul {
+  margin: 0;
+  padding: 0;
+}
+.author-info ul li {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.author-info ul li a {
+  margin-right: 20px;
+  font-size: 30px;
+}
+.author-info p {
+  color: #414a51;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+.author-info .tooltip {
+  display: inline;
+  position: relative;
+  z-index: 999;
+}
+.author-info .tooltip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: 100%;
+  left: 50%;
+  pointer-events: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.author-info .tooltip:hover::after {
+  pointer-events: auto;
+}
+.author-info .tooltip-content {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  left: 50%;
+  bottom: 100%;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 400;
+  color: #fffaf0;
+  background: transparent;
+  opacity: 0;
+  margin: 0 0 20px -150px;
+  cursor: default;
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s;
+}
+.author-info .tooltip:hover .tooltip-content {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.author-info .tooltip-content span {
+  display: block;
+}
+.author-info .tooltip-text {
+  border-bottom: 10px solid #fffaf0;
+  overflow: hidden;
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s 0.3s;
+  transition: transform 0.3s 0.3s;
+}
+.author-info .tooltip:hover .tooltip-text {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.author-info .tooltip-inner {
+  background: rgba(85, 61, 61, 0.95);
+  padding: 40px;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.author-info .tooltip:hover .tooltip-inner {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.author-info .tooltip-content::after {
+  content: '';
+  bottom: -20px;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #fffaf0;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.author-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.lesson {
+  min-height: 400px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: #112F5A;
+  color: white;
+  padding-top: 7px;
+  font-size: 48px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.icon i {
+  font-size: 48px;
+  margin-left: 17px;
+}
+
+.content {
+  min-height: 100px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 29px;
+}
+.content .post-image img {
+  max-height: 360px;
+}
+.content .amazon-link {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../images/amazon.png) no-repeat 20px 50%;
+  background-size: 65px 60px;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+.content .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: #112F5A;
+  color: white;
+  padding-top: 7px;
+  font-size: 48px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.content .icon span {
+  margin-left: 28px;
+}
+.content .chip {
+  background-color: #00CCFF;
+  color: white;
+}
+.content img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 37.5em) {
+  .content {
+    width: 90%;
+  }
+  .content p {
+    font-size: 22px;
+  }
+}
+@media (min-width: 37.5em) {
+  .content {
+    width: 90%;
+  }
+}
+@media (min-width: 50em) {
+  .content {
+    width: 80%;
+  }
+}
+@media (min-width: 64em) {
+  .content {
+    width: 95%;
+  }
+}
+.content h1, .content h2, .content h3, .content h4, .content h5 {
+  font-weight: normal;
+  font-family: 'Museo Slab','Helvetica','Arial',sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+.content h1 {
+  font-size: 55px;
+}
+.content h2 {
+  font-size: 25px;
+}
+.content h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+.content h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.content h5 {
+  font-size: 20px;
+}
+.content .info {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #9A9A9A;
+}
+.content .info p {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 37.5em) {
+  .content pre {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 0px;
+    background-color: #272822;
+  }
+}
+@media (min-width: 37.5em) {
+  .content pre {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 60px;
+    background-color: #272822;
+  }
+}
+@media (min-width: 50em) {
+  .content pre {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 60px;
+    background-color: #272822;
+  }
+}
+@media (min-width: 64em) {
+  .content pre {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 60px;
+    background-color: #272822;
+  }
+}
+.content .tip {
+  background-color: #F5F5F1;
+  padding: 20px;
+  text-align: center;
+}
+.content .tip .large {
+  font-size: 24px;
+  font-weight: 800;
+  width: 100%;
+}
+.content .post-body {
+  background-color: white;
+  padding: 40px;
+}
+.content .post-body .post-title .info {
+  float: left;
+  padding-top: 14px;
+  text-align: center;
+  min-width: 95px;
+  float: left;
+  display: block;
+  font-size: 16px;
+  color: #bababa;
+  padding: 0px 12px;
+}
+.content .post-body .post-title .info span {
+  display: inline;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.content .post-body .post-title h1 {
+  margin-top: 0;
+  font-size: 38px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ECEFF2;
+}
+.content .post-body h1 {
+  font-size: 30px;
+}
+.content .post-body ul li {
+  list-style-type: circle;
+  margin-left: 40px;
+}
+.content .post-body .recommended-articles .article {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #F5F5F1;
+  margin-bottom: 20px;
+}
+.content .post-body .recommended-articles .article h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.content .post-body .recommended-articles .article p {
+  color: #9A9A9A;
+  text-overflow: ellipsis;
+  font-size: 17px;
+}
+.content .post-body .recommended-articles .article .url {
+  font-size: 14px;
+}
+.content .result {
+  margin-bottom: 40px;
+}
+.content .result button {
+  background-color: #00CCFF;
+}
+
+.search .input-field input {
+  font-size: 23px;
+}
+.search .search-results .result {
+  background-color: white;
+}
+
+.comment-container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.comment-container .comments {
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 40px;
+}
+.comment-container .comments .comment {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+}
+.comment-container .comments .comment i.comment-icon {
+  color: #00CCFF;
+}
+.comment-container .comments .comment button {
+  background-color: #00CCFF;
+}
+.comment-container .comments .comment button i {
+  color: white;
+}
+.comment-container .comments .comment .input-field label .active {
+  color: #00CCFF;
+}
+.comment-container .comments .comment h5 {
+  font-size: 16px;
+}
+.comment-container .comments .comment h5 a {
+  color: #505b69;
+  margin: 1em 0;
+  line-height: 1.3em;
+  font-weight: 600;
+}
+.comment-container .comments .comment h5 .time-since {
+  color: #9ba6b5;
+}
+
+footer.page-footer {
+  background-color: white;
+  color: #aeaeae;
+  margin-top: 0;
+}
+footer.page-footer a {
+  color: #525252;
+}
+footer.page-footer .footer-copyright {
+  background-color: #FAFAFA;
+  color: #525252;
+}
+
+.clear {
+  clear: both;
+}
+
+.break {
+  width: 100%;
+  height: 40px;
+  clear: both;
+}
+
+.pagination {
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.article-progress {
+  background-color: #F2F2F2;
+  width: 100%;
+  padding: 20px;
+}
+@media (max-width: 37.5em) {
+  .article-progress {
+    display: none;
+  }
+}
+@media (min-width: 37.5em) {
+  .article-progress {
+    display: none;
+  }
+}
+@media (min-width: 50em) {
+  .article-progress {
+    display: block;
+  }
+}
+@media (min-width: 64em) {
+  .article-progress {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .left-sidebar {
+    display: none !important;
+  }
+}
+.github-link {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../images/github.png) no-repeat 20px 50%;
+  font-weight: bold;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 40px !important;
+}
+.sidebar .left-sidebar-content {
+  padding: 40px;
+}
+.sidebar .left-sidebar-content p {
+  color: #9A9A9A;
+}
+.sidebar .left-sidebar-content h2 {
+  text-align: center;
+  font-weight: 800;
+}
+.sidebar .left-sidebar-content h4 {
+  text-align: center;
+  color: #A6A9AC;
+}
+.sidebar .left-sidebar-content img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 75px;
+}
+.sidebar .social-links {
+  border-top: 1px solid #ECEFF2;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-top: -20px;
+  text-align: center;
+  font-size: 15px;
+}
+.sidebar .social-links i {
+  color: white;
+}
+.sidebar .social-links .twitter {
+  background-color: #1DA1F2;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.sidebar .social-links .facebook {
+  background-color: #3B5998;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.sidebar .social-links .youtube {
+  background-color: #DC4E41;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.sidebar .social-links .github {
+  background-color: #333333;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.sidebar p {
+  color: #9a9a9a;
+}
+.sidebar .register .register-btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+}
+.sidebar .register .register-btn i {
+  color: white;
+  margin-right: 5px;
+}
