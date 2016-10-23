@@ -6,7 +6,7 @@ function ArticleService($http, $log, CSRF_TOKEN) {
     console.log(article);
     return $http({
       method: 'POST',
-      url: 'articles',
+      url: 'articles?v=' + Date.now(),
       data: article
     });
   }
@@ -14,7 +14,7 @@ function ArticleService($http, $log, CSRF_TOKEN) {
   function updateArticle(article) {
     return $http({
       method: 'PATCH',
-      url: 'articles/' + article.slug,
+      url: 'articles/' + article.slug + "?v=" + Date.now(),
       data: article
     });
   }
@@ -24,11 +24,11 @@ function ArticleService($http, $log, CSRF_TOKEN) {
   }
 
   function getArticle(slug) {
-    return $http.get("api/lesson/" + slug);
+    return $http.get("api/lesson/" + slug + "?v=" + Date.now());
   }
 
   function getArticles(page){
-    return $http.get("api/lessons?page=" + page);
+    return $http.get("api/lessons?page=" + page + "&v=" + Date.now());
   }
 
   var service = {
