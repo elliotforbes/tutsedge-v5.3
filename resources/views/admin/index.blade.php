@@ -23,7 +23,7 @@
     <ng-view></ng-view>
   </div>
 
-  <script src="{{ asset('/js/admin-bundle.js') }}?v=245"></script>
+  <script src="{{ asset('/js/admin-bundle.js') }}?v=246"></script>
   <!-- TODO: Remove this sorta hacky way of getting csrf token -->
   <script>
     angular.module("root").constant("CSRF_TOKEN", '{{ csrf_token() }}');
