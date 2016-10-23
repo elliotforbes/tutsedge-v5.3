@@ -81,7 +81,7 @@ class LessonController extends Controller
 
         foreach ($tags as $tag) {
             Log::info($tag);
-            $currTag = Tag::find($tag[0]->id)->get()->first();
+            $currTag = Tag::find($tag['id'])->get()->first();
             $lesson->tags->save($currTag);
         }
         
