@@ -149,9 +149,12 @@ optgroup {
 }
 
 button,
-input,
-select {
+input {
   overflow: visible;
+}
+
+select {
+  overflow: auto;
 }
 
 button,

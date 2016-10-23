@@ -3,6 +3,7 @@ var articleNew = {
   controller: ArticleNewController,
   bindings: {
     article: '<',
+    tags: '<',
     error: '<'
   }
 };

@@ -1,13 +1,19 @@
-function ArticleNewController(ArticleService, CourseService, $log) {
+function ArticleNewController(ArticleService, CourseService, $log, TagService) {
   var ctrl = this;
 
   ctrl.article = {};
   ctrl.courses = [];
+  ctrl.tags = [];
 
   ctrl.$onInit = function() {
     CourseService.getCourses()
       .then(function success(response) {
         ctrl.courses = response.data.courses.data;
+        return TagService.getTags();
+      })
+      .then(function success(response){
+        ctrl.tags = response.data.tags.data;
+        $log.log("Finished loading");      
       });
   }
 
@@ -23,7 +29,7 @@ function ArticleNewController(ArticleService, CourseService, $log) {
 
 };
 
-ArticleNewController.$inject = ['ArticleService', 'CourseService', '$log'];
+ArticleNewController.$inject = ['ArticleService', 'CourseService', '$log', 'TagService'];
 
 angular.module('articles')
   .controller('ArticleNewController', ArticleNewController);
