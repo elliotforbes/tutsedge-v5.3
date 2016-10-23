@@ -25,6 +25,7 @@ function ArticleEditController($log, ArticleService, $routeParams, TagService, C
     ArticleService.updateArticle(article)
       .then(function success(response){
         $log.log("Successfully Saved Article");
+        window.location.reload();
       }, function error(response){
         $log.log("Failed to save article");
       });
