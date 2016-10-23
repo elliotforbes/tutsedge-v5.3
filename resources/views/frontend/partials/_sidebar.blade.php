@@ -4,7 +4,6 @@
         <p><b>Author:</b> Elliot Forbes</p>
         <p><b>Date Posted:</b> {{ date("d M, Y",strtotime($lesson->created_at)) }}</p>
         <p><b>Comments:</b> <a href="#comments">{{ count($lesson->comments) }}</a></p>
-        <p><b>Views:</b> {{ $lesson->views }}</p>
         
     </div><!-- .info. -->
 </div>
