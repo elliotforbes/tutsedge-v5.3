@@ -1,4 +1,4 @@
-function DashboardGrowthController() {
+function DashboardGrowthController(UserService, $log) {
   var ctrl = this;
 
   this.$onInit = function() {
