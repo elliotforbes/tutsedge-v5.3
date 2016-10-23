@@ -5,15 +5,15 @@ function UserService($log, $http) {
     }
 
     function getUser(id) {
-        return $http.get('api/user/' + id);
+        return $http.get('api/user/' + id + "?v=" + Date.now());
     }
 
     function getUsers(page) {
-        return $http.get('api/users?page=' + page);
+        return $http.get('api/users?page=' + page + "?v=" + Date.now());
     }
 
     function getGrowth() {
-        return $http.get('api/users/growth');
+        return $http.get('api/users/growth' + "?v=" + Date.now());
     }
 
     var service = {
