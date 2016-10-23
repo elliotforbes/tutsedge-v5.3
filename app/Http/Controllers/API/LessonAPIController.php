@@ -28,6 +28,7 @@ class LessonAPIController extends Controller
         Log::info("API Request made for Lessons...");
 
         $lessons = Lesson::orderBy('published_at', 'DESC')->paginate(10);
+
         return response(array(
             'error' => false,
             'lessons' => $lessons->toArray(),
@@ -57,6 +58,8 @@ class LessonAPIController extends Controller
     {
         Log::info("API Request made for lesson with slug: " . $slug);
         $lesson = Lesson::whereSlug($slug)->get()->first();
+
+        $lesson->tags = $lesson->tags;
 
         return response(array(
             'error' => false,

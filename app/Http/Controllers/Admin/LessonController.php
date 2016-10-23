@@ -42,6 +42,7 @@ class LessonController extends Controller
 
         $tags = $input['tags'];
 
+        $article->tags = $tags;
         Log::info($tags);
 
         $article->published_at = Carbon::now();
@@ -73,6 +74,11 @@ class LessonController extends Controller
         $article->course_id = $input['course_id'];
 
         $article->updated_at = Carbon::now();
+
+        $tags = $input['tags'];
+
+        $article->tags = $tags;
+        Log::info($tags);
 
         $article->save();
 
