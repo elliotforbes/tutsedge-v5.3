@@ -8,6 +8,7 @@ use Markdown;
 
 use Request;
 use App\Lesson;
+use App\Tag;
 use Log;
 use Carbon\Carbon;
 
@@ -78,12 +79,10 @@ class LessonController extends Controller
         $tags = $input['tags'];
         Log::info($tags);
 
-        foreach ($tag as $tags) {
+        foreach ($tags as $tag) {
             $currTag = Tag::find($tag->id)->get()->first();
             $lesson->tags->save($currTag);
         }
-
-        $article->tags = $tags;
         
         $article->save();
 
