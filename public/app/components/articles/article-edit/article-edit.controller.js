@@ -19,6 +19,7 @@ function ArticleEditController($log, ArticleService, $routeParams, TagService, C
         $log.log("Completed Loading");
       })
   };
+  
   ctrl.save = function(article) {
     $log.log("Save any updates to the article");
     ArticleService.updateArticle(article)

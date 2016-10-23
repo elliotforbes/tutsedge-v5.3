@@ -13,6 +13,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
   <script src="{{ asset('/js/angular-charts.js') }}"></script>
+
 </head>
 <body>
   
@@ -23,5 +24,9 @@
   </div>
 
   <script src="{{ asset('/js/admin-bundle.js') }}?v=240"></script>
+  <!-- TODO: Remove this sorta hacky way of getting csrf token -->
+  <script>
+    angular.module("root").constant("CSRF_TOKEN", '{{ csrf_token() }}');
+  </script>
 </body>
 </html>

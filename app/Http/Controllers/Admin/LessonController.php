@@ -63,10 +63,11 @@ class LessonController extends Controller
 
         $article->title = $input['title'];
         $article->body = $input['body'];
-        $article->author = $input['author'];
+        $article->description = $input['description'];
         $article->slug = $input['slug'];
-        $article->image_path = $input['image_path'];
+        $article->image_path = $input['image'];
         $article->course_id = $input['course_id'];
+
         $article->updated_at = Carbon::now();
 
         $article->save();

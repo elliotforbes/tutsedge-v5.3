@@ -1,4 +1,6 @@
-function ArticleService($http, $log) {
+function ArticleService($http, $log, CSRF_TOKEN) {
+
+  $http.defaults.headers.common['X-Csrf-Token'] = CSRF_TOKEN;
 
   function newArticle(article) {
     console.log(article);
@@ -10,7 +12,11 @@ function ArticleService($http, $log) {
   }
 
   function updateArticle(article) {
-    $log.log("Placeholder for updating new Article");
+    return $http({
+      method: 'PATCH',
+      url: 'articles/' + article.slug,
+      data: article
+    });
   }
 
   function deleteArticle(id) {
@@ -37,7 +43,7 @@ function ArticleService($http, $log) {
 
 }
 
-ArticleService.$inject = ['$http', '$log'];  
+ArticleService.$inject = ['$http', '$log', 'CSRF_TOKEN'];  
 
 angular
   .module('articles')
