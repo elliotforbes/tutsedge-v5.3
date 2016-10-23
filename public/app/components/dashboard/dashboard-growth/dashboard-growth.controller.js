@@ -4,9 +4,8 @@ function DashboardGrowthController(UserService, $log) {
   this.$onInit = function() {
     UserService.getUsers()
       .then(function success(response){
-        $log.log(ctrl.data);
-        ctrl.total = response.data.total;
-        $log.log(ctrl.data);
+        $log.log(response);
+        ctrl.total = response.data.users.total;
       });
   };
 
