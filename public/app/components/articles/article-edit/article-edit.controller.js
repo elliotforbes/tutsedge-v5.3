@@ -16,26 +16,17 @@ function ArticleEditController($log, ArticleService, $routeParams, TagService, C
       })
       .then(function success(response){
         ctrl.courses = response.data.courses.data;
-        return ctrl.promise();
+        $log.log("Completed Loading");
       })
-      .then(function success(response){
-        $log.log("Completed");
-      });
   };
-
-  ctrl.promise = function() {
-    var defer = $q.defer();
-
-    $timeout(function() {
-      defer.resolve('data received')
-    }, 2000);
-
-    return defer.promise;
-  }
-
   ctrl.save = function(article) {
     $log.log("Save any updates to the article");
-    ArticleService.updateArticle(article);
+    ArticleService.updateArticle(article)
+      .then(function success(response){
+        $log.log("Successfully Saved Article");
+      }, function error(response){
+        $log.log("Failed to save article");
+      });
   };
 
 };

@@ -57,13 +57,12 @@ class AuthController extends Controller
             return $authUser;
         }
         
-        Log::info("Creating a new user");
-        // Event::fire(new UserCreatedEvent($githubUser));
+        Log::info("Creating a new user for github user: " . $githubUser);
+
         return User::create([
             'name' => $githubUser->nickname,
             'email' => $githubUser->email,
             'github_id' => $githubUser->id,
-            'avatar' => $githubUser->avatar
         ]);
     }
 }
