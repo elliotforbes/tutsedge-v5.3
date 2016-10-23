@@ -77,7 +77,8 @@ class LessonController extends Controller
         $article->updated_at = Carbon::now();
 
         $tags = $input['tags'];
-        Log::info($tags);
+        Log::info($tags);   
+        $articles->tags()->detach();
 
         foreach ($tags as $tag) {
             Log::info($tag);
