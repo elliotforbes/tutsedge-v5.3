@@ -19,48 +19,60 @@
                 
                 @include('frontend.partials._ad')
             </div>
+
+            <div id="comments" class="comment-container">
+                <div class="comments">
+                <div id="disqus_thread"></div>
+                <script>
+
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+            
+                var disqus_config = function () {
+                    this.page.url = '{{ Request::url() }}';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = '/course/<?php echo $course->slug ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = '//tutorialedgenet.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+                <div class="clear"></div>
+            </div>
+
         </div><!-- .col -->
         
         <div class="sidebar col s12 m4 l3">
-
-            <div class="course-info">
-                <h2>Course Information:</h2>
-                <p><b>Author:</b> {{ $course->author }}</p>
-                <p><b>Date Published: </b> {{ date("d M, Y",strtotime($course->created_at)) }}</p>
-            </div><!-- .course-info -->
-            
-            <div class="register">
-                <h2>Register Now:</h2>
-                
-                <p>Register now for free quickly using your preferred social media platform and receive the latest tutorials and updates straight to your inbox.</p>
-                
-                <div class="row">
-                    <!--<div class="col s12 m6 l6">
-                        <a href="{{ url('/auth/facebook') }}"><button class="register-btn facebook"><i class="fa fa-facebook-square"></i> Facebook</button></a>
-                    </div>
-                    <div class="col s12 m6 l6">
-                        <a href="{{ url('/auth/twitter') }}"><button class="register-btn twitter"><i class="fa fa-twitter-square"></i> Twitter</button></a>
-                        <a href="{{ url('/auth/googleplus') }}"><button class="register-btn google-plus"><i class="fa fa-google-plus-square"></i> Google+</button></a>
-                    </div>-->
-                    <a href="{{ url('/auth/github') }}"><button class="register-btn github"><i class="fa fa-github-square"></i> Github</button></a>
-                </div><!-- .row -->
-            </div><!-- .register -->
-
             <div class="left-sidebar-content">
+                <img src="https://avatars0.githubusercontent.com/u/3332224?v=3&s=466" alt="Elliot Forbes Web Developer">
                 <h2>{!! $course->author !!}</h2>
                 <h4>Software Engineer</h4>
 
                 <p>23 Year old Software Engineer who loves all manner of front end programing.</p>
-            </div>
-            <div class="social-links register">
-                <h4>Follow Me</h4>
-                <a target="_blank" href="https://twitter.com/Elliot_F"><button class="register-btn twitter"><i class="fa fa-twitter-square"></i> Twitter</button></a>
-                <a target="_blank" href="https://www.facebook.com/tutorialedge"><button class="register-btn facebook"><i class="fa fa-facebook-square"></i> Facebook</button></a>             
-                <a target="_blank" href="https://github.com/emforce"><button class="register-btn github"><i class="fa fa-github-square"></i> Github</button></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCwFl9Y49sWChrddQTD9QhRA"><button class="register-btn youtube"><i class="fa fa-youtube-square"></i> Youtube</button></a>
-            </div>
+           
+                <div class="social-links register">
+                    <h4>Follow Me</h4>
+                    <a target="_blank" href="https://twitter.com/Elliot_F"><button class="register-btn twitter"><i class="fa fa-twitter-square"></i> Twitter</button></a>
+                    <a target="_blank" href="https://www.facebook.com/tutorialedge"><button class="register-btn facebook"><i class="fa fa-facebook-square"></i> Facebook</button></a>             
+                    <a target="_blank" href="https://github.com/emforce"><button class="register-btn github"><i class="fa fa-github-square"></i> Github</button></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCwFl9Y49sWChrddQTD9QhRA"><button class="register-btn youtube"><i class="fa fa-youtube-square"></i> Youtube</button></a>
+                </div>
+             </div>
+
+              <div class="course-info">
+                <h2>Course Information:</h2>
+                <p><b>Author:</b> {{ $course->author }}</p>
+                <p><b>Date Published: </b> {{ date("d M, Y",strtotime($course->created_at)) }}</p>
+            </div><!-- .course-info -->
+
             
-            <div class="ad"><!-- .ad -->
+            <div class="course-info"><!-- .ad -->
                 <h2>Sponsor Us:</h2>
             @include('frontend.partials._ad')
                 
