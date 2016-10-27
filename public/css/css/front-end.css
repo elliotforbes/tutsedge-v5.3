@@ -752,16 +752,69 @@ footer.page-footer .footer-copyright {
     display: none !important;
   }
 }
-.sidebar {
+.sidebar .course-info {
+  padding: 40px;
   background-color: white;
-  padding: 20px !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.sidebar .related-posts {
+  background-color: white;
+  padding: 40px;
+}
+.sidebar .related-posts h2 {
+  margin: 0 0 2px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+.sidebar .related-posts .post {
+  margin-bottom: 20px;
+}
+.sidebar .related-posts .post .post-link a h3 {
+  margin: 0 0 2px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #545454;
+}
+.sidebar .related-posts .post .post-image img {
+  width: 100%;
+  max-height: 100px;
+}
+.sidebar .related-posts .post p {
+  color: #7a7a7a;
+  margin: 0 0 35px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.sidebar .related-posts .post .tags a {
+  margin-right: 5px;
+  color: #ababab;
+}
+.sidebar .post-info {
+  padding: 40px;
+  background-color: white;
+}
+.sidebar .post-info .post-views {
+  border-right: 1px solid #9c9c9c;
+}
+.sidebar .post-info .post-author {
+  border-top: 1px solid #9c9c9c;
+}
+.sidebar .post-info .post-date {
+  border-top: 1px solid #9c9c9c;
 }
 .sidebar .left-sidebar-content {
   padding: 40px;
+  background-color: white;
+  margin-bottom: 40px;
 }
 .sidebar .left-sidebar-content p {
   color: #9A9A9A;
   text-align: center;
+  margin-bottom: 20px;
 }
 .sidebar .left-sidebar-content h2 {
   text-align: center;
@@ -780,13 +833,25 @@ footer.page-footer .footer-copyright {
   max-height: 150px;
   border-radius: 75px;
 }
+.sidebar .post-info {
+  text-align: center;
+}
+.sidebar .post-info span {
+  color: #272822;
+  font-weight: 600;
+  font-size: 26px;
+}
+.sidebar .post-info span a {
+  font-weight: 600;
+  font-size: 26px;
+}
 .sidebar .social-links {
   border-top: 1px solid #ECEFF2;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
   padding-top: 10px;
-  margin-top: -20px;
+  margin-top: 20px;
   text-align: center;
   font-size: 15px;
 }

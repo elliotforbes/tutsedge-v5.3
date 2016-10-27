@@ -51,16 +51,22 @@ class FrontendController extends Controller
 
         $tag = $lesson->tags->get(0);
         
-        if(count($lesson->tags) > 0){
+        if(count($lesson->tags) > 0) {
             $articles = Lesson::whereHas('tags', function($q) use ($tag)
                         {
                             // log::info($tag->id);
                             $q->where('tag_id', $tag->id);
                         })
                         ->where('id', '!=', $lesson->id)
-                        ->take(2)
+                        ->take(3)
                         ->get();
         } 
+        else 
+        {
+            $articles = Lesson::orderBy('id', 'DESC')
+                ->take(3)
+                ->get();
+        }
         
         return view('frontend.single', compact('lesson', 'articles', 'course'));     
         

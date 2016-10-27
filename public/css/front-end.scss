@@ -623,15 +623,83 @@ footer.page-footer{
 }
 
 .sidebar {
-    background-color: white;
-    padding: 20px !important;
+
+    .course-info{
+        padding: 40px;
+        background-color: white;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .related-posts{
+        background-color: white;
+        padding: 40px;
+
+        h2{
+            margin: 0 0 2px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+
+        .post{
+            margin-bottom: 20px; 
+            .post-link a{
+                h3{
+                    margin: 0 0 2px;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: #545454;
+                }
+            }
+
+            .post-image img{
+                width: 100%;
+                max-height: 100px; 
+            }
+
+            p{
+                color: #7a7a7a;
+                margin: 0 0 35px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            
+            .tags a{
+                margin-right: 5px;
+                color: #ababab;
+            }
+
+        }
+
+    }
+
+    .post-info{
+        padding: 40px;
+        background-color: white;
+        
+        .post-views{
+            border-right: 1px solid #9c9c9c;
+        }
+        .post-author{
+            border-top: 1px solid #9c9c9c;
+        }
+        .post-date {
+            border-top: 1px solid #9c9c9c;
+        }
+    }
 
     .left-sidebar-content{
         padding: 40px;
-
+        background-color: white;
+        margin-bottom: 40px;
         p{
             color: $light-gray;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         h2{
@@ -655,13 +723,27 @@ footer.page-footer{
         }
     }
 
+    .post-info{
+        text-align: center;
+        
+        span{
+            color: #272822;
+            font-weight: 600;
+            font-size: 26px;
+            a{
+                font-weight: 600;
+                font-size: 26px;
+            }
+        }
+    }
+
     .social-links{
         border-top: 1px solid #ECEFF2;
         padding-left: 40px;
         padding-right: 40px;
         padding-bottom: 20px;
         padding-top: 10px;  
-        margin-top: -20px;
+        margin-top: 20px;
         text-align: center;
         font-size: 15px;
 
