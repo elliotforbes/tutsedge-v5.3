@@ -186,21 +186,24 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #F5F8F9;
   color: #444;
-  font: 400 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased; }
   @media (max-width: 37.5em) {
     body p, body ul, body li, body a {
-      font-size: 20px;
-      line-height: 32px; } }
+      font-size: 16px;
+      line-height: 1.5; } }
   @media (min-width: 37.5em) {
     body p, body ul, body li, body a {
-      font-size: 19px; } }
+      font-size: 16px;
+      line-height: 1.5; } }
   @media (min-width: 50em) {
     body p, body ul, body li, body a {
-      font-size: 19px; } }
+      font-size: 16px;
+      line-height: 1.5; } }
   @media (min-width: 64em) {
     body p, body ul, body li, body a {
-      font-size: 18px; } }
+      font-size: 16px;
+      line-height: 1.5; } }
 
 nav {
   background-color: #188AE2; }
@@ -335,6 +338,31 @@ nav {
 .lesson {
   min-height: 400px; }
 
+.flexbox-courses {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  /* Safari */
+  justify-content: center;
+  -webkit-justify-content: space-between;
+  /* Safari */
+  justify-content: space-between;
+  -webkit-align-content: space-around;
+  /* Safari */
+  align-content: space-around;
+  -webkit-flex-wrap: wrap;
+  /* Safari */
+  flex-wrap: wrap; }
+
+.card {
+  max-width: 380px; }
+
+.card-action {
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 .icon {
   width: 80px;
   height: 80px;
@@ -398,7 +426,7 @@ nav {
     .content {
       width: 90%; }
       .content p {
-        font-size: 22px; } }
+        font-size: 16px; } }
   @media (min-width: 37.5em) {
     .content {
       width: 90%; } }
@@ -435,11 +463,11 @@ nav {
       padding: 0; }
   @media (max-width: 37.5em) {
     .content pre {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       margin-left: -40px;
       margin-right: -40px;
-      padding: 0px;
+      padding: 5px;
       background-color: #272822; } }
   @media (min-width: 37.5em) {
     .content pre {

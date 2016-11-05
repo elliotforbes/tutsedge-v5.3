@@ -22,54 +22,51 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
 
 <div class="gray-container">
     <div class="container">
-        <div class="row">
-            <h4>Courses</h4>
-
-
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ asset('/uploads/angular.jpg') }}">
-                    </div>
-                    <div class="card-content">
-                        <h5>AngularJS Fundamentals</h5>
-                        <p>Build your very own AngularJS Applications from the ground up and learn how to deliver high quality SPAs</p>
-                    </div>
-                    <div class="card-action">
-                    <a href="{{ url('/course') }}/angular-js-fundamentals">View Now</a>
-                    </div>
+        <h4>Courses</h4>
+        <div class="row flexbox-courses">
+            
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ asset('/uploads/angular.jpg') }}">
+                </div>
+                <div class="card-content">
+                    <h5>AngularJS Fundamentals</h5>
+                    <p>Build your very own AngularJS Applications from the ground up and learn how to deliver high quality SPAs</p>
+                </div>
+                <div class="card-action">
+                <a href="{{ url('/course') }}/angular-js-fundamentals">View Now</a>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ asset('/uploads/lwjgl3.png') }}">
-                        
-                    </div>
-                    <div class="card-content">
-                        <h5>LWJGL 3</h5>
-                        <p>Learn the basics of Graphics and Game programming using Java and the highly popular Lightweight Java Game Library 3.</p>
-                    </div>
-                    <div class="card-action">
-                    <a href="{{ url('/course') }}/lwjgl-3-fundamentals">View Now</a>
-                    </div>
+        
+        
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ asset('/uploads/lwjgl3.png') }}">
+                    
+                </div>
+                <div class="card-content">
+                    <h5>LWJGL 3</h5>
+                    <p>Learn the basics of Graphics and Game programming using Java and the highly popular Lightweight Java Game Library 3.</p>
+                </div>
+                <div class="card-action">
+                <a href="{{ url('/course') }}/lwjgl-3-fundamentals">View Now</a>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ asset('/uploads/laravel-5.jpg') }}">
-                        
-                    </div>
-                    <div class="card-content">
-                        <h5>Laravel 5.2 Fundamentals</h5>
-                        <p>In this course we cover the basics for creating a web application using the Laravel 5.2 PHP framework.</p>
-                    </div>
-                    <div class="card-action">
-                    <a href="{{ url('/course') }}/laravel-5">View Now</a>
-                    </div>
+        
+        
+        
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ asset('/uploads/laravel-5.jpg') }}">
+                    
+                </div>
+                <div class="card-content">
+                    <h5>Laravel 5.2 Fundamentals</h5>
+                    <p>In this course we cover the basics for creating a web application using the Laravel 5.2 PHP framework.</p>
+                </div>
+                <div class="card-action">
+                <a href="{{ url('/course') }}/laravel-5">View Now</a>
                 </div>
             </div>
             
@@ -79,12 +76,15 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
 </div>
 
 <div class="container">
-    <div class="course-container row">
+    <div class="course-container">
         <h4>Tutorials:</h4>
-        
+        <div class="row flexbox-courses">
         @foreach($lessons as $lesson)
-        <div class="lesson col s12 m6 l4">
-          <div class="card">
+        <div class="card">
+          
+            <div class="card-image">
+                <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="{{ $lesson->description }}">
+            </div>
             <div class="card-content">
               <span class="card-title">{{ $lesson->title }}</span>
               <p>{{ $lesson->description }}</p>
@@ -92,9 +92,9 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
             <div class="card-action">
               <a href="{{url('/') }}/{{ $lesson->slug }}">Read More</a>
             </div>
-          </div>
         </div>
         @endforeach
+        </div>
         
         <div class="break"></div>
         
