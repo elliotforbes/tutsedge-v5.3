@@ -206,11 +206,16 @@ body {
       line-height: 1.5; } }
 
 nav {
-  background-color: #188AE2; }
+  background-color: #188AE2;
+  height: 50px; }
   nav .button-collapse {
     padding-left: 10px; }
   nav .github-signin {
     background-color: #00CCFF; }
+  nav ul a {
+    padding-top: 13px;
+    font-size: 16px;
+    height: 51px; }
   nav ul li {
     margin-top: -1px; }
   nav ul li:hover {
