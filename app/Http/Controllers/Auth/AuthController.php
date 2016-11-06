@@ -33,8 +33,10 @@ class AuthController extends Controller
         
         $authUser = $this->findOrCreateUser($githubUser);
 
+        Log::info("Successfully found or created user");
+        Log::info("Logging User In...");
         Auth::login($authUser, true);
-                
+        Log::info("Redirecting to the homepage");
         return redirect('/');
 
     }
@@ -56,8 +58,11 @@ class AuthController extends Controller
             Log::info("Logging in existing user");
             return $authUser;
         }
-        
-        Log::info("Creating a new user for github user: " . $githubUser);
+
+        Log::info("User not found, trying to create user: ");
+        Log::info("Email: " . $githubUser->email);
+        Log::info("Name: " . $githubUser->nickname);
+        Log::info("github_id: " . $githubUser->id);
 
         return User::create([
             'name' => $githubUser->nickname,
