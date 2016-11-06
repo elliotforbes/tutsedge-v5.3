@@ -41,10 +41,10 @@ class LessonController extends Controller
         $article->image_path = $input['image'];
         $article->course_id = $input['course_id'];
 
-        $tags = $input['tags'];
+        // $tags = $input['tags'];
 
-        $article->tags = $tags;
-        Log::info($tags);
+        // $article->tags = $tags;
+        // Log::info($tags);
 
         $article->published_at = Carbon::now();
         $article->created_at = Carbon::now();
