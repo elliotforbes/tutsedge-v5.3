@@ -5,6 +5,11 @@ function DashboardOauthController($http, $log) {
     $http.get('oauth/clients')
       .then(function success(response){
         $log.log(response);
+      })
+      .catch(function error(response){
+        $log.log(response);
+        $log.log(response.status);
+        $log.log(response.headers);
       });
   }
 }
