@@ -8,5 +8,6 @@ angular.module('root', [
     'stats',
     'settings',
     'social',
-    'tags'
+    'tags',
+    'email'
 ]);

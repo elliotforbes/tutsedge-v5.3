@@ -29,6 +29,8 @@ class LessonAPIController extends Controller
 
         $lessons = Lesson::orderBy('published_at', 'DESC')->paginate(10);
 
+        Log::info($request);
+
         return response(array(
             'error' => false,
             'lessons' => $lessons->toArray(),
@@ -49,6 +51,27 @@ class LessonAPIController extends Controller
             'error' => false,
             'lessons' => $this->lessonTransformer->transformCollection($lessons->all())
         ], 200);
+    }
+
+    /*
+     * Returns a set of paginated articles based on search query
+     */
+    public function search(Request $request)
+    {
+        Log::info("Search API request hit");
+
+        Log::info($request);
+
+        $foundLessons = 
+            Lesson::where('title', 'like', '%' . $request->title . '%')
+                    ->Where('author', 'like', '%' . $request->author . '%')
+                    ->paginate(10);
+
+        return response()->json([
+            'error' => false,
+            'lessons' => $foundLessons->toArray(),
+        ], 200);
+
     }
 
     /* 

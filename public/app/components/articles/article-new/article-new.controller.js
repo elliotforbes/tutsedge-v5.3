@@ -1,4 +1,4 @@
-function ArticleNewController(ArticleService, CourseService, $log, TagService) {
+function ArticleNewController(ArticleService, CourseService, $log, TagService, $location) {
   var ctrl = this;
 
   ctrl.article = {};
@@ -21,6 +21,7 @@ function ArticleNewController(ArticleService, CourseService, $log, TagService) {
     ArticleService.newArticle(article)
       .then(function success(response){
         $log.log("Successfully Saved Article");
+        $location.path("article/edit/" + article.slug);
       }, function error(response){
         $log.log("Error: " + response);
         ctrl.error = response;
@@ -29,7 +30,7 @@ function ArticleNewController(ArticleService, CourseService, $log, TagService) {
 
 };
 
-ArticleNewController.$inject = ['ArticleService', 'CourseService', '$log', 'TagService'];
+ArticleNewController.$inject = ['ArticleService', 'CourseService', '$log', 'TagService', '$location'];
 
 angular.module('articles')
   .controller('ArticleNewController', ArticleNewController);

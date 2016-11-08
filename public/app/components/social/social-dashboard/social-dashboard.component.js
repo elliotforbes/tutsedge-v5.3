@@ -1,9 +1,10 @@
-var youtubeSubscribers = {
-  templateUrl: 'app/components/social/youtube-subscribers/youtube-subscribers.html',
+var socialDashboard = {
+  templateUrl: 'app/components/social/social-dashboard/social-dashboard.html',
+  controller: SocialDashboardController,
   bindings: {
-    youtubeSubscribers: '<'
+    socialDashboard: '<'
   }
 }
 
 angular.module('social')
-  .component('youtubeSubscribers', youtubeSubscribers);
+  .component('socialDashboard', socialDashboard);

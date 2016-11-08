@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
  * Lesson Routes
  */
 Route::get('lessons','API\LessonAPIController@index');
+Route::post('lessons', 'API\LessonAPIController@search');
 Route::get('lesson/{slug}', 'API\LessonAPIController@show');
 Route::get('lessons/all', 'API\LessonAPIController@all');
 

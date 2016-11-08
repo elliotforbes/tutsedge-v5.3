@@ -11,6 +11,13 @@ function ArticleService($http, $log, CSRF_TOKEN) {
     });
   }
 
+  function search(page, title) {
+    return $http({
+      method: 'POST',
+      url: 'api/lessons?page=' + page + "&title=" + title
+    });
+  }
+
   function updateArticle(article) {
     return $http({
       method: 'PATCH',
@@ -36,6 +43,7 @@ function ArticleService($http, $log, CSRF_TOKEN) {
     updateArticle : updateArticle,
     deleteArticle : deleteArticle,
     getArticle : getArticle,
+    search: search,
     getArticles: getArticles
   };
 

@@ -3,7 +3,8 @@ var articlesHome = {
   controller: ArticlesHomeController,
   bindings: {
     articles: '<',
-    pageSettings: '<'
+    pageSettings: '<',
+    title: '=?'
   }
 };
 
