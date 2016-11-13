@@ -25,7 +25,7 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
         <h4>Courses</h4>
         <div class="row flexbox-courses">
             
-            <div class="col l4 m4 s6 course-container">
+            <div class="col l4 m4 s12 course-container">
                 <div class="course-box">
                     <div class="course-image">
                         <img src="{{ asset('/uploads/AngularJS-header-image.png') }}">
@@ -41,7 +41,7 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
             </div>
         
         
-            <div class="col l4 m4 s6 course-container">            
+            <div class="col l4 m4 s12 course-container">            
                 <div class="course-box">
                     <div class="course-image">
                         <img src="{{ asset('/uploads/lwjgl3.png') }}">
@@ -58,7 +58,7 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
             </div>
         
         
-            <div class="col l4 m4 s6 course-container">
+            <div class="col l4 m4 s12 course-container">
                 <div class="course-box">
                     <div class="course-image">
                         <img src="{{ asset('/uploads/laravel-5.png') }}">
@@ -84,7 +84,7 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
         <h4>Tutorials:</h4>
         <div class="row flexbox-courses">
         @foreach($lessons as $lesson)
-        <div class="col l4 m4 s6 course-container">
+        <div class="col l4 m4 s12 course-container">
             <div class="course-box">
                 <div class="course-image">
                     <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="{{ $lesson->description }}">
