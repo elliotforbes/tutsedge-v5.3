@@ -369,8 +369,7 @@ nav {
 
 .course-action {
   height: 60px;
-  position: absolute;
-  bottom: 0;
+  padding: 20px;
   width: 100%; }
 
 .icon {

@@ -61,7 +61,7 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
             <div class="col l4 m4 s6 course-container">
                 <div class="course-box">
                     <div class="course-image">
-                        <img src="{{ asset('/uploads/laravel-5.jpg') }}">
+                        <img src="{{ asset('/uploads/laravel-5.png') }}">
                         
                     </div>
                     <div class="course-content">
@@ -84,17 +84,18 @@ by teaching you some of the latest and greatest programming frameworks.</h3>
         <h4>Tutorials:</h4>
         <div class="row flexbox-courses">
         @foreach($lessons as $lesson)
-        <div class="card">
-          
-            <div class="card-image">
-                <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="{{ $lesson->description }}">
-            </div>
-            <div class="card-content">
-              <span class="card-title">{{ $lesson->title }}</span>
-              <p>{{ $lesson->description }}</p>
-            </div>
-            <div class="card-action">
-              <a href="{{url('/') }}/{{ $lesson->slug }}">Read More</a>
+        <div class="col l4 m4 s6 course-container">
+            <div class="course-box">
+                <div class="course-image">
+                    <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="{{ $lesson->description }}">
+                </div>
+                <div class="course-content">
+                <h5 class="course-title">{{ $lesson->title }}</h5>
+                <p>{{ $lesson->description }}</p>
+                </div>
+                <div class="course-action">
+                <a href="{{url('/') }}/{{ $lesson->slug }}">Read More</a>
+                </div>
             </div>
         </div>
         @endforeach
