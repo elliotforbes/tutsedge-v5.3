@@ -241,16 +241,27 @@ nav{
     -webkit-justify-content: space-between; /* Safari */
     justify-content:         space-between;
     -webkit-align-content: space-around; /* Safari */
-  align-content:         space-around;
-  -webkit-flex-wrap: wrap; /* Safari */
-  flex-wrap:         wrap;
+    align-content:         space-around;
+    -webkit-flex-wrap: wrap; /* Safari */
+    flex-wrap:         wrap;
 }
 
-.card {
+.course-box {
     max-width: 380px;
+    height: 100%;
+    background-color: white;
 }
 
-.card-action{
+.course-content{
+    padding: 20px;
+}
+
+.course-image img{
+    height: auto;
+    width: 100%;
+}
+
+.course-action{
     height: 60px;
     position: absolute;
 

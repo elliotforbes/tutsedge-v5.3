@@ -1,7 +1,6 @@
 /*
 * All the colours for the site are defined here
 */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 .facebook {
   background-color: #3B5998; }
@@ -160,9 +159,6 @@
   .course-container figure.snip1253.hover img {
     -webkit-transform: scale(1.15);
     transform: scale(1.15); }
-  .course-container .course-box {
-    margin-bottom: 40px;
-    min-height: 300px; }
 
 .gray-container {
   background-color: #F5F5F1;
@@ -359,10 +355,19 @@ nav {
   /* Safari */
   flex-wrap: wrap; }
 
-.card {
-  max-width: 380px; }
+.course-box {
+  max-width: 380px;
+  height: 100%;
+  background-color: white; }
 
-.card-action {
+.course-content {
+  padding: 20px; }
+
+.course-image img {
+  height: auto;
+  width: 100%; }
+
+.course-action {
   height: 60px;
   position: absolute;
   bottom: 0;
