@@ -15,6 +15,9 @@ use App\Tag;
 use URL;
 use Log;
 use Auth;
+use Cookie;
+use Response;
+
 
 class FrontendController extends Controller
 {
@@ -33,9 +36,10 @@ class FrontendController extends Controller
      * 
      * @return view
      */
-    public function show($slug)
+    public function show(Request $request, $slug)
     {
         Log::info("Retrieving article for slug: " . $slug);
+        
         $lesson = Lesson::whereSlug($slug)->get()->first();
         
         if(count($lesson) < 1){
@@ -68,7 +72,8 @@ class FrontendController extends Controller
                 ->get();
         }
         
-        return view('frontend.single', compact('lesson', 'articles', 'course'));     
+        return Response::make(view('frontend.single', compact('lesson', 'articles', 'course')))
+            ->cookie('sessionID', '1');     
         
     }
     
@@ -101,8 +106,10 @@ class FrontendController extends Controller
     public function allTutorials()
     {
         $lessons = Lesson::paginate(9);
+
+        Log::info("Session ID: " . $request->cookie('sessionID'));
         
-        return view('frontend.all', compact('lessons'));
+        return Response(view('frontend.all', compact('lessons')))->cookie('sessionID', 1);
     }
     
     /*
