@@ -103,7 +103,7 @@ class FrontendController extends Controller
     /*
      * returns paginated results of all tutorials 
      */
-    public function allTutorials()
+    public function allTutorials(Request $request)
     {
         $lessons = Lesson::paginate(9);
 
