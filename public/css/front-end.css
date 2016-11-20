@@ -470,6 +470,8 @@ nav {
     .content .info p {
       margin: 0;
       padding: 0; }
+  .content pre {
+    color: white; }
   @media (max-width: 37.5em) {
     .content pre {
       margin-top: 20px;

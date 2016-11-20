@@ -408,6 +408,10 @@ nav{
         
     }
     
+    pre {
+        color: white;
+    }
+
     @include breakpoint(mobileonly){
          pre {
             margin-top: 20px;
