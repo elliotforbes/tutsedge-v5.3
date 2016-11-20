@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>@yield('title') | TutorialEdge.net</title>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -11,21 +9,13 @@
 		<link rel="author" href="https://plus.google.com/b/115194233692529836662">
 		<meta property="og:site_name" content="TutorialEdge.net" />
  
-        <!--<link rel="stylesheet" href="{{ asset('/css/material-icons-cdn.css') }}">-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-
-        <script>hljs.initHighlightingOnLoad();</script>
-
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=41">
-  
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="https://use.fontawesome.com/9b263d09bd.js"></script>
-     
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
+
         @yield('meta')
         
          <script>
@@ -119,7 +109,10 @@
         </footer>
         
         <!--Import jQuery before materialize.js-->
-        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://use.fontawesome.com/9b263d09bd.js"></script>
         
         <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
