@@ -27,7 +27,7 @@ Search the Site
                 <div id="search">
                     <h2>Results For: @{{ query }}</h2>
                 
-                    <div ng-if="query != ''" ng-repeat="lesson in lessons | filter:query" class="result">
+                    <div ng-repeat="lesson in lessons | filter:query" class="result">
                         
                         <div class="lesson col s12 m6 l4">
                             <figure class="snip1253">
