@@ -17,7 +17,7 @@
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        <script src="{{ asset('/js/highlight.pack.js') }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
         @yield('meta')
