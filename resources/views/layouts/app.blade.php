@@ -10,14 +10,14 @@
 		<meta property="og:site_name" content="TutorialEdge.net" />
  
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=41">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="{{ asset('/js/highlight.pack.js') }}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
 
         @yield('meta')
