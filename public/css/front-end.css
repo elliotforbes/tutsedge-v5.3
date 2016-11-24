@@ -767,4 +767,10 @@ footer.page-footer {
   background: #f8f8f8 url(../uploads/github.png) no-repeat 20px 50%;
   font-weight: bold; }
 
+.note {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
+  font-weight: bold; }
+
 /*# sourceMappingURL=front-end.css.map */
