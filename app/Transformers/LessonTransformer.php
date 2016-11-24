@@ -10,7 +10,8 @@ class LessonTransformer extends Transformer {
             'author' => $lesson['author'],
             'slug' => $lesson['slug'],
             'active' => $lesson['isLive'],
-            'views' => $lesson['views']
+            'views' => $lesson['views'],
+            'image_path' => $lesson['image_path'],
         ];
     }
     

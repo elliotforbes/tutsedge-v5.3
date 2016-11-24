@@ -26,23 +26,24 @@ Search the Site
             <div class="course-container row">
                 <div id="search">
                     <h2>Results For: @{{ query }}</h2>
-                
-                    <div ng-repeat="lesson in lessons | filter:query" class="result">
-                        <div class="col l4 m4 s12 course-container">
-                            <div class="course-box">
-                                <div class="course-image">
-                                    <img src="{{ asset('/uploads/') }}/@{{ lesson.image_path }}" alt="@{{ lesson.description }}">
-                                </div>
-                                <div class="course-content">
-                                <h5 class="course-title">@{{ lesson.title }}</h5>
-                                <p>@{{ lesson.description }}</p>
-                                </div>
-                                <div class="course-action">
-                                <a href="{{ url('/') }}/@{{ lesson.slug }}">Read More</a>
+                    <div class="row flexbox-courses">
+                        <div ng-repeat="lesson in lessons | filter:query" class="result">
+                            <div class="col l4 m4 s12 course-container">
+                                <div class="course-box">
+                                    <div class="course-image">
+                                        <img src="/uploads/@{{ lesson.image_path }}">
+                                    </div>
+                                    <div class="course-content">
+                                    <h5 class="course-title">@{{ lesson.title }}</h5>
+                                    <p>@{{ lesson.description }}</p>
+                                    </div>
+                                    <div class="course-action">
+                                    <a href="{{ url('/') }}/@{{ lesson.slug }}">Read More</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- .result -->
+                        </div><!-- .result -->
+                    </div>
                 </div><!-- .search -->
             </div><!-- .course-container .row -->
             
