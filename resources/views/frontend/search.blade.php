@@ -30,7 +30,7 @@ Search the Site
                         <div ng-repeat="lesson in lessons | filter:query" class="col l4 m4 s12 course-container">
                             <div class="course-box">
                                 <div class="course-image">
-                                    <img src="{{ url('/') }}/uploads/@{{ lesson.image_path }}">
+                                    <img src="{{ url('/uploads/') }}/@{{ lesson.image_path }}">
                                 </div>
                                 <div class="course-content">
                                 <h5 class="course-title">@{{ lesson.title }}</h5>
