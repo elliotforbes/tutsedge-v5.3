@@ -39,10 +39,6 @@
     </head>
     <body>
         
-         <!--Dropdown Structure 
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">THIS NEEDS TO BE ADDED</a></li>
-        </ul>-->
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
@@ -52,10 +48,8 @@
                     <!--<li><a href="{{ url('/books') }}">Book Store</a></li>-->
                     <li><a href="{{ url('/search') }}">Search</a></li>
                     <li><a href="{{ url('/courses') }}">Courses</a></li>
-                    <li><a href="{{ url('/books') }}">Books</a></li>
                     <li><a href="{{ url('/blog') }}">Blog</a></li>
                     <li><a href="{{ url('/tutorials') }}">Tutorials</a></li>
-                    <!--<li><a class="dropdown-button" href="{{ url('/courses') }}" data-activates="dropdown1">Courses<i class="material-icons right">arrow_drop_down</i></a></li>-->
                     @if (Auth::guest())
                     <li><a class="github-signin" href="{{ url('/auth/github') }}">Register/Sign-In With Github</a></li>
                     @else
@@ -99,7 +93,6 @@
                   <li><a class="text-lighten-3" href="{{ url('/courses') }}">Courses</a></li>
                   <li><a class="text-lighten-3" href="{{ url('/blog') }}">Blog</a></li>
                   <li><a class="text-lighten-3" href="{{ url('/about') }}">About</a></li>
-                  <!--<li><a class="text-lighten-3" href="{{ url('/advertise') }}">Advertise</a></li>-->
                 </ul>
               </div>
             </div>
@@ -113,11 +106,8 @@
         
         <!--Import jQuery before materialize.js-->
         <script src="https://use.fontawesome.com/9b263d09bd.js"></script>
-        
         <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>
-
-        
     </body>    
 </html>

@@ -97,22 +97,6 @@
         <div class="sidebar col s12 m12 l3"><!-- .sidebar -->
             
            <div class="sidebar">
-                <!--<div class="post-info row">
-                    <div class="post-views col l6">
-                        <p><span>2,345</span><br/>Views</p>
-                    </div>
-
-                    <div class="post-comments col l6">  
-                        <p><span><a href="#comments">{{ count($lesson->comments) }}</a></span><br/>Comments</p>
-                    </div>
-                    <div class="post-author col l12">
-                        <p><span>Elliot Forbes</span><br/>Author</p>
-                    </div>
-                    <div class="post-date col l12">
-                        <p><span>{{ date("d M, Y",strtotime($lesson->created_at)) }}</span><br/>Date Posted</p>
-                    </div>
-                </div>-->
-
                 <div class="related-posts">
                     <h2>Related Posts</h2>
                     @foreach ($articles as $article)
