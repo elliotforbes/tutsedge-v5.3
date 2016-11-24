@@ -8,7 +8,11 @@
         <meta name="google-site-verification" content="o0UedRQqZULbVZPe6SPx1VD1YxJd6WL-2-15-XHWS1g" />
 		<link rel="author" href="https://plus.google.com/b/115194233692529836662">
 		<meta property="og:site_name" content="TutorialEdge.net" />
- 
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
         @yield('meta')
         
          <script async>
@@ -103,10 +107,6 @@
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=42">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
-
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
         
         <!--Import jQuery before materialize.js-->
         <script async src="https://use.fontawesome.com/9b263d09bd.js"></script>
