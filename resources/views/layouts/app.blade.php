@@ -16,8 +16,8 @@
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=41">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
+        <script async type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script async src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         @yield('meta')
         
@@ -105,9 +105,9 @@
         </footer>
         
         <!--Import jQuery before materialize.js-->
-        <script src="https://use.fontawesome.com/9b263d09bd.js"></script>
-        <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>
+        <script async src="https://use.fontawesome.com/9b263d09bd.js"></script>
+        <script async type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
+        <script async type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
+        <script async type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>
     </body>    
 </html>
