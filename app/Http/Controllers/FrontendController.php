@@ -95,8 +95,8 @@ class FrontendController extends Controller
         else 
         {
             Log::info("User is not logged in, access denied");
-            // return redirect('/');
-            return view('admin.index');
+            return redirect('/');
+            // return view('admin.index');
         }
     }
 
@@ -246,7 +246,6 @@ class FrontendController extends Controller
                $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
            }
 
-           Log::info($sitemap->render('xml'));
            return $sitemap->render('xml');
        }
        

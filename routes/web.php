@@ -30,6 +30,7 @@ Route::get('/dashboard', 'FrontendController@dashboard');
 
 Route::group(['middleware' => 'auth'], function() {
   Route::resource('articles', 'Admin\LessonController');
+  Route::resource('courses', 'Admin\CourseController');
 });
 
 /*

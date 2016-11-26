@@ -26,10 +26,10 @@ class CourseAPIController extends Controller
         ), 200);
     } 
 
-    public function show($id) 
+    public function show($slug) 
     {
-        Log::info("API Request made for course with id: " . $id);
-        $course = Course::find($id)->first();
+        Log::info("API Request made for course with id: " . $slug);
+        $course = Course::whereSlug($slug)->get()->first();
 
         return response(array(
             'error' => false,

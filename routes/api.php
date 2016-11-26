@@ -33,7 +33,9 @@ Route::get('users/growth', 'API\UserAPIController@growthStats');
  * Course Routes
  */
 Route::get('courses', 'API\CourseAPIController@index');
-Route::get('course/{id}', 'API\CourseAPIController@show');
+Route::get('course/{slug}', 'API\CourseAPIController@show');
+Route::post('courses', 'API\CourseAPIController@search');
+Route::get('courses/all', 'API\CourseAPIController@all');
 
 /*
  * Tag Routes

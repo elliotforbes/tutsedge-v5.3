@@ -8,3 +8,4 @@ socialRoutes.$inject = ['$routeProvider'];
 
 angular.module('social')
   .config(socialRoutes);
+  

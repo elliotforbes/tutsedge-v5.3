@@ -2,7 +2,10 @@
 
   <div ng-if="$ctrl.error !== undefined" class="col-lg-12">
     <div class="alert alert-danger" role="alert">
-      <strong>Error!</strong> {{ $ctrl.error }}
+      <h2>Could Not Save Article:</h2>
+      <strong>Error:</strong> {{ $ctrl.error.statusText }}
+      <br/>
+      <strong>Status:</strong> {{ $ctrl.error.status }}
     </div>
   </div>
 

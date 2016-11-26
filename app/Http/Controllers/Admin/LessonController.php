@@ -39,12 +39,19 @@ class LessonController extends Controller
         $article->author = 'Elliot Forbes';
         $article->slug = $input['slug'];
         $article->image_path = $input['image'];
+
         $article->course_id = $input['course_id'];
 
-        // $tags = $input['tags'];
+        $tags = $input['tags'];
+        Log::info($tags);   
+        $article->tags()->detach();
 
-        // $article->tags = $tags;
-        // Log::info($tags);
+        foreach ($tags as $tag) {
+            Log::info($tag);
+            $currTag = Tag::find($tag['id']);
+            $article->tags()->save($currTag);
+        }
+
 
         $article->published_at = Carbon::now();
         $article->created_at = Carbon::now();
