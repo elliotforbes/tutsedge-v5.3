@@ -394,7 +394,14 @@ nav {
   margin-bottom: 40px;
   line-height: 29px; }
   .content .post-image img {
-    max-height: 360px; }
+    -webkit-box-shadow: 0px 3px 10px 1px #666666;
+    -moz-box-shadow: 0px 3px 10px 1px #666666;
+    box-shadow: 0px 3px 10px 1px #666666;
+    max-width: 650px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block; }
   .content .amazon-link {
     margin: 20px 0px;
     padding: 30px 20px 30px 100px;
@@ -428,9 +435,6 @@ nav {
   .content .chip {
     background-color: #00CCFF;
     color: white; }
-  .content img {
-    width: 100%;
-    height: auto; }
   @media (max-width: 37.5em) {
     .content {
       width: 90%; }

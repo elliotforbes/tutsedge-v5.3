@@ -1,7 +1,6 @@
 /*
 * All the colours for the site are defined here
 */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 .facebook {
   background-color: #3B5998;
@@ -198,10 +197,6 @@
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
 }
-.course-container .course-box {
-  margin-bottom: 40px;
-  min-height: 300px;
-}
 
 .gray-container {
   background-color: #F5F5F1;
@@ -230,39 +225,48 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #F5F8F9;
   color: #444;
-  font: 400 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 37.5em) {
   body p, body ul, body li, body a {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 @media (min-width: 37.5em) {
   body p, body ul, body li, body a {
-    font-size: 19px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 @media (min-width: 50em) {
   body p, body ul, body li, body a {
-    font-size: 19px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 @media (min-width: 64em) {
   body p, body ul, body li, body a {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
 nav {
   background-color: #188AE2;
+  height: 50px;
 }
 nav .button-collapse {
   padding-left: 10px;
 }
 nav .github-signin {
   background-color: #00CCFF;
+}
+nav ul a {
+  padding-top: 13px;
+  font-size: 16px;
+  height: 51px;
 }
 nav ul li {
   margin-top: -1px;
@@ -416,6 +420,44 @@ nav .brand-logo {
   min-height: 400px;
 }
 
+.flexbox-courses {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  /* Safari */
+  justify-content: center;
+  -webkit-justify-content: space-between;
+  /* Safari */
+  justify-content: space-between;
+  -webkit-align-content: space-around;
+  /* Safari */
+  align-content: space-around;
+  -webkit-flex-wrap: wrap;
+  /* Safari */
+  flex-wrap: wrap;
+}
+
+.course-box {
+  max-width: 380px;
+  height: 100%;
+  background-color: white;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-image img {
+  height: auto;
+  width: 100%;
+}
+
+.course-action {
+  height: 60px;
+  padding: 20px;
+  width: 100%;
+}
+
 .icon {
   width: 80px;
   height: 80px;
@@ -441,7 +483,9 @@ nav .brand-logo {
   line-height: 29px;
 }
 .content .post-image img {
-  max-height: 360px;
+  max-width: 650px !important;
+  height: auto !important;
+  margin: auto;
 }
 .content .amazon-link {
   margin: 20px 0px;
@@ -450,6 +494,18 @@ nav .brand-logo {
   background-size: 65px 60px;
   background-repeat: no-repeat;
   font-weight: bold;
+}
+.content .recommended-articles {
+  padding: 40px;
+  background-color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.content .recommended-articles h1 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
 .content .icon {
   width: 80px;
@@ -470,16 +526,12 @@ nav .brand-logo {
   background-color: #00CCFF;
   color: white;
 }
-.content img {
-  width: 100%;
-  height: auto;
-}
 @media (max-width: 37.5em) {
   .content {
     width: 90%;
   }
   .content p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 37.5em) {
@@ -530,13 +582,16 @@ nav .brand-logo {
   margin: 0;
   padding: 0;
 }
+.content pre {
+  color: white;
+}
 @media (max-width: 37.5em) {
   .content pre {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: -40px;
     margin-right: -40px;
-    padding: 0px;
+    padding: 5px;
     background-color: #272822;
   }
 }
@@ -904,5 +959,12 @@ footer.page-footer .footer-copyright {
   margin: 20px 0px;
   padding: 30px 20px 30px 100px;
   background: #f8f8f8 url(../uploads/github.png) no-repeat 20px 50%;
+  font-weight: bold;
+}
+
+.note {
+  margin: 20px 0px;
+  padding: 30px 20px 30px 100px;
+  background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
   font-weight: bold;
 }
