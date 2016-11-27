@@ -393,7 +393,12 @@ nav {
   margin-top: 40px;
   margin-bottom: 40px;
   line-height: 29px; }
-  .content img {
+  .content .header-image img {
+    width: 100%;
+    height: auto; }
+  .content .post-image img {
+    max-width: 360px; }
+  .content .post-content img {
     -webkit-box-shadow: 0px 3px 10px 1px #666666;
     -moz-box-shadow: 0px 3px 10px 1px #666666;
     box-shadow: 0px 3px 10px 1px #666666;
@@ -402,8 +407,6 @@ nav {
     margin: auto;
     margin-bottom: 20px;
     display: block; }
-  .content .post-image img {
-    max-width: 360px; }
   .content .amazon-link {
     margin: 20px 0px;
     padding: 30px 20px 30px 100px;

@@ -291,7 +291,18 @@ nav{
     margin-bottom: 40px;
     line-height:29px;
 
-    img {
+    .header-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-image{
+        img {
+            max-width: 360px;
+        }
+    }
+
+    .post-content img {
         -webkit-box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
         -moz-box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
         box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
@@ -300,12 +311,6 @@ nav{
         margin: auto;
         margin-bottom: 20px;
         display:block;
-    }
-
-    .post-image{
-        img {
-            max-width: 360px;
-        }
     }
 
     .amazon-link{

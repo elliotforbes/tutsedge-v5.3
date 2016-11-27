@@ -14,12 +14,10 @@
     <div class="row">
 
         <div class="col s12 m12 l9">
-            @if($lesson->image_path != 'default.png')
-            <div class="post-image">
+            <div class="header-image">
                 <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="">
             </div>            
-            @endif
-            <div class="post-body">
+            <div class="post-body post-content">
 
                 <div class="post-title">
                     <h1>{!! $lesson->title !!}</h1>
