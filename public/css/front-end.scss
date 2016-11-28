@@ -291,12 +291,28 @@ nav{
     margin-bottom: 40px;
     line-height:29px;
 
+    .header-image img {
+        width: 100%;
+        height: auto;
+    }
+
     .post-image{
         img {
-            max-height: 360px;
+            max-width: 360px;
         }
     }
-    
+
+    .post-content img {
+        -webkit-box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
+        -moz-box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
+        box-shadow: 0px 3px 10px 1px rgba(102,102,102,1);
+        max-width: 650px;
+        height: auto;
+        margin: auto;
+        margin-bottom: 20px;
+        display:block;
+    }
+
     .amazon-link{
         margin: 20px 0px;
         padding: 30px 20px 30px 100px;
@@ -341,12 +357,7 @@ nav{
         background-color: $light-blue;
         color: white;
     }
-    
-    img{
-        width: 100%;
-        height: auto;
-    }
-    
+
     @include breakpoint(mobileonly){
         width: 90%;
         p{
@@ -511,6 +522,7 @@ nav{
                 margin-left: 40px;
             }
         }
+
         
         .recommended-articles{
             
