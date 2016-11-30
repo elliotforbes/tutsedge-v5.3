@@ -32,33 +32,36 @@ class LessonController extends Controller
         $input = Request::all();
         Log::info($input);
         $article = new Lesson();
+        if(Auth::check())
+        {   
+            if(Auth::user()->github_id == 3332224){
+                $article->title = $input['title'];
+                $article->body = $input['body'];
+                $article->description = $input['description'];
+                $article->author = 'Elliot Forbes';
+                $article->slug = $input['slug'];
+                $article->image_path = $input['image'];
 
-        $article->title = $input['title'];
-        $article->body = $input['body'];
-        $article->description = $input['description'];
-        $article->author = 'Elliot Forbes';
-        $article->slug = $input['slug'];
-        $article->image_path = $input['image'];
+                $article->course_id = $input['course_id'];
 
-        $article->course_id = $input['course_id'];
+                $tags = $input['tags'];
+                Log::info($tags);   
+                $article->tags()->detach();
 
-        $tags = $input['tags'];
-        Log::info($tags);   
-        $article->tags()->detach();
+                foreach ($tags as $tag) {
+                    Log::info($tag);
+                    $currTag = Tag::find($tag['id']);
+                    $article->tags()->save($currTag);
+                }
 
-        foreach ($tags as $tag) {
-            Log::info($tag);
-            $currTag = Tag::find($tag['id']);
-            $article->tags()->save($currTag);
+
+                $article->published_at = Carbon::now();
+                $article->created_at = Carbon::now();
+                $article->updated_at = Carbon::now();
+
+                $article->save();
+            }
         }
-
-
-        $article->published_at = Carbon::now();
-        $article->created_at = Carbon::now();
-        $article->updated_at = Carbon::now();
-
-        $article->save();
-
         Log::info("Store method hit");
 
         return response(array(
@@ -74,27 +77,31 @@ class LessonController extends Controller
         $input = Request::all();
         $article = Lesson::whereSlug($slug)->get()->first();
 
-        $article->title = $input['title'];
-        $article->body = $input['body'];
-        $article->description = $input['description'];
-        $article->slug = $input['slug'];
-        $article->image_path = $input['image_path'];
-        $article->course_id = $input['course_id'];
+        if(Auth::check())
+        {   
+            if(Auth::user()->github_id == 3332224){
+                $article->title = $input['title'];
+                $article->body = $input['body'];
+                $article->description = $input['description'];
+                $article->slug = $input['slug'];
+                $article->image_path = $input['image_path'];
+                $article->course_id = $input['course_id'];
 
-        $article->updated_at = Carbon::now();
+                $article->updated_at = Carbon::now();
 
-        $tags = $input['tags'];
-        Log::info($tags);   
-        $article->tags()->detach();
+                $tags = $input['tags'];
+                Log::info($tags);   
+                $article->tags()->detach();
 
-        foreach ($tags as $tag) {
-            Log::info($tag);
-            $currTag = Tag::find($tag['id']);
-            $article->tags()->save($currTag);
+                foreach ($tags as $tag) {
+                    Log::info($tag);
+                    $currTag = Tag::find($tag['id']);
+                    $article->tags()->save($currTag);
+                }
+                
+                $article->save();
+            }
         }
-        
-        $article->save();
-
         return response(array(
             'error' => false
         ), 200);

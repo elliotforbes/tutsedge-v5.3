@@ -39,7 +39,7 @@ class FrontendController extends Controller
     public function show(Request $request, $slug)
     {
         Log::info("Retrieving article for slug: " . $slug);
-        
+
         $lesson = Lesson::whereSlug($slug)->get()->first();
         
         if(count($lesson) < 1){
