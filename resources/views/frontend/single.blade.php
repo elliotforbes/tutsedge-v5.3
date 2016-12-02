@@ -13,7 +13,7 @@
     <div class="banner-cont">
         <h1>{{ $lesson->title }}</h1>
         <h3>{{ $lesson->description }}</h3>
-        <p class="post-info">{{ $lesson->author }} | {{ date("d M, Y",strtotime($course->created_at)) }} | <a href="#comments">Comments</a></p>
+        <p class="post-info">{{ $lesson->author }} | {{ date("d M, Y",strtotime($lesson->created_at)) }} | <a href="#comments">Comments</a></p>
     </div>
 </div>
 @endsection
