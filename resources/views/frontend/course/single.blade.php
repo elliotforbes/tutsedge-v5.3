@@ -15,7 +15,7 @@
         <h3>Register to receive the latest news and updates on all your favorite frameworks</h3>
         <div class="row">
             <div class="col offset-l5 l2"></div>
-            <button class="register-btn">Register with Github Now</button>
+            <a href="{{ url('/auth/github') }}"><button class="register-btn">Register with Github Now</button></a>
         </div>
     </div>
 </div>
