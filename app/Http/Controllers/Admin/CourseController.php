@@ -46,6 +46,7 @@ class CourseController extends Controller
         $course->description = $input['description'];
         $course->author = 'Elliot Forbes';
 
+        $course->isLive = '1';
         $course->save();        
 
         return response(array(
