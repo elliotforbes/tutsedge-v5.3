@@ -11,6 +11,7 @@ use App\Course;
 use App\Tag;
 use Log;
 use Carbon\Carbon;
+use Auth;
 
 class CourseController extends Controller
 {

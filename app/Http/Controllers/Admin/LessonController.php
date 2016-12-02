@@ -11,6 +11,7 @@ use App\Lesson;
 use App\Tag;
 use Log;
 use Carbon\Carbon;
+use Auth;
 
 class LessonController extends Controller
 {
@@ -86,6 +87,7 @@ class LessonController extends Controller
                 $article->slug = $input['slug'];
                 $article->image_path = $input['image_path'];
                 $article->course_id = $input['course_id'];
+
 
                 $article->updated_at = Carbon::now();
 
