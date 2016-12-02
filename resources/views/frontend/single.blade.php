@@ -41,30 +41,6 @@
 
             </div><!-- .post-body -->
 
-            <div class="recommended-articles">
-                <div class="row">
-                    <h1>Recommended Articles</h1>
-                    @foreach($articles as $article)
-                    <div class="col l4 m4 s12">
-                        <div class="post">
-                            <div class="post-image">
-                                <img src="{{ asset('/uploads/') }}/{{ $article->image_path }}" alt="{{ $article->description }}">
-                            </div>
-                            <div class="post-link">
-                                <a href="{{ url('/') }}/{{ $article->slug }}"><h3>{{ $article->title }}</h3></a>
-                                <p>{{ $article->description }}</p>
-                                <div class="tags">
-                                    @foreach($article->tags as $tag)
-                                    <a href="{{ url('/') }}/tag/{{ $tag->name }}">{{ $tag->name }}</a>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-
             <div id="comments" class="comment-container">
                 <div class="comments">
                 <div id="disqus_thread"></div>
