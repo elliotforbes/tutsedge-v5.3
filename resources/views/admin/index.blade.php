@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/admin-bundle.css') }}">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+  <script src="{{ asset('/js/angular.min.js') }}"></script>
+  <script src="{{ asset('/js/angular-route.min.js') }}"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
   <script async src="{{ asset('/js/angular-charts.js') }}?v=1"></script>
