@@ -13,9 +13,10 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
-        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=46">
+        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=47">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
 
+        <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
@@ -41,19 +42,54 @@
     <body>
         
         
-        <div class="navbar-fixed">
-            <nav>
+        <div class="navbar">
+              <nav class="nav-extended">
                 <div class="nav-wrapper">
                 <a href="{{ url('/') }}" class="brand-logo">TutorialEdge.net</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <!--<li><a href="{{ url('/books') }}">Book Store</a></li>-->
+                    <li><a href="{{ url('/search') }}">Search</a></li>
+                    <li><a href="{{ url('/blog') }}">Blog</a></li>
+                    <li><a href="{{ url('/about') }}">About</a></li>
+                     @if (Auth::guest())
+                    <li><a href="{{ url('/auth/github') }}">Register</a></li>
+                    @else
+                    <li><a href="{{ url('/profile') }}">Profile</a></li>
+                    @endif
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{ url('/search') }}">Search</a></li>
+                    <li><a href="{{ url('/blog') }}">Blog</a></li>
+                    <li><a href="{{ url('/about') }}">About</a></li>
+                    @if (Auth::guest())
+                    <li><a href="{{ url('/auth/github') }}">Register</a></li>
+                    @else
+                    <li><a href="{{ url('/profile') }}">Profile</a></li>
+                    @endif
+                </ul>
+
+                <ul class="tabs">
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/javascript"><img src="{{ asset('/uploads/js-logo.jpg') }}" alt="Javascript Tutorials"> Javascript</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-js-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="AngularJS"> AngularJS</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/golang"><img src="{{ asset('/uploads/go-logo.png') }}" alt="golang tutorials"> Golang</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/laravel-5"><img src="{{ asset('/uploads/laravel-logo.png') }}" alt="laravel 5.3 tutorials"> Laravel</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/python"><img src="{{ asset('/uploads/python-logo.png') }}" alt="Python Tutorials"> Python</a></li>
+                </ul>
+                </div>
+            </nav>
+
+            <!--<nav>
+                <div class="nav-wrapper">
+                <a href="{{ url('/') }}" class="brand-logo">TutorialEdge.net</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ url('/books') }}">Book Store</a></li>
                     <li><a href="{{ url('/search') }}">Search</a></li>
                     <li><a href="{{ url('/courses') }}">Courses</a></li>
                     <li><a href="{{ url('/blog') }}">Blog</a></li>
                     <li><a href="{{ url('/tutorials') }}">Tutorials</a></li>
                     @if (Auth::guest())
-                    <li><a class="github-signin" href="{{ url('/auth/github') }}">Register/Sign-In With Github</a></li>
+                    <li><a class="github-signin" href="{{ url('/auth/github') }}">Register</a></li>
                     @else
                     <li><a class="github-signin" href="{{ url('/profile') }}">Profile</a></li>
                     @endif
@@ -72,7 +108,7 @@
                     @endif
                 </ul>
                 </div>
-            </nav>
+            </nav>-->
         </div>
         
         @yield('banner')
@@ -110,7 +146,6 @@
         <!--Import jQuery before materialize.js-->
         <script async src="https://use.fontawesome.com/9b263d09bd.js"></script>
         
-        <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>
 

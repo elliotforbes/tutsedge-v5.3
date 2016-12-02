@@ -2,26 +2,6 @@
 @import "colours";
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
  
-.banner{
-    background-color: $light-blue;
-    margin-top: -40px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    color: white;
-    .banner-cont{
-        margin: auto;
-        width: 80%;
-        text-align: center;
-        .element{
-            font-weight: 800;
-        }    
-        
-        h3{
-            font-size: 32px;
-        }
-    }
-    
-}
 
 .homepage-cont{
     

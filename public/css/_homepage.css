@@ -14,21 +14,6 @@
 .google-plus {
   background-color: #DB4437; }
 
-.banner {
-  background-color: #00CCFF;
-  margin-top: -40px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  color: white; }
-  .banner .banner-cont {
-    margin: auto;
-    width: 80%;
-    text-align: center; }
-    .banner .banner-cont .element {
-      font-weight: 800; }
-    .banner .banner-cont h3 {
-      font-size: 32px; }
-
 .homepage-cont {
   min-height: 600px; }
   @media (max-width: 37.5em) {

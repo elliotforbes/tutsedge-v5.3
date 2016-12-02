@@ -40,8 +40,12 @@ body{
 
 
 nav{
-    background-color: #188AE2;
-    height: 50px;
+
+    margin-bottom: 20px;
+
+    .nav-wrapper {
+        background-color: #1D3B5A;
+    }
 
     .button-collapse{
         padding-left: 10px;
@@ -49,20 +53,13 @@ nav{
     
     .github-signin{
         background-color: $light-blue;
+        border-radius: 5px;
     }
     
     ul a {
         padding-top: 13px;
         font-size: 16px;
         height: 51px;
-    }
-
-    ul li{
-        margin-top: -1px;
-    }
-    
-    ul li:hover{
-        background-color: $light-blue;
     }
     
     .brand-logo{
@@ -75,9 +72,92 @@ nav{
         font-weight: 300;
     }
     
+    .tabs {
+
+        .tab {
+            background-color: #3A5E83;
+
+            img {
+                width: 15px;
+                height: auto;
+            }
+
+            a.active{
+                border-bottom: 2px solid #1EC4D6 !important;
+            }
+
+            a {
+                color: white;
+            }
+
+            a:hover{
+                color: #4C7198;
+                color: white;
+            }
+        } 
+
+    }
+
 }
 
+.banner{
+    margin-top: -40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: url(../uploads/blueprint.png) top center #4C7198;
 
+    .banner-cont{
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        .element{
+            font-weight: 800;
+        }    
+
+        h1 {
+            margin-bottom: 23px;
+            font-family: Circular, sans-serif;
+            color: #fff;
+            font-weight: 400;
+            text-align: center;
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        h3{
+            font-size: 20px;
+            color: #97F1F1;
+        }
+
+        .post-info {
+            font-size: 18px;
+            color: #C4CDCE;
+            a{
+                color: #C4CDCE;
+            }
+        }
+
+        button.register-btn {
+            background-color: #1EC4D6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            height: 49px;
+            padding-top: 11px;
+            transition: all 100ms ease-in-out;
+            font-family: Circular, sans-serif;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    }
+    
+}
 
 .author-info{
     background-color: #ffffff;
@@ -287,7 +367,7 @@ nav{
 .content{
     min-height: 100px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 40px;
     line-height:29px;
 

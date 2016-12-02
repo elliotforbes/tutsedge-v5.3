@@ -8,24 +8,23 @@
 <meta name="description" content="{{ $lesson->description }}">
 @endsection
 
-@section('content')
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>{{ $lesson->title }}</h1>
+        <h3>{{ $lesson->description }}</h3>
+        <p class="post-info">{{ $lesson->author }} | {{ date("d M, Y",strtotime($course->created_at)) }} | <a href="#comments">Comments</a></p>
+    </div>
+</div>
+@endsection
+
+@section('content') 
 
 <div class="content">
     <div class="row">
 
         <div class="col s12 m12 l9">
-            <div class="header-image">
-                <img src="{{ asset('/uploads/') }}/{{ $lesson->image_path }}" alt="">
-            </div>            
             <div class="post-body post-content">
-
-                <div class="post-title">
-                    <h1>{!! $lesson->title !!}</h1>
-                </div>  
-                
-
-                <div class="clear"></div>
-
 
                 {!! Markdown::parse($lesson->body) !!}     
 

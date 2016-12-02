@@ -11,9 +11,13 @@ The Home of High Quality Programming Tutorials
 @section('banner')
 <div class="banner">
     <div class="banner-cont">
-        <h1>Learn: How to Program</h1>
-        <h3>Our Goal is to help new developers land their dream jobs<br/>
-by teaching you some of the latest and greatest programming frameworks.</h3>
+        <h1>Hundreds of free programming tutorials</h1>
+        <h3>Learn how to work with some of the most popular and cutting edge<br/>
+        programming languages out.</h3>
+        <div class="row">
+            <div class="col offset-l5 l2"></div>
+            <button class="register-btn">Register with Github Now</button>
+        </div>
     </div>
 </div>
 @endsection

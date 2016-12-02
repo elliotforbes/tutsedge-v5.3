@@ -8,13 +8,25 @@
 <meta name="description" content="{{ $course->description }}">
 @endsection
 
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>{{ $course->title }}</h1>
+        <h3>Register to receive the latest news and updates on all your favorite frameworks</h3>
+        <div class="row">
+            <div class="col offset-l5 l2"></div>
+            <button class="register-btn">Register with Github Now</button>
+        </div>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="content">
     <div class="row">
         
         <div class="col s12 m8 l9">
             <div class="post-body">  
-                <h1>{{ $course->title }}</h1>
                 {!! Markdown::parse($course->body) !!}
                 
                 @include('frontend.partials._ad')
