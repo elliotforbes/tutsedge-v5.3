@@ -205,18 +205,50 @@ nav {
     @media (max-width: 37.5em) {
       nav .brand-logo {
         margin-top: 10px; } }
-  nav .tabs .tab {
+  nav .tab-nav {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 48px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    white-space: nowrap;
     background-color: #3A5E83; }
-    nav .tabs .tab img {
-      width: 15px;
-      height: auto; }
-    nav .tabs .tab a.active {
-      border-bottom: 2px solid #1EC4D6 !important; }
-    nav .tabs .tab a {
-      color: white; }
-    nav .tabs .tab a:hover {
-      color: #4C7198;
-      color: white; }
+    nav .tab-nav .tab {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      display: block;
+      float: left;
+      text-align: center;
+      line-height: 48px;
+      height: 48px;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      letter-spacing: .8px;
+      width: 15%;
+      min-width: 80px; }
+      nav .tab-nav .tab img {
+        width: 15px;
+        height: auto; }
+      nav .tab-nav .tab a:hover {
+        color: #4C7198;
+        color: white; }
+      nav .tab-nav .tab a {
+        border-bottom: 2px solid #1EC4D6 !important;
+        color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: color .28s ease; }
 
 .banner {
   margin-top: -40px;

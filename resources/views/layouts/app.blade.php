@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
-        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=47">
+        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=48">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
 
         <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
@@ -68,7 +68,7 @@
                     @endif
                 </ul>
 
-                <ul class="tabs">
+                <ul class="tab-nav">
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/javascript"><img src="{{ asset('/uploads/js-logo.jpg') }}" alt="Javascript Tutorials"> Javascript</a></li>
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-js-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="AngularJS"> AngularJS</a></li>
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/golang"><img src="{{ asset('/uploads/go-logo.png') }}" alt="golang tutorials"> Golang</a></li>
@@ -77,38 +77,6 @@
                 </ul>
                 </div>
             </nav>
-
-            <!--<nav>
-                <div class="nav-wrapper">
-                <a href="{{ url('/') }}" class="brand-logo">TutorialEdge.net</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url('/books') }}">Book Store</a></li>
-                    <li><a href="{{ url('/search') }}">Search</a></li>
-                    <li><a href="{{ url('/courses') }}">Courses</a></li>
-                    <li><a href="{{ url('/blog') }}">Blog</a></li>
-                    <li><a href="{{ url('/tutorials') }}">Tutorials</a></li>
-                    @if (Auth::guest())
-                    <li><a class="github-signin" href="{{ url('/auth/github') }}">Register</a></li>
-                    @else
-                    <li><a class="github-signin" href="{{ url('/profile') }}">Profile</a></li>
-                    @endif
-                    
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ url('/search') }}">Search</a></li>
-                    <li><a href="{{ url('/tutorials') }}">Tutorials</a></li>
-                    <li><a href="{{ url('/blog') }}">Blog</a></li>
-                    <li><a href="{{ url('/books') }}">Books</a></li>
-                    <li><a href="{{ url('/courses') }}">Courses</a></li>
-                    @if (Auth::guest())
-                    <li><a href="{{ url('/auth/github') }}">Register With Github</a></li>
-                    @else
-                    <li><a href="{{ url('/profile') }}">Profile</a></li>
-                    @endif
-                </ul>
-                </div>
-            </nav>-->
         </div>
         
         @yield('banner')
