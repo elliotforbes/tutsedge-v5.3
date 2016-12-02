@@ -12,11 +12,13 @@ use App\Course;
 use App\User;
 use App\Post;
 use App\Tag;
+use App\Review;
 use URL;
 use Log;
 use Auth;
 use Cookie;
 use Response;
+
 
 
 class FrontendController extends Controller
@@ -229,7 +231,8 @@ class FrontendController extends Controller
 
            $sitemap->add(URL::to('/'), '2015-01-01T12:00:00+02:00'  , '1.0', 'daily');
            $lessons = Lesson::orderBy('created_at', 'desc')->get()->all();
-
+           $posts = Post::get()->all();
+           $reviews = Review::get()->all();
            $courses = Course::get()->all();
 
            foreach($courses as $course) 
@@ -244,6 +247,20 @@ class FrontendController extends Controller
                Log::info($lesson);
                $location = URL::to('/') . "/" . $lesson->slug;
                $sitemap->add($location , $lesson->created_at, '1.0', 'monthly');
+           }
+
+           foreach($posts as $blog) 
+           {
+               Log::info($blog);
+               $location = URL::to('/') . "/" . "blog/" . $blog->slug;
+               $sitemap->add($location, $blog->created_at, '1.0', 'monthly');
+           }
+
+           foreach($reviews as $review) 
+           {
+               Log::info($review);
+               $location = URL::to('/') . "/book" . "/" . $review->slug;
+               $sitemap->add($location, $review->created_at, '1.0', 'monthly'); 
            }
 
            return $sitemap->render('xml');
