@@ -8,3 +8,4 @@ var courseNew = {
 
 angular.module('courses')
   .component('courseNew', courseNew);
+  

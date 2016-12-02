@@ -10,6 +10,13 @@ function CourseEditController(CourseService, $log, $routeParams) {
       });
   }
 
+  ctrl.save = function(course) {
+    CourseService.updateCourse(course)
+      .then(function success(response){
+        window.location.reload();
+      });
+  }
+
 }
 
 CourseEditController.$inject = ['CourseService', '$log', '$routeParams'];
