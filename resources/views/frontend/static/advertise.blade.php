@@ -9,10 +9,11 @@ Advertise
 @endsection
 
 @section('banner')
-<div class="gray-container">
-    <div class="content">
-        <h1>Advertise on the Site:</h1>
-        
+<div class="banner">
+    <div class="banner-cont">
+        <h1>Advertise On TutorialEdge</h1>
+        <h3>Do you want to advertise your stuff on our site?<br/>
+        Email me: admin@tutorialedge.net</h3>
     </div>
 </div>
 @endsection

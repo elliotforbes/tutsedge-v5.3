@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="gray-container">
-    <div class="content">
-        <h1>Programming Book Reviews:</h1>
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>Programming Book Reviews</h1>
+        <h3>Register to receive the latest news and updates on all your favorite frameworks</h3>
+        <div class="row">
+            <div class="col offset-l5 l2"></div>
+            <a href="{{ url('/auth/github') }}"><button class="register-btn">Register with Github Now</button></a>
+        </div>
     </div>
 </div>
+@endsection
 
+@section('content')
 <div class="container">
     <div class="course-container row">
         @foreach($books as $book)

@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>{{ $tag->name }}</h1>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="course-container">
-        <h2>{{ $tag->name }}</h2>
         <div class="row flexbox-courses">
             @foreach($articles as $lesson)
                 <div class="col l4 m4 s12 course-container">

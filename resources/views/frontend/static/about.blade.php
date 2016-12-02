@@ -8,6 +8,14 @@ The Story
 <meta name="description" content="The Story">
 @endsection
 
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>About TutorialEdge</h1>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="content">
     <div class="post-body">

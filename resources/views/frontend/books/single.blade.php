@@ -8,14 +8,24 @@
 <meta name="description" content="{{ $book->description }}">
 @endsection
 
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>{{ $book->book_name }} Review</h1>
+        <div class="row">
+            <div class="col offset-l5 l2"></div>
+            <a href="{{ url('/auth/github') }}"><button class="register-btn">Register with Github Now</button></a>
+        </div>
+    </div>
+</div>
+@endsection
+
 @section('content')
 
 <div class="content">
     <div class="row">
         <div class="col s12 m8 l8">
             <div class="post-body">
-                 <h1>{{ $book->book_name }} Review</h1>
-
                 {!! $book->body !!}    
                 
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
