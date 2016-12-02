@@ -2,6 +2,8 @@
 @import "grid";
 @import "homepage";
 
+
+
 body{
     -webkit-font-smoothing: antialiased;
     background-color: #F5F8F9;
@@ -63,21 +65,18 @@ nav{
     }
     
     .brand-logo{
-        
+        font-style: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        weight: 800;
         @include breakpoint(mobileonly){
             margin-top: 10px;
         }
         
+        span {
+            color: #1EC4D6;
+        }
+
         margin-left: 20px;
-        font-weight: 300;
-    }
-    
-    .tabs {
-
-        .tab {
-            
-        } 
-
+        weight: 800;
     }
 
     .tab-nav {

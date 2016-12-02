@@ -9,11 +9,12 @@
 		<link rel="author" href="https://plus.google.com/b/115194233692529836662">
 		<meta property="og:site_name" content="TutorialEdge.net" />
         
+        <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
-        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=48">
+        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=49">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
@@ -41,7 +42,7 @@
         <div class="navbar">
               <nav class="nav-extended">
                 <div class="nav-wrapper">
-                <a href="{{ url('/') }}" class="brand-logo">TutorialEdge.net</a>
+                <a href="{{ url('/') }}" class="brand-logo"><span>Tutorial</span>Edge.net</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url('/search') }}">Search</a></li>

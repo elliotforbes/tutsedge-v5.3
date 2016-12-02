@@ -200,11 +200,15 @@ nav {
     font-size: 16px;
     height: 51px; }
   nav .brand-logo {
+    font-style: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    weight: 800;
     margin-left: 20px;
-    font-weight: 300; }
+    weight: 800; }
     @media (max-width: 37.5em) {
       nav .brand-logo {
         margin-top: 10px; } }
+    nav .brand-logo span {
+      color: #1EC4D6; }
   nav .tab-nav {
     display: flex;
     position: relative;
