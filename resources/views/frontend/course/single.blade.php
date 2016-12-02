@@ -80,7 +80,6 @@
               <div class="course-info">
                 <h2>Course Information:</h2>
                 <p><b>Author:</b> {{ $course->author }}</p>
-                <p><b>Date Published: </b> {{ date("d M, Y",strtotime($course->created_at)) }}</p>
             </div><!-- .course-info -->
 
             
