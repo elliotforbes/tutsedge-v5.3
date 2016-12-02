@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
-  <script src="{{ asset('/js/angular-charts.js') }}"></script>
+  <script async src="{{ asset('/js/angular-charts.js') }}"></script>
 
 </head>
 <body>
@@ -23,9 +23,9 @@
     <ng-view></ng-view>
   </div>
 
-  <script src="{{ asset('/js/admin-bundle.js') }}?v=260"></script>
+  <script async src="{{ asset('/js/admin-bundle.js') }}?v=260"></script>
   <!-- TODO: Remove this sorta hacky way of getting csrf token -->
-  <script>
+  <script aysnc>
     angular.module("root").constant("CSRF_TOKEN", '{{ csrf_token() }}');
   </script>
 </body>
