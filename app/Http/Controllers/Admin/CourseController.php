@@ -37,7 +37,7 @@ class CourseController extends Controller
           ), 200);
     }
 
-    public function update()
+    public function update($slug, Request $request)
     { 
         $input = Request::all();
         Log::info($input);
