@@ -1,4 +1,4 @@
-function CourseNewController(CourseService) {
+function CourseNewController(CourseService, $log) {
   var ctrl = this;
 
   ctrl.save = function(course) {
@@ -14,7 +14,7 @@ function CourseNewController(CourseService) {
 
 }
 
-CourseNewController.$inject = ['CourseService'];
+CourseNewController.$inject = ['CourseService', '$log'];
 
 angular.module('courses')
   .controller('CourseNewController', CourseNewController);

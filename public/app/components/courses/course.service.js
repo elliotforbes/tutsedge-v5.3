@@ -6,7 +6,7 @@ function CourseService($http, $log, CSRF_TOKEN) {
     console.log(course);
     return $http({
       method: 'POST',
-      url: 'course?v=' + Date.now(),
+      url: 'courses?v=' + Date.now(),
       data: course
     });
   }
@@ -29,7 +29,7 @@ function CourseService($http, $log, CSRF_TOKEN) {
   function updateCourse(course) {
     return $http({
       method: 'PATCH',
-      url: 'course/' + course.slug + "?v=" + Date.now(),
+      url: 'courses/' + course.slug + "?v=" + Date.now(),
       data: course
     });
   }
