@@ -14,6 +14,7 @@ function CourseEditController(CourseService, $log, $routeParams) {
     CourseService.updateCourse(course)
       .then(function success(response){
         window.location.reload();
+        $log.log("Successfully Saved")''
       });
   }
 
