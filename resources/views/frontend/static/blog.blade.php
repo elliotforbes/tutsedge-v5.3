@@ -32,7 +32,7 @@ The Blog
             <p>{{ $post->description }}</p>
             </div>
             <div class="course-action">
-            <a href="{{url('/') }}/{{ $post->slug }}">Read More</a>
+            <a href="{{url('/') }}/blog/{{ $post->slug }}">Read More</a>
             </div>
         </div>
     </div>
