@@ -10,5 +10,4 @@ angular.module('root', [
     'social',
     'tags',
     'email'
-    
 ]);
