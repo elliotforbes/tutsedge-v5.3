@@ -25,7 +25,7 @@
 
   <script async src="{{ asset('/js/admin-bundle.js') }}?v=266"></script>
   <!-- TODO: Remove this sorta hacky way of getting csrf token -->
-  <script aysnc>
+  <script>
     angular.module("root").constant("CSRF_TOKEN", '{{ csrf_token() }}');
   </script>
 </body>
