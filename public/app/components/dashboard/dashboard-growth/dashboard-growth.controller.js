@@ -11,7 +11,7 @@ function DashboardGrowthController(UserService, $log) {
 
 }
 
-DashboardGrowthController.$inject = ['UserService', '$log'];
+DashboardGrowthController.$inject = ['UserService',  '$log'];
 
 angular.module('dashboard')
   .controller('DashboardGrowthController', DashboardGrowthController);
