@@ -41,6 +41,7 @@ class PostController extends Controller
                 $article->description = $input['description'];
                 $article->author = 'Elliot Forbes';
                 $article->slug = $input['slug'];
+                $article->isLive = '1';
                 $article->published_at = Carbon::now();
                 $article->created_at = Carbon::now();
                 $article->updated_at = Carbon::now();
@@ -69,6 +70,7 @@ class PostController extends Controller
                 $article->title = $input['title'];
                 $article->body = $input['body'];
                 $article->description = $input['description'];
+                $article->isLive = '1';
                 $article->slug = $input['slug'];
                 $article->updated_at = Carbon::now();
                 $article->save();
