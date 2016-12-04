@@ -42,6 +42,21 @@ class UserAPIController extends Controller
     }
 
     /*
+     * Returns transformed list of all lessons
+     */
+    public function all() 
+    {
+        Log::info("API Request made for search");
+
+        $users = User::all();
+
+        return response()->json([
+            'error' => false,
+            'users' => $users->toArray(),
+        ], 200);
+    }
+
+    /*
      * count's user growth stats for last month
      */
     public function growthStats()

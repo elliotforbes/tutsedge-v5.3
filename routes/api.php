@@ -34,6 +34,7 @@ Route::get('posts/all', 'API\PostAPIController@all');
  * User Routes
  */
 Route::get('users', 'API\UserAPIController@index');
+Route::get('users/all', 'API\UserAPIController@all');
 Route::get('user/{id}', 'API\UserAPIController@show');
 Route::get('users/growth', 'API\UserAPIController@growthStats');
 
