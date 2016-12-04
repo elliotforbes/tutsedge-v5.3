@@ -29,8 +29,8 @@ function BlogService($http, $log){
       });
     }
 
-    function getPost(slug) {
-      return $http.get("api/posts/" + slug + "?v=" + Date.now());
+    function getPost(id) {
+      return $http.get("api/posts/" + id;
     }
 
     function getPosts(page) {

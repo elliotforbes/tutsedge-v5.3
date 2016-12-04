@@ -16,7 +16,6 @@ function BlogEditController(BlogService, $log, $routeParams) {
         window.location.reload();
       });
   }
-
 }
 
 BlogEditController.$inject = ['BlogService', '$log', '$routeParams'];
