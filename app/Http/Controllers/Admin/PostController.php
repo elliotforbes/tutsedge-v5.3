@@ -57,12 +57,12 @@ class PostController extends Controller
     }
     
     
-    public function update($slug, Request $request)
+    public function update($id, Request $request)
     {
         Log::info("Lesson update function hit");
 
         $input = Request::all();
-        $article = Post::whereSlug($slug)->get()->first();
+        $article = Post::find($id)->get()->first();
 
         if(Auth::check())
         {   

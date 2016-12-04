@@ -76,10 +76,10 @@ class PostAPIController extends Controller
     /* 
      * Returns one lesson based on slug
      */
-    public function show($slug) 
+    public function show($id) 
     {
-        Log::info("API Request made for post with slug: " . $slug);
-        $post = Post::whereSlug($slug)->get()->first();
+        Log::info("API Request made for post with slug: " . $id);
+        $post = Post::find($id)->get()->first();
 
         return response(array(
             'error' => false,

@@ -1,10 +1,10 @@
 function BlogEditController(BlogService, $log, $routeParams) {
   var ctrl = this;
   ctrl.article = {};
-  var slug = $routeParams.slug;
+  var id = $routeParams.id;
 
   this.$onInit = function() {
-    BlogService.getPost(slug)
+    BlogService.getPost(id)
       .then(function success(response){
         ctrl.post = response.data.post;
       });
