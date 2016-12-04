@@ -59,7 +59,7 @@ class PostController extends Controller
     
     public function update($id, Request $request)
     {
-        Log::info("Lesson update function hit");
+        Log::info("Lesson update function hit for ID: " . $id);
 
         $input = Request::all();
         $article = Post::find($id);

@@ -8,11 +8,11 @@ function BlogService($http, $log){
     function updatePost(post) {
       return $http({
         method : 'PATCH',
-        url: 'posts/' + post.slug + "?v=" + Date.now(),
+        url: 'posts/' + post.id + "?v=" + Date.now(),
         data : post
       });
     }
-
+    
     function newPost(post) {
       $log.log(post);
       return $http({
