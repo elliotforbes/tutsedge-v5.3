@@ -62,7 +62,7 @@ class PostController extends Controller
         Log::info("Lesson update function hit");
 
         $input = Request::all();
-        $article = Post::find($id)->get()->first();
+        $article = Post::find($id);
 
         if(Auth::check())
         {   
