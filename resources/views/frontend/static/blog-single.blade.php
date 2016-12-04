@@ -29,7 +29,7 @@
                 {{ $post->author }} 
                 | {{ date("d M, Y",strtotime($post->created_at)) }}
             </div>
-            {!! $post->body !!}            
+            {!! Markdown::parse($post->body) !!}            
         </div>
     </div>
 </div><!-- .container -->
