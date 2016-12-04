@@ -37,7 +37,7 @@ class AuthController extends Controller
         Log::info("Logging User In...");
         Auth::login($authUser, true);
         Log::info("Redirecting to the homepage");
-        return redirect('/');
+        return redirect('/profile');
 
     }
 
