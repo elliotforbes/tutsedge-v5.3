@@ -30,13 +30,12 @@ function BlogService($http, $log){
     }
 
     function getPost(id) {
-      return $http.get("api/posts/" + id;
+      return $http.get("api/posts/" + id);
     }
 
     function getPosts(page) {
       return $http.get("api/posts?page=" + page + "&v=" + Date.now());
     }
-
     var service = {
         deletePost : deletePost,
         updatePost : updatePost,
