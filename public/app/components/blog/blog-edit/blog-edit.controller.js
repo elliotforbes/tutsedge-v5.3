@@ -10,6 +10,13 @@ function BlogEditController(BlogService, $log, $routeParams) {
       });
   }
 
+  ctrl.save = function(post) {
+    BlogService.updatePost(post)
+      .then(function success(response){
+        window.location.reload();
+      });
+  }
+
 }
 
 BlogEditController.$inject = ['BlogService', '$log', '$routeParams'];

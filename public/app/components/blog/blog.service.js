@@ -1,4 +1,4 @@
-function BlogService($log){
+function BlogService($http, $log){
     var service = {};
 
     function deletePost(slug) {
@@ -17,7 +17,7 @@ function BlogService($log){
       $log.log(post);
       return $http({
         method: 'POST',
-        url: 'post',
+        url: 'posts',
         data: post
       });
     }
@@ -39,6 +39,7 @@ function BlogService($log){
 
     var service = {
         deletePost : deletePost,
+        updatePost : updatePost,
         newPost : newPost,
         search : search,
         getPost : getPost,
@@ -47,7 +48,7 @@ function BlogService($log){
 
     return service;
 }
-BlogService.$inject = ['$log'];
+BlogService.$inject = ['$http', '$log'];
 
-angular.module('Blog')
+angular.module('blog')
     .factory('BlogService', BlogService);

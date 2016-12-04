@@ -1,6 +1,6 @@
 var blogNew = {
-  template: './app/components/blog/blog-new/blog-new.html',
-  controller: blogNewController,
+  templateUrl: "./app/components/blog/blog-new/blog-new.html",
+  controller: BlogNewController,
   bindings: {
     post: '<'
   }

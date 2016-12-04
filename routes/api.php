@@ -23,6 +23,14 @@ Route::get('lesson/{slug}', 'API\LessonAPIController@show');
 Route::get('lessons/all', 'API\LessonAPIController@all');
 
 /*
+ * Blog Post Routes
+ */
+Route::get('posts', 'API\PostAPIController@index');
+Route::post('posts', 'API\PostAPIController@search');
+Route::get('posts/{slug}', 'API\PostAPIController@show');
+Route::get('posts/all', 'API\PostAPIController@all');
+
+/*
  * User Routes
  */
 Route::get('users', 'API\UserAPIController@index');

@@ -1,5 +1,5 @@
 var blogEdit = {
-  template: './app/components/blog/blog-edit/blog-edit.html',
+  templateUrl: "./app/components/blog/blog-edit/blog-edit.html",
   controller: BlogEditController,
   bindings: {
     post: '<'

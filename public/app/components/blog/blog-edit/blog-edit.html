@@ -1,0 +1,56 @@
+<div class="row" ng-init="$ctrl.init()">
+  <div class="col-lg-8">
+    <div class="component">
+      <div class="header">
+        <h2>Edit Post: {{ $ctrl.post.title }}</h2>
+      </div>
+      <div class="content">
+        <div class="form-group">
+          <label for="title">Post Title</label>
+          <input type="text" class="form-control" ng-model="$ctrl.post.title"/>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea cols="30" rows="5" class="form-control" ng-model="$ctrl.post.description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="body">Post Body</label>
+          <textarea name="" id="" cols="30" rows="60" class="form-control" ng-model="$ctrl.post.body"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="component">
+      <div class="header">
+        <h2>Options</h2>
+      </div>
+      <div class="content">
+        <div class="form-group">
+          <label for="slug">post Slug</label>
+          <input type="text" class="form-control" ng-model="$ctrl.post.slug" placeholder="your-post-slug">
+        </div>
+        <div class="form-group">
+          <label for="publishDate">Status</label>
+          <select class="form-control">
+            <option>Draft</option>
+            <option>In Review</option>
+            <option>Public</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Actions</label>
+          <div class="row">
+            <div class="col-lg-6">
+              <button class="btn btn-outline-primary btn-block">Preview</button>
+            </div>
+            <div class="col-lg-6">
+              <button class="btn btn-outline-primary btn-block" ng-click="$ctrl.save($ctrl.post)">Save New post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
