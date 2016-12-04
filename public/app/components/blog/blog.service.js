@@ -12,7 +12,7 @@ function BlogService($http, $log){
         data : post
       });
     }
-    
+
     function newPost(post) {
       $log.log(post);
       return $http({
@@ -30,8 +30,9 @@ function BlogService($http, $log){
     }
 
     function getPost(id) {
-      return $http.get("api/posts/" + id);
+      return $http.get("api/posts/" + id + "&v=" + Date.now());
     }
+  
 
     function getPosts(page) {
       return $http.get("api/posts?page=" + page + "&v=" + Date.now());
