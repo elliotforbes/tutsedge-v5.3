@@ -79,7 +79,7 @@ class PostAPIController extends Controller
     public function show($id) 
     {
         Log::info("API Request made for post with slug: " . $id);
-        $post = Post::find($id)->get()->first();
+        $post = Post::find($id);
 
         return response(array(
             'error' => false,
