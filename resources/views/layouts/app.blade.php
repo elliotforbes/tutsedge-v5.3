@@ -61,7 +61,7 @@
                                     <h3>Elliot Forbes<br/><small><div class="online-dot"></div> Online</small></h3>
                                 </div>
                                 <div class="col l6 m6 s12 logout">
-                                    <a href="/logout"><i class="ion ion-power"></i> LOGOUT</a>
+                                    <a href="{{ url('/logout') }}"><i class="ion ion-power"></i> LOGOUT</a>
                                 </div>
                             </div>
                             <h5>New Notifications <span>1</span></h5>
