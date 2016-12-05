@@ -190,6 +190,15 @@ li.profile {
   position: relative;
   display: inline-block; }
 
+.online-dot {
+  float: left;
+  margin-top: 8px;
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #35CF65;
+  border-radius: 4px; }
+
 .profile-content {
   display: none;
   position: absolute;
@@ -223,14 +232,6 @@ li.profile {
     .profile-content h3 small {
       font-size: 15px;
       font-weight: 400; }
-      .profile-content h3 small .online-dot {
-        float: left;
-        margin-top: 8px;
-        margin-right: 8px;
-        width: 8px;
-        height: 8px;
-        background-color: #35CF65;
-        border-radius: 4px; }
   .profile-content .logout a {
     margin-bottom: 20px;
     padding: 0;

@@ -44,6 +44,17 @@ li.profile {
     position: relative;
     display: inline-block;
 }
+
+.online-dot {
+    float: left;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #35CF65;
+    border-radius: 4px;
+}
+
 .profile-content {
     display: none;
     position: absolute;
@@ -80,16 +91,6 @@ li.profile {
         font-weight: 300;
 
         small {
-
-            .online-dot {
-                float: left;
-                margin-top: 8px;
-                margin-right: 8px;
-                width: 8px;
-                height: 8px;
-                background-color: #35CF65;
-                border-radius: 4px;
-            }
 
             font-size: 15px;
             font-weight: 400;

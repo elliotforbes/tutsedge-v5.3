@@ -11,14 +11,17 @@
         
         <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=53">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
+
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+        
         @yield('meta')
          <script async>
             (function (i, s, o, g, r, a, m) {
@@ -45,6 +48,7 @@
                 <a href="{{ url('/') }}" class="brand-logo"><span>Tutorial</span>Edge.net</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!--<li><a href="#"><div class="online-dot"></div> 15 Users Online</a></li>-->
                     <li><a href="{{ url('/search') }}">Search</a></li>
                     <li><a href="{{ url('/blog') }}">Blog</a></li>
                     <li><a href="{{ url('/about') }}">About</a></li>
@@ -131,15 +135,8 @@
             </div>
           </div>
         </footer>
-        
-        <!--Import jQuery before materialize.js-->
-        <script async src="https://use.fontawesome.com/9b263d09bd.js"></script>
-        
-
         <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
         <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>
-
-        
+        <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>  
     </body>    
 </html>
