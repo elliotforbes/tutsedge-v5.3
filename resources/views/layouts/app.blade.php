@@ -58,7 +58,7 @@
                         <div class="profile-content">
                             <div class="row border-bottom">
                                 <div class="col l6 m6 s12">
-                                    <h3>{{ $user->name }}<br/><small><div class="online-dot"></div> Online</small></h3>
+                                    <h3>Profile<br/><small><div class="online-dot"></div> Online</small></h3>
                                 </div>
                                 <div class="col l6 m6 s12 logout">
                                     <a href="{{ url('/logout') }}"><i class="ion ion-power"></i> LOGOUT</a>
