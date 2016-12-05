@@ -90,13 +90,6 @@
                     @endforeach
                 </div>
 
-                <div class="course-info"><!-- .course-info -->        
-                    <h5>Share This Post:</h5>
-                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                    <div class="addthis_sharing_toolbox"></div>
-                            
-                </div><!-- .course-info -->
-
                 <div class="left-sidebar-content">
                     <img src="https://avatars0.githubusercontent.com/u/3332224?v=3&s=466" alt="Elliot Forbes Web Developer">
                     <h2>Elliot Forbes</h2>
@@ -132,7 +125,5 @@
         
     </div>
 </div>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=emforce"></script>
 
 @endsection
