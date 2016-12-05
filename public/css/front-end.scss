@@ -40,6 +40,130 @@ body{
     
 }
 
+li.profile {
+    position: relative;
+    display: inline-block;
+}
+.profile-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: #363F51;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 200;
+    -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+    transition: height 2s;
+    .border-bottom {
+        border-bottom: 1px solid #293244;
+    }
+
+    h5 {
+        font-size: 17px;
+        font-weight: 800;
+        margin-left: 10px;
+        span {
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #ED7374;
+            border-radius: 5px;
+            padding: 3px;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+
+        small {
+
+            .online-dot {
+                float: left;
+                margin-top: 8px;
+                margin-right: 8px;
+                width: 8px;
+                height: 8px;
+                background-color: #35CF65;
+                border-radius: 4px;
+            }
+
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+
+    .logout a {
+        margin-bottom: 20px;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: right;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: -10px;
+        i {
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+            color: #49B1E5;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 200px;
+        overflow-y: scroll;
+        li a{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            height: auto;
+            border-bottom: 1px solid #293244;
+            .date {
+                margin: 0;
+                padding: 0;
+                color: #7D8893;
+                font-size: 12px;
+            }
+
+            .header {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+            }
+
+            .message-icon {
+                background-color: #293343;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                float: left;
+                margin-right: 20px;
+                i {
+                    padding: 6px;
+                    margin-left: 2px;
+                    color: #586272;
+                    line-height: 0px;
+                }
+            }
+
+        }
+    }
+
+}   
+
+li.profile:hover .profile-content {
+    display: block;
+    opacity: 1;
+}
 
 nav{
 

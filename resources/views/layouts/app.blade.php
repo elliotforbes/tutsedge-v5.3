@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
         <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
-        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=50">
+        <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=51">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
@@ -48,10 +48,41 @@
                     <li><a href="{{ url('/search') }}">Search</a></li>
                     <li><a href="{{ url('/blog') }}">Blog</a></li>
                     <li><a href="{{ url('/about') }}">About</a></li>
-                     @if (Auth::guest())
-                    <li><a href="{{ url('/auth/github') }}">Register</a></li>
+                    @if (Auth::guest())
+                    <li>
+                        <a href="{{ url('/auth/github') }}">Register</a>
+                    </li>
                     @else
-                    <li><a href="{{ url('/profile') }}">Profile</a></li>
+                    <li class="profile">
+                        <a href="{{ url('/auth/github') }}">Register</a>
+                        <div class="profile-content">
+                            <div class="row border-bottom">
+                                <div class="col l6 m6 s12">
+                                    <h3>Elliot Forbes<br/><small><div class="online-dot"></div> Online</small></h3>
+                                </div>
+                                <div class="col l6 m6 s12 logout">
+                                    <a href="/profile"><i class="ion ion-power"></i> LOGOUT</a>
+                                </div>
+                            </div>
+                            <h5>New Notifications <span>1</span></h5>
+                            <ul>
+                                <li>
+                                    <a href="/profile">
+                                        <div class="message-icon"><i class="ion ion-ios-email"></i></div>
+                                        <span class="header">New Notification Title</span>
+                                        <span class="date">10.14.2016 @ 2:30pm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/profile">
+                                        <div class="message-icon"><i class="ion ion-ios-email"></i></div>
+                                        <span class="header">New Notification Title</span>
+                                        <span class="date">10.14.2016 @ 2:30pm</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     @endif
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
