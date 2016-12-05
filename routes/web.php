@@ -24,6 +24,7 @@ Route::get('/sitemap', 'FrontendController@sitemap');
 Route::get('/profile', 'FrontendController@profile');
 Route::get('/forum', 'FrontendController@forum');
 Route::get('/register', 'FrontendController@register');
+Route::get('/logout', 'FrontendController@logout');
 
 
 Route::get('/dashboard', 'FrontendController@dashboard');

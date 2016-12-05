@@ -103,6 +103,18 @@ class FrontendController extends Controller
     }
 
     /*
+     * Logout function which destroys user session
+     */
+    public function logout()
+    {
+        if(Auth::check()) 
+        {
+            Auth::logout();
+            return redirect('/');
+        }
+    }
+
+    /*
      * returns paginated results of all tutorials 
      */
     public function allTutorials(Request $request)

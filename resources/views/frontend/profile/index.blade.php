@@ -11,10 +11,13 @@
 @endsection
 
 @section('content')
-<div class="content">
-    <div class="container">
-        <div class="row">
-            <h2>This Page is currently under construction!</h2>
+<div class="container">
+    <div class="content">
+        <div class="post-body">
+            <h2>Notifications</h2>
+
+            <p>Welcome To TutorialEdge.net!</p>
+            <p>More Controls will be added to this page shortly. If you need to get in touch then please do at elliot@elliotforbes.co.uk</p>
         </div>
     </div>
 </div>
