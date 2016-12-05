@@ -45,7 +45,7 @@ li.profile {
     display: inline-block;
 }
 .profile-content {
-    display: none;
+    display: block;
     position: absolute;
     right: 0px;
     background-color: #363F51;
@@ -91,7 +91,7 @@ li.profile {
                 border-radius: 4px;
             }
 
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 400;
         }
     }
@@ -119,6 +119,10 @@ li.profile {
         padding: 0;
         height: 200px;
         overflow-y: scroll;
+        width: 100%;
+        li {
+            width: 100%;
+        }
         li a{
             display: block;
             width: 100%;

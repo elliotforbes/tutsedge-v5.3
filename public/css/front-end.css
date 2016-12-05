@@ -191,7 +191,7 @@ li.profile {
   display: inline-block; }
 
 .profile-content {
-  display: none;
+  display: block;
   position: absolute;
   right: 0px;
   background-color: #363F51;
@@ -221,7 +221,7 @@ li.profile {
     padding: 0;
     font-weight: 300; }
     .profile-content h3 small {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 400; }
       .profile-content h3 small .online-dot {
         float: left;
@@ -250,7 +250,10 @@ li.profile {
     margin: 0;
     padding: 0;
     height: 200px;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    width: 100%; }
+    .profile-content ul li {
+      width: 100%; }
     .profile-content ul li a {
       display: block;
       width: 100%;
