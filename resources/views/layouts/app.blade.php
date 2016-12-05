@@ -69,7 +69,7 @@
                                 <li>
                                     <a href="/profile">
                                         <div class="message-icon"><i class="ion ion-ios-email"></i></div>
-                                        <span class="header">Welcome To TutorialEdge.net!</span>
+                                        <span class="header">Welcome To TutorialEdge</span><br/>
                                         <span class="date">5th December, 2016 @ 6:30pm</span>
                                     </a>
                                 </li>
