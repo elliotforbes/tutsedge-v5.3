@@ -69,15 +69,8 @@
                                 <li>
                                     <a href="/profile">
                                         <div class="message-icon"><i class="ion ion-ios-email"></i></div>
-                                        <span class="header">New Notification Title</span>
-                                        <span class="date">10.14.2016 @ 2:30pm</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/profile">
-                                        <div class="message-icon"><i class="ion ion-ios-email"></i></div>
-                                        <span class="header">New Notification Title</span>
-                                        <span class="date">10.14.2016 @ 2:30pm</span>
+                                        <span class="header">Welcome To TutorialEdge.net!</span>
+                                        <span class="date">5th December, 2016 @ 6:30pm</span>
                                     </a>
                                 </li>
                             </ul>
