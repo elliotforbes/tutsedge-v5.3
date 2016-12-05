@@ -54,7 +54,7 @@
                     </li>
                     @else
                     <li class="profile">
-                        <a href="{{ url('/auth/github') }}">Register</a>
+                        <a href="{{ url('/profile') }}">Profile</a>
                         <div class="profile-content">
                             <div class="row border-bottom">
                                 <div class="col l6 m6 s12">
