@@ -108,7 +108,8 @@ class FrontendController extends Controller
     public function logout()
     {
         if(Auth::check()) 
-        {
+        {   
+            Log::info("Logging out User...");
             Auth::logout();
             return redirect('/');
         }
