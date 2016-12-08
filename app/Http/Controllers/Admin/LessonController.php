@@ -32,10 +32,10 @@ class LessonController extends Controller
     {
         $input = Request::all();
         Log::info($input);
-        $article = new Lesson();
         if(Auth::check())
         {   
             if(Auth::user()->github_id == 3332224){
+                $article = new Lesson();
                 $article->title = $input['title'];
                 $article->body = $input['body'];
                 $article->description = $input['description'];
@@ -44,16 +44,6 @@ class LessonController extends Controller
                 $article->image_path = $input['image'];
 
                 $article->course_id = $input['course_id'];
-
-                $tags = $input['tags'];
-                Log::info($tags);   
-                $article->tags()->detach();
-
-                foreach ($tags as $tag) {
-                    Log::info($tag);
-                    $currTag = Tag::find($tag['id']);
-                    $article->tags()->save($currTag);
-                }
 
 
                 $article->published_at = Carbon::now();
