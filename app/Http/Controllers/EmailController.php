@@ -17,6 +17,7 @@ class EmailController extends Controller
     {   
         $user = new User();
         $user->name = 'Test';
+        
         event(new NewUserEvent($user));
     }
 

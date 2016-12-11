@@ -30,7 +30,7 @@ class NewUserEventListener
      */
     public function handle(NewUserEvent $event)
     {
-        Log::info($event->$user);
-        Mail::to('elliot@elliotforbes.co.uk')->send(new NewUser($event->$user));
+        Log::info("Sending New User Event...");
+        Mail::to('elliot@elliotforbes.co.uk')->send(new NewUser());
     }
 }
