@@ -65,15 +65,11 @@ class AuthController extends Controller
         Log::info("github_id: " . $githubUser->id);
         
         try {
-            $user = new User();
-            $user->name = $githubUser->nickname;
-            $user->email = $githubUser->email;
-            $user->id = $githubUser->id;
-
-            event(new NewUserEvent($user));
+            event(new NewUserEvent());
         } catch (Exception $e) {
             Log::info("Exception: " . $e);
         }
+        
         return User::create([
             'name' => $githubUser->nickname,
             'email' => $githubUser->email,
