@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 use App\Mail\NewUser;
 use Illuminate\Support\Facades\Mail;
+use Log;
 
 class NewUserEventListener
 {
@@ -18,7 +19,7 @@ class NewUserEventListener
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -29,6 +30,7 @@ class NewUserEventListener
      */
     public function handle(NewUserEvent $event)
     {
+        Log::info($event->$user);
         Mail::to('elliot@elliotforbes.co.uk')->send(new NewUser($event->$user));
     }
 }

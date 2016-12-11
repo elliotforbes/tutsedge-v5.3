@@ -33,7 +33,6 @@ class NewUser extends Mailable
      */
     public function build()
     {   
-
         return $this->from('admin@tutorialedge.net')->view('mail.newuser');
     }
 }
