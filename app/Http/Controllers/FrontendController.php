@@ -142,20 +142,18 @@ class FrontendController extends Controller
       */
       public function course($slug)
       {
-          Log::info("Retrieving Course Page for: " . $slug);
-          $course = Course::whereSlug($slug)->get()->first();
+        Log::info("Retrieving Course Page for: " . $slug);
+        $course = Course::whereSlug($slug)->get()->first();
 
-          if(count($course) < 1){
-            Log::info("Course could not be found");
+        if(count($course) < 1){
+            Log::info("Course could not be found " . $slug);
             $error = [
-                'type' => '404: Course Not Found: ',
-                'body' => $slug,
+            'type' => '404: Course Not Found: ',
+            'body' => $slug,
             ];
             return view('errors.404');
         }
-
-
-          return view('frontend.course.single', compact('course'));
+        return view('frontend.course.single', compact('course'));
          
       }
       
@@ -221,8 +219,17 @@ class FrontendController extends Controller
        
        public function tag($slug)
        {
-           $tag = Tag::where('name', '=', $slug)->get()->first();
-           
+            $tag = Tag::where('name', '=', $slug)->get()->first();
+                
+            if(count($tag) < 1){
+                Log::info("Tag could not be found: " . $slug);
+                $error = [
+                'type' => '404: Course Not Found: ',
+                'body' => $slug,
+                ];
+                return view('errors.404');
+            }
+
            $articles = $tag->articles;
           
            return view('frontend.tag', compact('tag', 'articles')); 

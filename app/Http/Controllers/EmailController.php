@@ -8,16 +8,16 @@ use App\Http\Requests;
 use App\User;
 use App\Mail\NewUser;
 use Illuminate\Support\Facades\Mail;
+use App\Events\NewUserEvent;
 
 class EmailController extends Controller
 {
     
     public function test() 
-    {
+    {   
         $user = new User();
         $user->name = 'Test';
-
-        Mail::to('elliot@elliotforbes.co.uk')->send(new NewUser($user));
+        event(new NewUserEvent($user));
     }
 
 }
