@@ -52,7 +52,7 @@ Route::get('courses/all', 'API\CourseAPIController@all');
 Route::get('tags', 'API\TagAPIController@index');
 Route::get('tag/{id}', 'API\TagAPIController@show');
 
-
+Route::get('test', 'EmailController@test');
 
 
 
