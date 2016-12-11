@@ -142,7 +142,19 @@ class FrontendController extends Controller
       */
       public function course($slug)
       {
+          Log::info("Retrieving Course Page for: " . $slug);
           $course = Course::whereSlug($slug)->get()->first();
+
+          if(count($course) < 1){
+            Log::info("Course could not be found");
+            $error = [
+                'type' => '404: Course Not Found: ',
+                'body' => $slug,
+            ];
+            return view('errors.404');
+        }
+
+
           return view('frontend.course.single', compact('course'));
          
       }
