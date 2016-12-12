@@ -95,7 +95,7 @@
                 </ul>
 
                 <ul class="tab-nav">
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-2-fundamentals"><img src="{{ asset('/uploads/angular-logo.jpg') }}" alt="Angular 2 Fundamentals"> Angular 2</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-2-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="Angular 2 Fundamentals"> Angular 2</a></li>
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-js-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="AngularJS"> AngularJS</a></li>
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/golang"><img src="{{ asset('/uploads/go-logo.png') }}" alt="golang tutorials"> Golang</a></li>
                     <li class="tab"><a target="_self" href="{{ url('/course') }}/laravel-5"><img src="{{ asset('/uploads/laravel-logo.png') }}" alt="laravel 5.3 tutorials"> Laravel</a></li>
