@@ -1,47 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>404 Not Found</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title')
+Search the Site
+@endsection
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('meta')
+<meta name="description" content="Search the site for high quality programming tutorials...">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato', sans-serif;
-            }
+@endsection
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+@section('banner')
+<div class="banner">
+    <div class="banner-cont">
+        <h1>404: Page Not Found</h1>
+        <h3>Sorry to say we couldn't place your requested page.</h3>
+    </div>
+</div>
+@endsection
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">404 Not Found</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+<div>
+    <div id="search">
+        <div class="gray-container search">
+        </div> 
+    </div>
+</div>
+@endsection
