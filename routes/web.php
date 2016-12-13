@@ -44,10 +44,8 @@ Route::get('/book/{slug}', 'BookController@single');
 /*
 * Our github authentication routes 
 */
-Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
-Route::get('login', 'Auth\AuthController@handleProviderCallback');
-Route::get('auth/twitter', 'Auth\AuthController@twitterRedirect');
-Route::get('auth/twitter/login', 'Auth\AuthController@handleTwitterCallback');
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 
 

@@ -13,6 +13,11 @@ return [
     | to have a conventional place to find your various credentials.
     |
     */
+    'facebook' => [
+        'client_id' => env('FACEBOOK_ID'),
+        'client_secret' => env('FACEBOOK_SECRET'),
+        'redirect' => env('FACEBOOK_CALLBACK_URL'),  
+    ],
 
     'github' => [
         'client_id' => env('GITHUB_ID'),
@@ -25,7 +30,7 @@ return [
         'client_secret' => env('TWITTER_SECRET'),
         'redirect' => env('TWITTER_CALLBACK_URL'),
     ],
-    
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

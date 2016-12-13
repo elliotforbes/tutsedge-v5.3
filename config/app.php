@@ -167,6 +167,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
         
+        
         /*
          * Package Service Providers...
          */
@@ -231,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Markdown'  => AlfredoRamos\ParsedownExtra\Facades\ParsedownExtra::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        
     ],
 
 ];
