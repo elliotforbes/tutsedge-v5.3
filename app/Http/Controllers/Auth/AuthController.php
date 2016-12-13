@@ -18,7 +18,7 @@ class AuthController extends Controller
     public function redirectToProvider()
     {
         $redirectUrl = "https://tutorialedge.net/login";
-        return Socialite::driver('github')->redirectUrL($redirectUrl)->redirect();
+        return Socialite::driver('github')->redirectUrl($redirectUrl)->redirect();
     }
 
     /**
@@ -29,7 +29,7 @@ class AuthController extends Controller
     public function twitterRedirect()
     {
         $redirectUrl = "https://tutorialedge.net/auth/twitter/login";
-        return Socialite::driver('twitter')->redirectUrl($redirectUrl)->redirect();
+        return Socialite::driver('twitter')->redirect();
     }
 
     public function handleTwitterCallback()
