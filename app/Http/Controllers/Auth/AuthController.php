@@ -58,7 +58,7 @@ class AuthController extends Controller
         if ($authUser) {
             return $authUser;
         }
-        Log::info($user);
+        Log::info($user->toJson());
         event(new NewUserEvent($user));
         return User::create([
             'name'     => $user->name,
