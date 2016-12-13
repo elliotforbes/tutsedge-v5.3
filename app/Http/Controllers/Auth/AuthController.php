@@ -22,7 +22,7 @@ class AuthController extends Controller
     public function redirectToProvider($provider)
     {   
         $redirectUrl = "https://tutorialedge.net/auth/" . $provider . "/callback";
-        return Socialite::driver($provider)->redirectUrl($redirectUrl)->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
