@@ -18,6 +18,7 @@
 
             <p>Welcome To TutorialEdge.net!</p>
             <p>More Controls will be added to this page shortly. If you need to get in touch then please do at elliot@elliotforbes.co.uk</p>
+            <p><a href="https://tutorialedge.net/auth/twitter">Twitter Auth</a></p>
         </div>
     </div>
 </div>

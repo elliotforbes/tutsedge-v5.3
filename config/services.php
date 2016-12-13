@@ -20,6 +20,12 @@ return [
         'redirect' => env('GITHUB_CALLBACK_URL'),  
     ],
 
+    'twitter' => [
+        'client_id' => env('TWITTER_ID'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect' => env('TWITTER_CALLBACK_URL'),
+    ],
+    
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

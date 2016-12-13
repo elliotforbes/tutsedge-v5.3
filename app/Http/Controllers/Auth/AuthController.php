@@ -22,6 +22,23 @@ class AuthController extends Controller
     }
 
     /**
+     * Redirect the user to the Twitter Authentication page.
+     * 
+     * @return Response
+     */
+    public function twitterRedirect()
+    {
+        $redirectUrl = "https://tutorialedge.net/auth/twitter/login";
+        return Socialite::driver('twitter')->redirectUrl($redirectUrl)->redirect();
+    }
+
+    public function handleTwitterCallback()
+    {
+        $twitterUser = Socialite::driver('twitter')->stateless()->user();
+        Log::info($twitterUser->id);
+    }
+
+    /**
      * Obtain the user information from GitHub.
      *
      * @return Response

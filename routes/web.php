@@ -46,6 +46,10 @@ Route::get('/book/{slug}', 'BookController@single');
 */
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('login', 'Auth\AuthController@handleProviderCallback');
+Route::get('auth/twitter', 'Auth\AuthController@twitterRedirect');
+Route::get('auth/twitter/login', 'Auth\AuthController@handleTwitterCallback');
+
+
 
 /*
  * Error Routes.
