@@ -86,11 +86,11 @@ class FrontendController extends Controller
     {
         if(Auth::check())
         {   
-            if(Auth::user()->github_id == 3332224){
+            if(Auth::user()->provider_id == 3332224){
                 Log::info("User is logged in, permitting access to the admin panel");
                 return view('admin.index');
             } else {
-                Log::info("User does not have correct github_id for dashboard");
+                Log::info("User does not have correct provider_id for dashboard");
                 return redirect('/');
             }
         } 
