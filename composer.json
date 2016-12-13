@@ -12,7 +12,8 @@
         "laravel/passport": "^1.0",
         "roumen/sitemap": "^2.6",
         "guzzlehttp/guzzle": "^6.2",
-        "socialiteproviders/twitter": "^2.0"
+        "socialiteproviders/twitter": "^2.0",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
