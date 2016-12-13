@@ -86,6 +86,7 @@ class FrontendController extends Controller
     {
         if(Auth::check())
         {   
+            Log::info(Auth::user()->provider_id);
             if(Auth::user()->provider_id == 3332224){
                 Log::info("User is logged in, permitting access to the admin panel");
                 return view('admin.index');
