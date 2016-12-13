@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Socialite;
 use Log;
 use App\User;
+use App\Mail\NewUser;
+use Illuminate\Support\Facades\Mail;
+use App\Events\NewUserEvent;
 
 class AuthController extends Controller
 {
@@ -55,7 +58,7 @@ class AuthController extends Controller
         if ($authUser) {
             return $authUser;
         }
-        
+        event(new NewUserEvent($user));
         return User::create([
             'name'     => $user->name,
             'email'    => $user->email,
