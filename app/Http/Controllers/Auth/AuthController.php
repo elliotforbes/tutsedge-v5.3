@@ -50,7 +50,7 @@ class AuthController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('github_id', $user->id)->first();
+        $authUser = User::where('provider_id', $user->id)->first();
         
         if ($authUser) {
             return $authUser;
@@ -59,7 +59,8 @@ class AuthController extends Controller
         return User::create([
             'name'     => $user->name,
             'email'    => $user->email,
-            'github_id' => $user->id
+            'provider' => $provider,
+            'provider_id' => $user->id
         ]);
     }
 
