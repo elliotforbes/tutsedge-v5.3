@@ -19,7 +19,7 @@
               <tr ng-repeat="user in $ctrl.users">
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.github_id }}</td>
+                <td>{{ user.provider_id }}</td>
                 <td>{{ user.created_at }}</td>
                 <td><a href="#/user/edit/{{ user.id }}" class="btn btn-outline-primary"><i class="ion ion-ios-search-strong"></i> View</a></td>
               </tr>
