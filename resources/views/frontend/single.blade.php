@@ -113,21 +113,6 @@
                     @endforeach
                 </div>
 
-                <div class="left-sidebar-content">
-                    <img src="https://avatars0.githubusercontent.com/u/3332224?v=3&s=466" alt="Elliot Forbes Web Developer">
-                    <h2>Elliot Forbes</h2>
-                    <h4>Software Engineer</h4>
-
-                    <p>23 Year old Software Engineer who loves all manner of front end programing.</p>
-                    <div class="social-links register">
-                        <h4>Follow Me</h4>
-                        <a target="_blank" href="https://twitter.com/Elliot_F"><button class="register-btn twitter"><i class="fa fa-twitter-square"></i> Twitter</button></a>
-                        <a target="_blank" href="https://www.facebook.com/tutorialedge"><button class="register-btn facebook"><i class="fa fa-facebook-square"></i> Facebook</button></a>             
-                        <a target="_blank" href="https://github.com/emforce"><button class="register-btn github"><i class="fa fa-github-square"></i> Github</button></a>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCwFl9Y49sWChrddQTD9QhRA"><button class="register-btn youtube"><i class="fa fa-youtube-square"></i> Youtube</button></a>
-                    </div>
-                </div>
-
 
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- article ad -->
