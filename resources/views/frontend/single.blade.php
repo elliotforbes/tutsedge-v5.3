@@ -9,7 +9,7 @@
 @endsection
 
 @section('banner')
-<div class="banner">
+<div class="banner z-depth-1">
     <div class="banner-cont">
         <h1>{{ $lesson->title }}</h1>
         <h3>{{ $lesson->description }}</h3>
@@ -37,7 +37,7 @@
     <div class="row">
 
         <div class="col s12 m12 l9">
-            <div class="post-body post-content">
+            <div class="post-body z-depth-1 post-content">
                 @if(count($lesson->tags) > 0)
                     @foreach($lesson->tags as $tag) 
                     <a href="{{ url('/') }}/tag/{{$tag->name}}">
@@ -64,8 +64,8 @@
 
             </div><!-- .post-body -->
 
-            <div id="comments" class="comment-container">
-                <div class="comments">
+            <div id="comments" class="comment-container ">
+                <div class="comments z-depth-1">
                 <div id="disqus_thread"></div>
                 <script>
                 /**
@@ -90,9 +90,9 @@
             </div>
         </div><!-- .col s9 -->
         
-        <div class="sidebar col s12 m12 l3"><!-- .sidebar -->
+        <div class="sidebar  col s12 m12 l3"><!-- .sidebar -->
             
-           <div class="sidebar">
+           <div class="sidebar z-depth-1">
                 <div class="related-posts">
                     <h2>Related Posts</h2>
                     @foreach ($articles as $article)
