@@ -14,6 +14,20 @@
         <h1>{{ $lesson->title }}</h1>
         <h3>{{ $lesson->description }}</h3>
         <p class="post-info">{{ $lesson->author }} | {{ date("d M, Y",strtotime($lesson->created_at)) }} | <a href="#comments">Comments</a></p>
+        <div>
+            <p class="post-info">Join the hundreds of other developers and become part of a growing community of like-minded developers.</p>
+            <div class="row">
+                <div class="col hide-on-small-only m12 l4">
+                    <a href="{{ url('/auth/github') }}"><button class="btn github center-align"><i class="fa fa-github-square"></i> Register with Github</button></a>
+                </div>
+                <div class="col hide-on-small-only m12 l4">
+                    <a href="{{ url('/auth/twitter') }}"><button class="btn twitter"><i class="fa fa-twitter-square"></i> Register with Twiter</button></a>
+                </div>
+                <div class="col hide-on-small-only m12 l4">
+                    <a href="{{ url('/auth/facebook') }}"><button class="btn facebook"><i class="fa fa-facebook-square"></i> Register with Facebook</button></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
@@ -25,6 +39,16 @@
 
         <div class="col s12 m12 l9">
             <div class="post-body post-content">
+                @if(count($lesson->tags) > 0)
+                    @foreach($lesson->tags as $tag) 
+                    <a href="{{ url('/') }}/tag/{{$tag->name}}">
+                        <div class="chip">
+                            {{ $tag->name }}
+                        </div>
+                    </a>
+                    @endforeach
+                @endif
+
 
                 {!! Markdown::parse($lesson->body) !!}     
 

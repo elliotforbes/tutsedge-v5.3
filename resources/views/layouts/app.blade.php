@@ -54,7 +54,7 @@
                     <li><a href="{{ url('/about') }}">About</a></li>
                     @if (Auth::guest())
                     <li>
-                        <a href="{{ url('/auth/github') }}">Register</a>
+                        <a href="{{ url('/register') }}">Register</a>
                     </li>
                     @else
                     <li class="profile">

@@ -238,7 +238,7 @@ class FrontendController extends Controller
        
        public function register() 
        {
-            return view('frontend.register');   
+            return view('frontend.profile.register');   
        }
        
        public function profile()
