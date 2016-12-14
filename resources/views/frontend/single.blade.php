@@ -15,7 +15,6 @@
         <h3>{{ $lesson->description }}</h3>
         <p class="post-info">{{ $lesson->author }} | {{ date("d M, Y",strtotime($lesson->created_at)) }} | <a href="#comments">Comments</a></p>
         <div>
-            <p class="post-info">Join the hundreds of other developers and become part of a growing community of like-minded developers.</p>
             <div class="row">
                 <div class="col hide-on-small-only m12 l4">
                     <a href="{{ url('/auth/github') }}"><button class="btn github center-align"><i class="fa fa-github-square"></i> Register with Github</button></a>
