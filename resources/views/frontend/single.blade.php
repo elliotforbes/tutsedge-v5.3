@@ -22,8 +22,15 @@
 
 <div class="content">
     <div class="row">
+        <div class="col hide-on-small-only m3 l1">
+            <ul class="section table-of-contents">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#initialization">Intialization</a></li>
+            </ul>
+        </div>
 
-        <div class="col s12 m12 l9">
+        <div class="col s12 m12 l8">
             <div class="post-body post-content">
 
                 {!! Markdown::parse($lesson->body) !!}     
@@ -125,5 +132,11 @@
         
     </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+</script>
 
 @endsection

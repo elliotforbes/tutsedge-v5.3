@@ -18,8 +18,7 @@
         <link rel="stylesheet" href="{{ asset('/css/materialize.min.css', Request::secure() )  }}">
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=53">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
-
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         
@@ -95,11 +94,11 @@
                 </ul>
 
                 <ul class="tab-nav">
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-2-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="Angular 2 Fundamentals"> Angular 2</a></li>
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-js-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="AngularJS"> AngularJS</a></li>
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/golang"><img src="{{ asset('/uploads/go-logo.png') }}" alt="golang tutorials"> Golang</a></li>
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/laravel-5"><img src="{{ asset('/uploads/laravel-logo.png') }}" alt="laravel 5.3 tutorials"> Laravel</a></li>
-                    <li class="tab"><a target="_self" href="{{ url('/course') }}/python"><img src="{{ asset('/uploads/python-logo.png') }}" alt="Python Tutorials"> Python</a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-2-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="Angular 2 Fundamentals"> <span class="hide-on-small-only">Angular 2</span></a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/angular-js-fundamentals"><img src="{{ asset('/uploads/angular-logo.png') }}" alt="AngularJS"> <span class="hide-on-small-only">AngularJS</span></a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/golang"><img src="{{ asset('/uploads/go-logo.png') }}" alt="golang tutorials"> <span class="hide-on-small-only">Golang</span></a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/laravel-5"><img src="{{ asset('/uploads/laravel-logo.png') }}" alt="laravel 5.3 tutorials"> <span class="hide-on-small-only">Laravel</span></a></li>
+                    <li class="tab"><a target="_self" href="{{ url('/course') }}/python"><img src="{{ asset('/uploads/python-logo.png') }}" alt="Python Tutorials"> <span class="hide-on-small-only">Python</span></a></li>
                 </ul>
                 </div>
             </nav>
@@ -136,8 +135,9 @@
             </div>
           </div>
         </footer>
-        <script type="text/javascript" src="{{ asset('/js/jquery.min.js', Request::secure()) }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/materialize.min.js', Request::secure()) }}"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        
         <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>  
     </body>    
 </html>
