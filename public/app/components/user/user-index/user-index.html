@@ -11,7 +11,8 @@
             <thead>
               <th>User Name</th>
               <th>Email</th>
-              <th>Github ID</th>
+              <th>Provider ID</th>
+              <th>Provider</th>
               <th>Date Joined</th>
               <th>View Profile</th>
             </thead>
@@ -20,6 +21,7 @@
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.provider_id }}</td>
+                <th>{{ user.provider }}</th>
                 <td>{{ user.created_at }}</td>
                 <td><a href="#/user/edit/{{ user.id }}" class="btn btn-outline-primary"><i class="ion ion-ios-search-strong"></i> View</a></td>
               </tr>
