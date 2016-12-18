@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 /*
  * Lesson Routes
  */
+Route::group(['middleware' =>  ['cors']], function() {
 
 Route::get('lessons','API\LessonAPIController@index');
 Route::post('lessons', 'API\LessonAPIController@search');
@@ -55,4 +56,5 @@ Route::get('tag/{id}', 'API\TagAPIController@show');
 
 Route::get('test', 'EmailController@test');
 
+});
 
