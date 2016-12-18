@@ -82,6 +82,10 @@ class LessonAPIController extends Controller
         Log::info("API Request made for lesson with slug: " . $slug);
         $lesson = Lesson::whereSlug($slug)->get()->first();
 
+        if(count($lesson) < 1) {
+            Log::info("Could not find lesson...");
+        }
+
         $lesson->tags = $lesson->tags;
 
         return response(array(

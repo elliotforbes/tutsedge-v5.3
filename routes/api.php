@@ -17,44 +17,44 @@ use Illuminate\Http\Request;
 /*
  * Lesson Routes
  */
-Route::group(['middleware' =>  ['cors']], function() {
+Route::group(['middleware' =>  ['cors', 'auth']], function() {
 
-Route::get('lessons','API\LessonAPIController@index');
-Route::post('lessons', 'API\LessonAPIController@search');
-Route::get('lesson/{slug}', 'API\LessonAPIController@show');
-Route::get('lessons/all', 'API\LessonAPIController@all');
+  Route::get('lessons','API\LessonAPIController@index');
+  Route::post('lessons', 'API\LessonAPIController@search');
+  Route::get('lesson/{slug}', 'API\LessonAPIController@show');
+  Route::get('lessons/all', 'API\LessonAPIController@all');
 
-/*
- * Blog Post Routes
- */
-Route::get('posts', 'API\PostAPIController@index');
-Route::post('posts', 'API\PostAPIController@search');
-Route::get('posts/{slug}', 'API\PostAPIController@show');
-Route::get('posts/all', 'API\PostAPIController@all');
+  /*
+  * Blog Post Routes
+  */
+  Route::get('posts', 'API\PostAPIController@index');
+  Route::post('posts', 'API\PostAPIController@search');
+  Route::get('posts/{slug}', 'API\PostAPIController@show');
+  Route::get('posts/all', 'API\PostAPIController@all');
 
-/*
- * User Routes
- */
-Route::get('users', 'API\UserAPIController@index');
-Route::get('users/all', 'API\UserAPIController@all');
-Route::get('user/{id}', 'API\UserAPIController@show');
-Route::get('users/growth', 'API\UserAPIController@growthStats');
+  /*
+  * User Routes
+  */
+  Route::get('users', 'API\UserAPIController@index');
+  Route::get('users/all', 'API\UserAPIController@all');
+  Route::get('user/{id}', 'API\UserAPIController@show');
+  Route::get('users/growth', 'API\UserAPIController@growthStats');
 
-/* 
- * Course Routes
- */
-Route::get('courses', 'API\CourseAPIController@index');
-Route::get('course/{slug}', 'API\CourseAPIController@show');
-Route::post('courses', 'API\CourseAPIController@search');
-Route::get('courses/all', 'API\CourseAPIController@all');
+  /* 
+  * Course Routes
+  */
+  Route::get('courses', 'API\CourseAPIController@index');
+  Route::get('course/{slug}', 'API\CourseAPIController@show');
+  Route::post('courses', 'API\CourseAPIController@search');
+  Route::get('courses/all', 'API\CourseAPIController@all');
 
-/*
- * Tag Routes
- */
-Route::get('tags', 'API\TagAPIController@index');
-Route::get('tag/{id}', 'API\TagAPIController@show');
+  /*
+  * Tag Routes
+  */
+  Route::get('tags', 'API\TagAPIController@index');
+  Route::get('tag/{id}', 'API\TagAPIController@show');
 
-Route::get('test', 'EmailController@test');
+  Route::get('test', 'EmailController@test');
 
 });
 
