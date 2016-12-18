@@ -35,9 +35,14 @@
 
 <div class="content">
     <div class="row">
+        <div class="col hide-on-small-only m2 l1">
+            <div class="social fixed">
+                <p>Hello</p>
+            </div>
+        </div>
 
-        <div class="col s12 m12 l9">
-            <div class="post-body z-depth-1 post-content">
+        <div class="col s12 m10 l8">
+            <div class="post-body post-content">
                 @if(count($lesson->tags) > 0)
                     @foreach($lesson->tags as $tag) 
                     <a href="{{ url('/') }}/tag/{{$tag->name}}">
@@ -65,7 +70,7 @@
             </div><!-- .post-body -->
 
             <div id="comments" class="comment-container ">
-                <div class="comments z-depth-1">
+                <div class="comments">
                 <div id="disqus_thread"></div>
                 <script>
                 /**
@@ -92,7 +97,7 @@
         
         <div class="sidebar  col s12 m12 l3"><!-- .sidebar -->
             
-           <div class="sidebar z-depth-1">
+           <div class="sidebar">
                 <div class="related-posts">
                     <h2>Related Posts</h2>
                     @foreach ($articles as $article)

@@ -1214,3 +1214,8 @@ footer.page-footer .footer-copyright {
   background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
   font-weight: bold;
 }
+
+.fixed {
+  position: fixed;
+  z-index: 10;
+}

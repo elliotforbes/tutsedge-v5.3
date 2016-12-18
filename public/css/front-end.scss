@@ -1160,3 +1160,8 @@ footer.page-footer{
     background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
     font-weight: bold;
 }
+
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
