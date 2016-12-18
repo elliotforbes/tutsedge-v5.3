@@ -34,24 +34,23 @@ class LessonController extends Controller
         Log::info($input);
         if(Auth::check())
         {   
-            if(Auth::user()->github_id == 3332224){
-                $article = new Lesson();
-                $article->title = $input['title'];
-                $article->body = $input['body'];
-                $article->description = $input['description'];
-                $article->author = 'Elliot Forbes';
-                $article->slug = $input['slug'];
-                $article->image_path = $input['image'];
+            $article = new Lesson();
+            $article->title = $input['title'];
+            $article->body = $input['body'];
+            $article->description = $input['description'];
+            $article->author = 'Elliot Forbes';
+            $article->slug = $input['slug'];
+            $article->image_path = $input['image'];
 
-                $article->course_id = $input['course_id'];
+            $article->course_id = $input['course_id'];
 
 
-                $article->published_at = Carbon::now();
-                $article->created_at = Carbon::now();
-                $article->updated_at = Carbon::now();
+            $article->published_at = Carbon::now();
+            $article->created_at = Carbon::now();
+            $article->updated_at = Carbon::now();
 
-                $article->save();
-            }
+            $article->save();
+        
         }
         Log::info("Store method hit");
 
@@ -70,29 +69,27 @@ class LessonController extends Controller
 
         if(Auth::check())
         {   
-            if(Auth::user()->github_id == 3332224){
-                $article->title = $input['title'];
-                $article->body = $input['body'];
-                $article->description = $input['description'];
-                $article->slug = $input['slug'];
-                $article->image_path = $input['image_path'];
-                $article->course_id = $input['course_id'];
+            $article->title = $input['title'];
+            $article->body = $input['body'];
+            $article->description = $input['description'];
+            $article->slug = $input['slug'];
+            $article->image_path = $input['image_path'];
+            $article->course_id = $input['course_id'];
 
 
-                $article->updated_at = Carbon::now();
+            $article->updated_at = Carbon::now();
 
-                $tags = $input['tags'];
-                Log::info($tags);   
-                $article->tags()->detach();
+            $tags = $input['tags'];
+            Log::info($tags);   
+            $article->tags()->detach();
 
-                foreach ($tags as $tag) {
-                    Log::info($tag);
-                    $currTag = Tag::find($tag['id']);
-                    $article->tags()->save($currTag);
-                }
-                
-                $article->save();
+            foreach ($tags as $tag) {
+                Log::info($tag);
+                $currTag = Tag::find($tag['id']);
+                $article->tags()->save($currTag);
             }
+            
+            $article->save();
         }
         return response(array(
             'error' => false
