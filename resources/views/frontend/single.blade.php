@@ -35,13 +35,8 @@
 
 <div class="content">
     <div class="row">
-        <div class="col hide-on-small-only m2 l1">
-            <div class="social fixed">
-                <p>Hello</p>
-            </div>
-        </div>
 
-        <div class="col s12 m10 l8">
+        <div class="col s12 m10 l9">
             <div class="post-body post-content">
                 @if(count($lesson->tags) > 0)
                     @foreach($lesson->tags as $tag) 
