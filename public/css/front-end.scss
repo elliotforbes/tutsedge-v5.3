@@ -726,8 +726,14 @@ nav{
     
     .post-body{
         background-color: white;
-        padding: 40px;     
+        padding: 40px;   
 
+        img {
+            width: 80%;
+            height: auto;
+            margin: auto;
+        }  
+        
         .post-title{  
 
             .info{

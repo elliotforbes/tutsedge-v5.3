@@ -703,6 +703,10 @@ nav {
   .content .post-body {
     background-color: white;
     padding: 40px; }
+    .content .post-body img {
+      width: 80%;
+      height: auto;
+      margin: auto; }
     .content .post-body .post-title .info {
       float: left;
       padding-top: 14px;
@@ -753,6 +757,30 @@ nav {
   font-size: 23px; }
 .search .search-results .result {
   background-color: white; }
+
+.twitter {
+  background-color: #1DA1F2;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+
+.facebook {
+  background-color: #3B5998;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+
+.youtube {
+  background-color: #DC4E41;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+
+.github {
+  background-color: #333333;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
 
 .comment-container {
   width: 100%;
@@ -960,5 +988,9 @@ footer.page-footer {
   padding: 30px 20px 30px 100px;
   background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
   font-weight: bold; }
+
+.fixed {
+  position: fixed;
+  z-index: 10; }
 
 /*# sourceMappingURL=front-end.css.map */
