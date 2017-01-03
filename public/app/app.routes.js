@@ -8,3 +8,4 @@ routeProvider.$inject = ['$routeProvider'];
 
 angular.module('root')
   .config(routeProvider);
+
