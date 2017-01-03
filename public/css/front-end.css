@@ -758,30 +758,6 @@ nav {
 .search .search-results .result {
   background-color: white; }
 
-.twitter {
-  background-color: #1DA1F2;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-
-.facebook {
-  background-color: #3B5998;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-
-.youtube {
-  background-color: #DC4E41;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-
-.github {
-  background-color: #333333;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-
 .comment-container {
   width: 100%;
   padding-top: 40px;
@@ -858,6 +834,26 @@ footer.page-footer {
 @media screen and (max-width: 1024px) {
   .left-sidebar {
     display: none !important; } }
+.sidebar .twitter {
+  background-color: #1DA1F2;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+.sidebar .facebook {
+  background-color: #3B5998;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+.sidebar .youtube {
+  background-color: #DC4E41;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
+.sidebar .github {
+  background-color: #333333;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; }
 .sidebar .course-info {
   padding: 40px;
   background-color: white;

@@ -834,31 +834,6 @@ nav{
     
 }
 
-.twitter{
-    background-color: $twitter;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-}
-
-.facebook{
-    background-color: $facebook;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-}
-.youtube{
-    background-color: $youtube;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-}
-.github{
-    background-color: $github;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-}
 
 .comment-container{
     width: 100%;
@@ -976,7 +951,31 @@ footer.page-footer{
 }
 
 .sidebar {
+    .twitter{
+        background-color: $twitter;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
 
+    .facebook{
+        background-color: $facebook;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    .youtube{
+        background-color: $youtube;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    .github{
+        background-color: $github;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
     .course-info{
         padding: 40px;
         background-color: white;
