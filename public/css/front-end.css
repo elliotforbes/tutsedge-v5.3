@@ -704,7 +704,7 @@ nav {
     background-color: white;
     padding: 40px; }
     .content .post-body img {
-      width: 80%;
+      max-width: 80%;
       height: auto;
       margin: auto; }
     .content .post-body .post-title .info {
