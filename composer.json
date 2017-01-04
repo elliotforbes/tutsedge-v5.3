@@ -13,7 +13,8 @@
         "roumen/sitemap": "^2.6",
         "guzzlehttp/guzzle": "^6.2",
         "socialiteproviders/twitter": "^2.0",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "graham-campbell/markdown": "^7.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
