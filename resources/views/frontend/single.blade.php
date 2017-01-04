@@ -49,7 +49,7 @@
                 @endif
 
 
-                {!! Markdown::parse($lesson->body) !!}     
+                {!! Markdown::convertToHtml($lesson->body) !!}     
 
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- article ad -->

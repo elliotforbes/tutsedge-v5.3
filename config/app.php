@@ -165,6 +165,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
+
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         
         
