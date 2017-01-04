@@ -597,7 +597,9 @@ nav {
       background-color: #272822; }
     .content .post-body pre > code {
       border-radius: 5px;
-      padding: 5px; }
+      padding: 5px;
+      line-height: 24px;
+      font-size: 14px; }
     .content .post-body pre::before {
       content: " ";
       background-color: #1EC4D6;
