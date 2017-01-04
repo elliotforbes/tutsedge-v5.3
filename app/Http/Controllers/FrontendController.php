@@ -64,12 +64,13 @@ class FrontendController extends Controller
                             $q->where('tag_id', $tag->id);
                         })
                         ->where('id', '!=', $lesson->id)
+                        ->inRandomOrder()
                         ->take(3)
                         ->get();
         } 
         else 
         {
-            $articles = Lesson::orderBy('id', 'DESC')
+            $articles = Lesson::inRandomOrder()
                 ->take(3)
                 ->get();
         }
