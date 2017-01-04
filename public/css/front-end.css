@@ -538,6 +538,51 @@ nav {
   .content .post-body {
     background-color: white;
     padding: 40px; }
+    .content .post-body ul.tags {
+      list-style-type: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0; }
+    .content .post-body .tags li {
+      float: left;
+      list-style-type: none;
+      margin: 0; }
+    .content .post-body .tag {
+      background: #eee;
+      border-radius: 3px 0 0 3px;
+      color: #999;
+      display: inline-block;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 20px 0 23px;
+      position: relative;
+      margin: 0 10px 10px 0;
+      text-decoration: none;
+      -webkit-transition: color 0.2s; }
+    .content .post-body .tag::before {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      content: '';
+      height: 6px;
+      left: 10px;
+      position: absolute;
+      width: 6px;
+      top: 10px; }
+    .content .post-body .tag::after {
+      background: #fff;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #eee;
+      border-top: 13px solid transparent;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .content .post-body .tag:hover {
+      background-color: crimson;
+      color: white; }
+    .content .post-body .tag:hover::after {
+      border-left-color: crimson; }
     .content .post-body .github-link {
       margin: 20px 0px;
       padding: 30px 20px 30px 100px;

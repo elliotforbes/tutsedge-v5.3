@@ -39,13 +39,13 @@
         <div class="col s12 m10 l9">
             <div class="post-body post-content">
                 @if(count($lesson->tags) > 0)
-                    @foreach($lesson->tags as $tag) 
-                    <a href="{{ url('/') }}/tag/{{$tag->name}}">
-                        <div class="chip">
-                            {{ $tag->name }}
-                        </div>
-                    </a>
-                    @endforeach
+                    <ul class="tags">
+                        @foreach($lesson->tags as $tag) 
+                        <li>
+                            <a class="tag" href="{{ url('/') }}/tag/{{$tag->name}}">{{ $tag->name }}</a>
+                        </li>
+                        @endforeach
+                    </ul>
                 @endif
 
 
