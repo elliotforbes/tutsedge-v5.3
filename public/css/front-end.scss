@@ -366,6 +366,66 @@ nav{
     margin-bottom: 40px;
     line-height:29px;
 
+    ul.tags {
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden; 
+        padding: 0;
+    }
+
+    .tags li {
+        float: left; 
+        list-style-type: none;
+        margin: 0;
+    }
+
+    .tag {
+        background-color: #1EC4D6;
+        border-radius: 3px 0 0 3px;
+        color: #fff;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 20px 0 23px;
+        position: relative;
+        margin: 0 10px 10px 0;
+        text-decoration: none;
+        -webkit-transition: color 0.2s;
+    }
+
+    .tag::before {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+        content: '';
+        height: 6px;
+        left: 10px;
+        position: absolute;
+        width: 6px;
+        top: 10px;
+    }
+
+    .tag::after {
+        background: #fff;
+        border-bottom: 13px solid transparent;
+        border-left: 10px solid #1EC4D6;
+        border-top: 13px solid transparent;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .tag:hover {
+        background-color: #eee;
+        color: #1EC4D6;
+    }
+
+    .tag:hover::after {
+        border-left-color: #eee; 
+    }
+
+
     .header-image img {
         width: 100%;
         height: auto;
@@ -500,63 +560,10 @@ nav{
         background-color: white;
         padding: 40px;   
 
-        ul.tags {
-            list-style-type: none;
-            margin: 0;
-            overflow: hidden; 
-            padding: 0;
-        }
-
         .tags li {
             float: left; 
             list-style-type: none;
             margin: 0;
-        }
-
-        .tag {
-            background-color: #1EC4D6;
-            border-radius: 3px 0 0 3px;
-            color: #fff;
-            display: inline-block;
-            height: 26px;
-            line-height: 26px;
-            padding: 0 20px 0 23px;
-            position: relative;
-            margin: 0 10px 10px 0;
-            text-decoration: none;
-            -webkit-transition: color 0.2s;
-        }
-
-        .tag::before {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-            content: '';
-            height: 6px;
-            left: 10px;
-            position: absolute;
-            width: 6px;
-            top: 10px;
-        }
-
-        .tag::after {
-            background: #fff;
-            border-bottom: 13px solid transparent;
-            border-left: 10px solid #1EC4D6;
-            border-top: 13px solid transparent;
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .tag:hover {
-            background-color: #eee;
-            color: #1EC4D6;
-        }
-
-        .tag:hover::after {
-            border-left-color: #eee; 
         }
 
         .github-link {
@@ -939,11 +946,6 @@ footer.page-footer{
                 margin: 0 0 35px;
                 font-size: 16px;
                 line-height: 24px;
-            }
-            
-            .tags a{
-                margin-right: 5px;
-                color: #ababab;
             }
 
         }

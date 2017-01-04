@@ -103,11 +103,13 @@
                         <div class="post-link">
                             <a href="{{ url('/') }}/{{ $article->slug }}"><h3>{{ $article->title }}</h3></a>
                             <p>{{ $article->description }}</p>
-                            <div class="tags">
-                                @foreach($article->tags as $tag)
-                                <a href="{{ url('/') }}/tag/{{ $tag->name }}">{{ $tag->name }}</a>
+                            <ul class="tags">
+                                @foreach($lesson->tags as $tag) 
+                                <li>
+                                    <a class="tag" href="{{ url('/') }}/tag/{{$tag->name}}">{{ $tag->name }}</a>
+                                </li>
                                 @endforeach
-                            </div>
+                            </ul>
                         </div>
                     </div>
                     @endforeach
