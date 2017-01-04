@@ -402,122 +402,6 @@ nav {
       text-decoration: none;
       margin-top: 20px; }
 
-.author-info {
-  background-color: #ffffff;
-  padding: 30px;
-  padding-bottom: 10px;
-  /* Gap filler */
-  /* Tooltip */
-  /* Arrow */ }
-  .author-info h5 {
-    margin: 0;
-    padding: 0; }
-    .author-info h5 a {
-      font-size: 26px;
-      color: #4e5e6a; }
-  .author-info ul {
-    margin: 0;
-    padding: 0; }
-    .author-info ul li {
-      padding: 0;
-      margin: 0;
-      display: inline; }
-      .author-info ul li a {
-        margin-right: 20px;
-        font-size: 30px; }
-  .author-info p {
-    color: #414a51;
-    font-weight: 400;
-    font-size: 16px;
-    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.2;
-    -webkit-font-smoothing: antialiased; }
-  .author-info .tooltip {
-    display: inline;
-    position: relative;
-    z-index: 999; }
-  .author-info .tooltip::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    bottom: 100%;
-    left: 50%;
-    pointer-events: none;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
-  .author-info .tooltip:hover::after {
-    pointer-events: auto; }
-  .author-info .tooltip-content {
-    position: absolute;
-    z-index: 9999;
-    width: 300px;
-    left: 50%;
-    bottom: 100%;
-    font-size: 20px;
-    line-height: 1.4;
-    text-align: center;
-    font-weight: 400;
-    color: #fffaf0;
-    background: transparent;
-    opacity: 0;
-    margin: 0 0 20px -150px;
-    cursor: default;
-    pointer-events: none;
-    -webkit-font-smoothing: antialiased;
-    -webkit-transition: opacity 0.3s 0.3s;
-    transition: opacity 0.3s 0.3s; }
-  .author-info .tooltip:hover .tooltip-content {
-    opacity: 1;
-    pointer-events: auto;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s; }
-  .author-info .tooltip-content span {
-    display: block; }
-  .author-info .tooltip-text {
-    border-bottom: 10px solid #fffaf0;
-    overflow: hidden;
-    -webkit-transform: scale3d(0, 1, 1);
-    transform: scale3d(0, 1, 1);
-    -webkit-transition: -webkit-transform 0.3s 0.3s;
-    transition: transform 0.3s 0.3s; }
-  .author-info .tooltip:hover .tooltip-text {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
-  .author-info .tooltip-inner {
-    background: rgba(85, 61, 61, 0.95);
-    padding: 40px;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s; }
-  .author-info .tooltip:hover .tooltip-inner {
-    -webkit-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  .author-info .tooltip-content::after {
-    content: '';
-    bottom: -20px;
-    left: 50%;
-    border: solid transparent;
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    border-top-color: #fffaf0;
-    border-width: 10px;
-    margin-left: -10px; }
-  .author-info img {
-    width: 80px;
-    height: 80px; }
-
-.lesson {
-  min-height: 400px; }
-
 .flexbox-courses {
   display: -webkit-flex;
   display: flex;
@@ -550,21 +434,6 @@ nav {
   height: 60px;
   padding: 20px;
   width: 100%; }
-
-.icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
-  background-color: #112F5A;
-  color: white;
-  padding-top: 7px;
-  font-size: 48px;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 20px; }
-  .icon i {
-    font-size: 48px;
-    margin-left: 17px; }
 
 .content {
   min-height: 100px;
@@ -658,40 +527,6 @@ nav {
     .content .info p {
       margin: 0;
       padding: 0; }
-  .content pre {
-    color: white; }
-  @media (max-width: 37.5em) {
-    .content pre {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 5px;
-      background-color: #272822; } }
-  @media (min-width: 37.5em) {
-    .content pre {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 60px;
-      background-color: #272822; } }
-  @media (min-width: 50em) {
-    .content pre {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 60px;
-      background-color: #272822; } }
-  @media (min-width: 64em) {
-    .content pre {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 60px;
-      background-color: #272822; } }
   .content .tip {
     background-color: #F5F5F1;
     padding: 20px;
@@ -703,13 +538,82 @@ nav {
   .content .post-body {
     background-color: white;
     padding: 40px; }
+    .content .post-body .github-link {
+      margin: 20px 0px;
+      padding: 30px 20px 30px 100px;
+      background: #f8f8f8 url(../uploads/github.png) no-repeat 20px 50%;
+      font-weight: bold; }
+    .content .post-body .note {
+      margin: 20px 0px;
+      padding: 30px 20px 30px 100px;
+      background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
+      font-weight: bold; }
+    .content .post-body blockquote {
+      border-left: 4px solid #1EC4D6;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: -40px;
+      margin-right: -40px;
+      font-weight: bold;
+      position: relative;
+      overflow: visible;
+      padding: 20px;
+      white-space: pre;
+      background-color: #D7F9FD; }
+    .content .post-body blockquote::before {
+      content: "";
+      background-color: #1EC4D6;
+      background-image: url(/images/code.svg);
+      background-size: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -21px;
+      top: -20px;
+      color: white;
+      line-height: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 100%;
+      font-size: 30px;
+      font-weight: 700; }
     .content .post-body > p > code {
       background-color: #D7F9FD;
       border-radius: 5px;
       padding: 5px; }
+    .content .post-body pre {
+      border-left: 4px solid #1EC4D6;
+      position: relative;
+      overflow: visible;
+      white-space: pre;
+      word-wrap: normal;
+      color: #C1C2C3;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 40px;
+      background-color: #272822; }
     .content .post-body pre > code {
       border-radius: 5px;
       padding: 5px; }
+    .content .post-body pre::before {
+      content: " ";
+      background-color: #1EC4D6;
+      background-image: url(/images/code.svg);
+      background-size: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -21px;
+      top: -20px;
+      color: white;
+      line-height: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 100%;
+      font-size: 30px;
+      font-weight: 700; }
     .content .post-body img {
       max-width: 80%;
       height: auto;
@@ -979,18 +883,6 @@ footer.page-footer {
   .sidebar .register .register-btn i {
     color: white;
     margin-right: 5px; }
-
-.github-link {
-  margin: 20px 0px;
-  padding: 30px 20px 30px 100px;
-  background: #f8f8f8 url(../uploads/github.png) no-repeat 20px 50%;
-  font-weight: bold; }
-
-.note {
-  margin: 20px 0px;
-  padding: 30px 20px 30px 100px;
-  background: #f8f8f8 url(../uploads/note.png) no-repeat 20px 50%;
-  font-weight: bold; }
 
 .fixed {
   position: fixed;
