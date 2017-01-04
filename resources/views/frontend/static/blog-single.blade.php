@@ -29,7 +29,7 @@
                 {{ $post->author }} 
                 | {{ date("d M, Y",strtotime($post->created_at)) }}
             </div>
-            {!! Markdown::parse($post->body) !!}            
+            {!! Markdown::convertToHtml($post->body) !!}            
         </div>
          <div id="comments" class="comment-container">
                 <div class="comments">

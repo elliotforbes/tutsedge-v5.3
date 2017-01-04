@@ -27,7 +27,7 @@
         
         <div class="col s12 m8 l9">
             <div class="post-body">  
-                {!! Markdown::parse($course->body) !!}
+                {!! Markdown::convertToHtml($course->body) !!}
                 
                 @include('frontend.partials._ad')
             </div>
