@@ -703,7 +703,7 @@ nav {
   .content .post-body {
     background-color: white;
     padding: 40px; }
-    .content .post-body > code {
+    .content .post-body > p > code {
       background-color: #D7F9FD;
       border-radius: 5px;
       padding: 5px; }
