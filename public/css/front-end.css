@@ -548,9 +548,9 @@ nav {
       list-style-type: none;
       margin: 0; }
     .content .post-body .tag {
-      background: #eee;
+      background-color: #1EC4D6;
       border-radius: 3px 0 0 3px;
-      color: #999;
+      color: #fff;
       display: inline-block;
       height: 26px;
       line-height: 26px;
@@ -572,17 +572,17 @@ nav {
     .content .post-body .tag::after {
       background: #fff;
       border-bottom: 13px solid transparent;
-      border-left: 10px solid #eee;
+      border-left: 10px solid #1EC4D6;
       border-top: 13px solid transparent;
       content: '';
       position: absolute;
       right: 0;
       top: 0; }
     .content .post-body .tag:hover {
-      background-color: crimson;
-      color: white; }
+      background-color: #eee;
+      color: #1EC4D6; }
     .content .post-body .tag:hover::after {
-      border-left-color: crimson; }
+      border-left-color: #eee; }
     .content .post-body .github-link {
       margin: 20px 0px;
       padding: 30px 20px 30px 100px;

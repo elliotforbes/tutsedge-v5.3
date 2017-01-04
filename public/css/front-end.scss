@@ -514,9 +514,9 @@ nav{
         }
 
         .tag {
-            background: #eee;
+            background-color: #1EC4D6;
             border-radius: 3px 0 0 3px;
-            color: #999;
+            color: #fff;
             display: inline-block;
             height: 26px;
             line-height: 26px;
@@ -542,7 +542,7 @@ nav{
         .tag::after {
             background: #fff;
             border-bottom: 13px solid transparent;
-            border-left: 10px solid #eee;
+            border-left: 10px solid #1EC4D6;
             border-top: 13px solid transparent;
             content: '';
             position: absolute;
@@ -551,12 +551,12 @@ nav{
         }
 
         .tag:hover {
-            background-color: crimson;
-            color: white;
+            background-color: #eee;
+            color: #1EC4D6;
         }
 
         .tag:hover::after {
-            border-left-color: crimson; 
+            border-left-color: #eee; 
         }
 
         .github-link {
