@@ -557,7 +557,8 @@ nav {
       font-weight: bold;
       position: relative;
       overflow: visible;
-      padding: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
       white-space: pre;
       background-color: #D7F9FD; }
     .content .post-body blockquote::before {
