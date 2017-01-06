@@ -1,1 +1,0 @@
-angular.module('dashboard', ['chart.js']);

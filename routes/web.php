@@ -26,9 +26,6 @@ Route::get('/forum', 'FrontendController@forum');
 Route::get('/register', 'FrontendController@register');
 Route::get('/logout', 'FrontendController@logout');
 
-
-Route::get('/dashboard', 'FrontendController@dashboard');
-
 Route::group(['middleware' => ['auth', 'cors']], function() {
   Route::resource('articles', 'Admin\LessonController');
   Route::resource('courses', 'Admin\CourseController');
@@ -46,8 +43,6 @@ Route::get('/book/{slug}', 'BookController@single');
 */
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
-
-
 
 /*
  * Error Routes.
