@@ -93,8 +93,21 @@
         <div class="sidebar  col s12 m12 l3"><!-- .sidebar -->
             
            <div class="sidebar">
+
+               <div class="social">
+                    <div class="row">
+                        <div class="col l2"><a class="facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=#{{ url('/') }}/{{ $lesson->slug }}"><i class="ion ion-social-facebook"></i></a></div>
+                        <div class="col l2"><a class="twitter" taget="_blank" href="https://twitter.com/intent/tweet?url={{ url('/') }}/{{ $lesson->slug }}&text={{ $lesson->title }}"><i class="ion ion-social-twitter"></i></a></div>
+                        <div class="col l2"><a class="youtube" target="_blank" href="https://plus.google.com/share?url={{ url('/') }}/{{ $lesson->slug }}"><i class="ion ion-social-googleplus"></i></a></div>
+                        <div class="col l2"><a class="linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?url={{ url('/') }}/{{ $lesson->slug }}&title={{ $lesson->title }}"><i class="ion ion-social-linkedin"></i></a></div>
+                        <div class="col l2"><a class="hackernews" target="_blank" href="https://news.ycombinator.com/submit"><i class="ion ion-social-hackernews"></i></a></div>
+                        <div class="col l2"><a class="github" target="_blank" href="https://reddit.com/submit?url={{url('/') }}/{{ $lesson->slug }}&title={{ $lesson->title }}"><i class="ion ion-social-reddit"></i></a></div>
+                    </div>
+               </div>
+
                 <div class="related-posts">
                     <h2>Related Posts</h2>
+                    
                     @foreach ($articles as $article)
                     <div class="post">
                         <div class="post-image">
@@ -102,7 +115,6 @@
                         </div>
                         <div class="post-link">
                             <a href="{{ url('/') }}/{{ $article->slug }}"><h3>{{ $article->title }}</h3></a>
-                            <p>{{ $article->description }}</p>
                             <ul class="tags">
                                 @foreach($lesson->tags as $tag) 
                                 <li>

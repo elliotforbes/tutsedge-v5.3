@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{{ asset('/css/front-end.css' , Request::secure() ) }}?v=68">
         <link rel="icon" type="image/png" href="{{ asset('/favicon.ico', Request::secure()) }}">
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{{ asset('/js/stickyfill.js') }}"></script>
         <script src="{{ asset('/js/highlight.pack.js', Request::secure()) }}"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         
@@ -137,7 +138,6 @@
         </footer>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-        
         <script type="text/javascript" src="{{ asset('/js/site-scripts.js', Request::secure()) }}"></script>  
     </body>    
 </html>

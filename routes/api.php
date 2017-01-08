@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 /*
  * Lesson Routes
  */
-Route::group(['middleware' =>  ['cors']], function() {
+Route::group(['middleware' =>  ['auth:api']], function() {
 
   Route::get('lessons','API\LessonAPIController@index');
   Route::post('lessons', 'API\LessonAPIController@search');

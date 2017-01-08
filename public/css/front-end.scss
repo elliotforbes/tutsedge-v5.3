@@ -879,30 +879,58 @@ footer.page-footer{
 }
 
 .sidebar {
-    .twitter{
-        background-color: $twitter;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-    }
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
 
-    .facebook{
-        background-color: $facebook;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-    }
-    .youtube{
-        background-color: $youtube;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-    }
-    .github{
-        background-color: $github;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
+    .social{
+        margin-top: 5px;
+
+        .twitter{
+            background-color: $twitter;
+        }
+
+        .facebook{
+            background-color: $facebook;
+        }
+        .youtube{
+            background-color: $youtube;
+        }
+        .github{
+            background-color: $github;
+        }
+        .hackernews {
+            background-color:#FF6600;
+        }
+
+        .linkedin {
+            background-color: #007AB9;
+        }
+
+        a {
+            color:#fff;
+            background: #1EC4D6;
+            border-radius:4px;
+            text-align:center;
+            text-decoration:none;
+            position: relative;
+            display: inline-block;
+            width:100%;
+            height: auto;
+            padding:10px;
+            margin:0 2px;
+            -o-transition:all .5s;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a:hover {
+            background: #D7F9FD;
+            color: #1EC4D6;
+        }
+
     }
     .course-info{
         padding: 40px;

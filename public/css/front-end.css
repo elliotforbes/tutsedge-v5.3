@@ -796,141 +796,159 @@ footer.page-footer {
 @media screen and (max-width: 1024px) {
   .left-sidebar {
     display: none !important; } }
-.sidebar .twitter {
-  background-color: #1DA1F2;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-.sidebar .facebook {
-  background-color: #3B5998;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-.sidebar .youtube {
-  background-color: #DC4E41;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-.sidebar .github {
-  background-color: #333333;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; }
-.sidebar .course-info {
-  padding: 40px;
-  background-color: white;
-  margin-top: 40px;
-  margin-bottom: 40px; }
-.sidebar .related-posts {
-  background-color: white;
-  padding: 40px; }
-  .sidebar .related-posts h2 {
-    margin: 0 0 2px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px; }
-  .sidebar .related-posts .post {
-    margin-bottom: 20px; }
-    .sidebar .related-posts .post .post-link a h3 {
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px; }
+  .sidebar .social {
+    margin-top: 5px; }
+    .sidebar .social .twitter {
+      background-color: #1DA1F2; }
+    .sidebar .social .facebook {
+      background-color: #3B5998; }
+    .sidebar .social .youtube {
+      background-color: #DC4E41; }
+    .sidebar .social .github {
+      background-color: #333333; }
+    .sidebar .social .hackernews {
+      background-color: #FF6600; }
+    .sidebar .social .linkedin {
+      background-color: #007AB9; }
+    .sidebar .social a {
+      color: #fff;
+      background: #1EC4D6;
+      border-radius: 4px;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      margin: 0 2px;
+      -o-transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+      -webkit-font-smoothing: antialiased; }
+    .sidebar .social a:hover {
+      background: #D7F9FD;
+      color: #1EC4D6; }
+  .sidebar .course-info {
+    padding: 40px;
+    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .sidebar .related-posts {
+    background-color: white;
+    padding: 40px; }
+    .sidebar .related-posts h2 {
       margin: 0 0 2px;
+      margin-bottom: 20px;
       font-weight: 400;
       font-size: 24px;
-      line-height: 30px;
-      color: #545454; }
-    .sidebar .related-posts .post .post-image img {
+      line-height: 30px; }
+    .sidebar .related-posts .post {
+      margin-bottom: 20px; }
+      .sidebar .related-posts .post .post-link a h3 {
+        margin: 0 0 2px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: #545454; }
+      .sidebar .related-posts .post .post-image img {
+        width: 100%;
+        max-height: 100px; }
+      .sidebar .related-posts .post p {
+        color: #7a7a7a;
+        margin: 0 0 35px;
+        font-size: 16px;
+        line-height: 24px; }
+  .sidebar .post-info {
+    padding: 40px;
+    background-color: white; }
+    .sidebar .post-info .post-views {
+      border-right: 1px solid #9c9c9c; }
+    .sidebar .post-info .post-author {
+      border-top: 1px solid #9c9c9c; }
+    .sidebar .post-info .post-date {
+      border-top: 1px solid #9c9c9c; }
+  .sidebar .left-sidebar-content {
+    padding: 40px;
+    background-color: white;
+    margin-bottom: 40px; }
+    .sidebar .left-sidebar-content p {
+      color: #9A9A9A;
+      text-align: center;
+      margin-bottom: 20px; }
+    .sidebar .left-sidebar-content h2 {
+      text-align: center;
+      font-weight: 800; }
+    .sidebar .left-sidebar-content h4 {
+      text-align: center;
+      color: #A6A9AC; }
+    .sidebar .left-sidebar-content img {
+      display: block;
+      margin: auto;
       width: 100%;
-      max-height: 100px; }
-    .sidebar .related-posts .post p {
-      color: #7a7a7a;
-      margin: 0 0 35px;
-      font-size: 16px;
-      line-height: 24px; }
-.sidebar .post-info {
-  padding: 40px;
-  background-color: white; }
-  .sidebar .post-info .post-views {
-    border-right: 1px solid #9c9c9c; }
-  .sidebar .post-info .post-author {
-    border-top: 1px solid #9c9c9c; }
-  .sidebar .post-info .post-date {
-    border-top: 1px solid #9c9c9c; }
-.sidebar .left-sidebar-content {
-  padding: 40px;
-  background-color: white;
-  margin-bottom: 40px; }
-  .sidebar .left-sidebar-content p {
-    color: #9A9A9A;
-    text-align: center;
-    margin-bottom: 20px; }
-  .sidebar .left-sidebar-content h2 {
-    text-align: center;
-    font-weight: 800; }
-  .sidebar .left-sidebar-content h4 {
-    text-align: center;
-    color: #A6A9AC; }
-  .sidebar .left-sidebar-content img {
-    display: block;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 75px; }
-.sidebar .post-info {
-  text-align: center; }
-  .sidebar .post-info span {
-    color: #272822;
-    font-weight: 600;
-    font-size: 26px; }
-    .sidebar .post-info span a {
+      height: auto;
+      max-width: 150px;
+      max-height: 150px;
+      border-radius: 75px; }
+  .sidebar .post-info {
+    text-align: center; }
+    .sidebar .post-info span {
+      color: #272822;
       font-weight: 600;
       font-size: 26px; }
-.sidebar .social-links {
-  border-top: 1px solid #ECEFF2;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 15px; }
-  .sidebar .social-links i {
-    color: white; }
-  .sidebar .social-links .twitter {
-    background-color: #1DA1F2;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px; }
-  .sidebar .social-links .facebook {
-    background-color: #3B5998;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px; }
-  .sidebar .social-links .youtube {
-    background-color: #DC4E41;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px; }
-  .sidebar .social-links .github {
-    background-color: #333333;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px; }
-.sidebar p {
-  color: #9a9a9a; }
-.sidebar .register .register-btn {
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 20px;
-  height: auto; }
-  .sidebar .register .register-btn i {
+      .sidebar .post-info span a {
+        font-weight: 600;
+        font-size: 26px; }
+  .sidebar .social-links {
+    border-top: 1px solid #ECEFF2;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px; }
+    .sidebar .social-links i {
+      color: white; }
+    .sidebar .social-links .twitter {
+      background-color: #1DA1F2;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; }
+    .sidebar .social-links .facebook {
+      background-color: #3B5998;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; }
+    .sidebar .social-links .youtube {
+      background-color: #DC4E41;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; }
+    .sidebar .social-links .github {
+      background-color: #333333;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px; }
+  .sidebar p {
+    color: #9a9a9a; }
+  .sidebar .register .register-btn {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
     color: white;
-    margin-right: 5px; }
+    font-size: 20px;
+    height: auto; }
+    .sidebar .register .register-btn i {
+      color: white;
+      margin-right: 5px; }
 
 .fixed {
   position: fixed;

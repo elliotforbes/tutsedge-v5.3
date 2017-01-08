@@ -1,5 +1,4 @@
-$(".button-collapse").sideNav();
-
 $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-  });
+  $(".button-collapse").sideNav();
+  $('.sidebar').Stickyfill();
+});
